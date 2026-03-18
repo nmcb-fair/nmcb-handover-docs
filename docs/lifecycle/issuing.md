@@ -7,8 +7,10 @@ This stage covers how data is shared with requesters: data requests, multicentre
 | Channel | Purpose | Documentation |
 |---------|---------|---------------|
 | Data requests | External access | [Data requests](../governance/data-requests.md) |
-| Multicentre transfers | Nijmegen ↔ Amsterdam UMC | [Biobank](../systems/biobank.md) |
-| Internal extracts | Analysis-ready datasets | [Snowflake](../systems/snowflake.md), [Scripts](../systems/scripts.md) |
+| myDRE | Secure analysis environment for requestors | [myDRE](../systems/mydre.md) |
+| Sample requests | Biobank sample release | [Data requests](../governance/data-requests.md), [OpenSpecimen](../systems/openspecimen.md) |
+| Multicentre transfers | Nijmegen ↔ Amsterdam UMC | [Multicentre](../systems/multicentre.md) |
+| Internal extracts | Analysis-ready datasets | [Snowflake](../systems/snowflake.md), [Scripts and QC](../systems/scripts-and-qc.md) |
 
 ## Data request workflow
 

@@ -38,10 +38,16 @@ nav:
   - Systems:
       - Data architecture: systems/data-architecture.md
       - Castor EDC: systems/castor.md
-      - Devices and QC: systems/devices.md
-      - Scripts and automation: systems/scripts.md
+      - Devices: systems/devices.md
+      - Scripts and QC: systems/scripts-and-qc.md
       - Snowflake and structured data: systems/snowflake.md
-      - Biobank and multicentre data: systems/biobank.md
+      - Research Drive: systems/research-drive.md
+      - Biobank: systems/biobank.md
+      - Multicentre data: systems/multicentre.md
+      - OpenSpecimen: systems/openspecimen.md
+      - myDRE: systems/mydre.md
+      - LDOT: systems/ldot.md
+      - GitHub: systems/github.md
   - Operations & Governance:
       - Operations overview: operations/index.md
       - Regular tasks: operations/regular-tasks.md

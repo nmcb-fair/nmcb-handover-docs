@@ -6,29 +6,19 @@ This stage covers quality control and transformation of raw data before it is us
 
 | Activity | Purpose | System |
 |----------|---------|--------|
-| Device QC | Validate and clean device outputs | [Devices](../systems/devices.md) |
-| Conversion scripts | Standardise formats (Omron, Tanita, Nellcor, M&L) | [Scripts](../systems/scripts.md) |
-| Python/R cleaning | Clean raw data, quality control | [Scripts](../systems/scripts.md) |
+| Device QC | Validate and clean device outputs | [Scripts and QC](../systems/scripts-and-qc.md) |
+| Conversion scripts | Standardise formats (Omron, Tanita, Nellcor, M&L) | [Scripts and QC](../systems/scripts-and-qc.md) |
+| Python/R cleaning | Clean raw data, quality control | [Scripts and QC](../systems/scripts-and-qc.md) |
 
-## Device QC
+## Device QC and conversion
 
-For each device, document:
+See [Scripts and QC](../systems/scripts-and-qc.md) for QC procedures and conversion scripts. For each device, document:
 
-1. setup before use
+1. setup before use (see [Devices](../systems/devices.md))
 2. raw output format
 3. naming convention
 4. quality control procedure
 5. cleaned output or conversion format
-
-### Device-specific notes
-
-- **Nellcor:** Date format change from MM/DD/YY to DD/MM/YY — device settings matter for downstream matching.
-
-- **Tanita:** Difference between onsite Tanita Pro and portable home-visit Tanita data; document field mappings and how outputs are standardised.
-
-- **VU-AMS:** Document expected file pattern, abnormal export patterns, QC script or manual process, and pass/fail criteria.
-
-- **Amsterdam Cognitive Scan:** Document QC checks, completeness criteria, and how output links to participant ID.
 
 ## Scripts
 

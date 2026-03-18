@@ -1,29 +1,27 @@
-# Devices and QC
+# Devices
 
-*Lifecycle stages: [Collection](../lifecycle/collection.md) (data capture); [Cleaning](../lifecycle/cleaning.md) (QC and conversion)*
+*Lifecycle stage: [Collection](../lifecycle/collection.md) (data capture)*
 
-The task board shows several device-related workflows. These need explicit documentation because device data often contains the highest amount of tacit operational knowledge.
+The task board shows several device-related workflows. Device data capture needs explicit documentation because it often contains tacit operational knowledge.
 
 ## Device topics visible in the board
 
 - portable Tanita data and mapping differences
 - VU-AMS abnormal report
-- VU-AMS quality control protocol
+- Amsterdam Cognitive Scan
 - changing Nellcor date format from MM/DD/YY to DD/MM/YY
-- Amsterdam Cognitive Scan QC
 - iPad setup for home visits
 - requisites for using Nellcor
 - Tanita for home visit
 
 ## General rule for device workflows
 
-For each device, document five things:
+For each device, document:
 
 1. setup before use
 2. raw output format
 3. naming convention
-4. quality control procedure
-5. cleaned output or conversion format
+4. where output is stored for QC (see [Scripts and QC](scripts-and-qc.md))
 
 ## Nellcor
 
@@ -47,17 +45,17 @@ The board notes a difference between onsite Tanita Pro and portable home-visit T
 
 ### Handover note
 
-This is both a QC and data model issue. The next person should know:
+Document:
 
 - what fields differ between device versions
 - whether a field mapping table exists
-- how outputs are standardised before analysis use
+- how outputs are standardised (see [Scripts and QC](scripts-and-qc.md))
 
 ## VU-AMS
 
 ### Current board signal
 
-The board notes abnormal reports and a QC protocol. It also mentions that multiple or unexpectedly large files can be created rather than a single expected file.
+The board notes abnormal reports. It also mentions that multiple or unexpectedly large files can be created rather than a single expected file.
 
 ### Handover note
 
@@ -66,12 +64,11 @@ Document:
 - expected file pattern
 - known abnormal export patterns
 - whether all files should be preserved
-- which script or manual process is used for QC
-- what constitutes a pass/fail QC result
+- QC procedure (see [Scripts and QC](scripts-and-qc.md))
 
 ## Amsterdam Cognitive Scan
 
-Document the QC checks performed, what is considered complete, and how output is linked back to the participant ID.
+Document the setup, output format, and how output is linked back to the participant ID. QC checks are in [Scripts and QC](scripts-and-qc.md).
 
 ## iPads for home visits
 

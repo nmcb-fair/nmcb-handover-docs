@@ -28,4 +28,4 @@ Analysis outputs may feed into [Publication](publication.md).
 
 ## Scripts
 
-See [Scripts and automation](../systems/scripts.md) for scripts used to get numbers and summary counts.
+See [Scripts and QC](../systems/scripts-and-qc.md) for scripts used to get numbers and summary counts.

@@ -6,9 +6,9 @@ This stage covers where data is stored: file structures, Snowflake, and biobank 
 
 | Location | Purpose | System |
 |----------|---------|--------|
-| Research drive | File storage, raw and processed data | File structure |
+| Research Drive | File storage, raw and processed data | [Research Drive](../systems/research-drive.md) |
 | Snowflake | Structured data, analytical queries | [Snowflake](../systems/snowflake.md) |
-| Biobank | Sample metadata, biosample data | [Biobank](../systems/biobank.md) |
+| Biobank | Sample metadata, biosample data | [Biobank](../systems/biobank.md), [OpenSpecimen](../systems/openspecimen.md) |
 
 ## Folder design principle
 
@@ -23,13 +23,13 @@ A good storage structure should separate:
 
 ## File structure
 
-See [Where everything lives](../where-everything-lives.md) for the current map of folders, owners, and permissions.
+See [Where everything lives](../where-everything-lives.md) for the current map of folders, owners, and permissions. See [Research Drive](../systems/research-drive.md) for the primary storage system.
 
 Key locations include:
 
 - Device raw data (organised by device and date)
 - Device QC outputs (versioned folders preferred)
-- Scripts (prefer Git version control)
+- Scripts (prefer [GitHub](../systems/github.md) version control)
 - Snowflake / SQL setup
 
 ## Snowflake

@@ -1,12 +1,14 @@
-# Biobank and multicentre data
+# Biobank data
 
-*Lifecycle stages: [Storage](../lifecycle/storage.md) (sample metadata); [Issuing](../lifecycle/issuing.md) (multicentre transfers)*
+*Lifecycle stages: [Storage](../lifecycle/storage.md) (sample metadata); [Issuing](../lifecycle/issuing.md) (sample preparation)*
 
-The board shows a meaningful cluster of work around biobank flow and multicentre collaboration.
+The board shows work around biobank data flow and sample management.
+
+## Related system
+
+Sample tracking is done in [OpenSpecimen](openspecimen.md), the biobank system used for tracking samples.
 
 ## Board themes
-
-### Biobank data
 
 - biobank data flow
 - fecal sample data template
@@ -14,14 +16,6 @@ The board shows a meaningful cluster of work around biobank flow and multicentre
 - prepare input file for biobank
 - clean dirty ML data
 - script and protocol for biobank data flow
-- two incomplete box
-
-### Multicentre
-
-- manual of procedures for NMCB
-- sample processing data in Nijmegen
-- lab data and alert in Nijmegen
-- data transfer towards A-UMC
 
 ## Handover priorities
 
@@ -45,17 +39,6 @@ If multiple templates exist, define:
 - mandatory columns
 - validation rules before sending
 
-### 3. Multicentre transfers
-
-For data moving between Nijmegen and Amsterdam UMC or other sites, document:
-
-- transfer trigger
-- transfer frequency
-- allowed transport mechanism
-- file naming and structure
-- expected confirmation back from receiver
-- escalation if files are missing or inconsistent
-
 ## Operational risk
 
-Biobank and multicentre workflows are especially vulnerable to confusion when naming conventions, sample identifiers, or template versions are not tightly controlled.
+Biobank workflows are vulnerable to confusion when naming conventions, sample identifiers, or template versions are not tightly controlled.

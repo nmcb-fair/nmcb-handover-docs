@@ -1,8 +1,8 @@
-# Scripts and automation
+# Scripts and QC
 
-*Lifecycle stages: [Cleaning](../lifecycle/cleaning.md) (conversion, QC); [Modelling](../lifecycle/modelling.md) (eligibility); [Issuing](../lifecycle/issuing.md) (extracts)*
+*Lifecycle stages: [Cleaning](../lifecycle/cleaning.md) (conversion, QC); [Modelling](../lifecycle/modelling.md) (eligibility); [Issuing](../lifecycle/issuing.md) (extracts); [Analysis](../lifecycle/analysis.md) (summary counts)*
 
-The board indicates a substantial amount of scripting work in Python and R.
+The board indicates a substantial amount of scripting work in Python and R, including quality control of device outputs.
 
 ## Script themes visible in the board
 
@@ -13,6 +13,25 @@ The board indicates a substantial amount of scripting work in Python and R.
 - conversion documentation and code for Omron, Tanita, Nellcor, and M&L
 - Python scripts for cleaning raw data and quality control
 - getting numbers and summary counts
+
+## Device QC
+
+QC procedures for device outputs (see [Devices](devices.md)) are implemented in scripts. For each device, document:
+
+- expected file pattern
+- QC script or manual process
+- pass/fail criteria
+- cleaned output or conversion format
+
+### Device-specific QC notes
+
+- **Nellcor:** Date format change from MM/DD/YY to DD/MM/YY — device settings matter for downstream matching.
+
+- **Tanita:** Difference between onsite Tanita Pro and portable home-visit Tanita data; document field mappings and how outputs are standardised.
+
+- **VU-AMS:** Document expected file pattern, abnormal export patterns, QC script or manual process, and pass/fail criteria.
+
+- **Amsterdam Cognitive Scan:** Document QC checks, completeness criteria, and how output links to participant ID.
 
 ## Recommended script inventory
 

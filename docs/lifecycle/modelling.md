@@ -7,7 +7,7 @@ This stage covers how data is structured for analysis: Snowflake structures, eli
 | Activity | Purpose | System |
 |----------|---------|--------|
 | Snowflake structures | Tables, views, analytical queries | [Snowflake](../systems/snowflake.md) |
-| Eligibility logic | Inclusion criteria, ME criteria | [Castor](../systems/castor.md), [Scripts](../systems/scripts.md) |
+| Eligibility logic | Inclusion criteria, ME criteria | [Castor](../systems/castor.md), [Scripts and QC](../systems/scripts-and-qc.md) |
 | OMOP mapping | Standardised data model | In progress |
 
 ## Eligibility scripts

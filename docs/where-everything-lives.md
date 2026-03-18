@@ -13,12 +13,17 @@ Use this page as a map of systems, folders, owners, and permissions.
 | Subject ID log | Participant ID mapping | `TBD` | `TBD` | Critical for joins across systems |
 | Castor project | Data capture | `TBD` | `TBD` | Add project URL and role names |
 | Linked2Trial input/output | Recruitment screener exchange | `TBD` | `TBD` | Note timing expectation |
+| Research Drive | File storage | `TBD` | `TBD` | Raw data, processed data, scripts |
 | Device raw data | Raw exports | `TBD` | `TBD` | Organise by device and date |
 | Device QC outputs | QC reports and cleaned outputs | `TBD` | `TBD` | Prefer versioned folders |
-| Scripts | Python/R code | `TBD` | `TBD` | Prefer Git version control |
+| Scripts | Python/R code | `TBD` | `TBD` | GitHub or Research Drive |
 | Snowflake / SQL setup | Structured data | `TBD` | `TBD` | Record how access is provisioned |
+| OpenSpecimen | Sample tracking | `TBD` | `TBD` | Biobank system |
+| myDRE | Secure analysis environment | `TBD` | `TBD` | Data issuing for requestors |
+| LDOT | `TBD` | `TBD` | `TBD` | Add purpose and location |
 | SOPs | Governance and procedures | `TBD` | `TBD` | Keep links stable |
 | Data request forms | External access workflow | `TBD` | `TBD` | Add published version |
+| Sample request forms | Sample release workflow | `TBD` | `TBD` | Add published version |
 
 ## Folder design principle
 

@@ -158,6 +158,97 @@ Participants transferred into the screener workflow.
 
 ---
 
+## Sample requests
+
+### Purpose
+
+Process requests for biological samples from the biobank. Ensure samples are released according to governance and that transfers are documented.
+
+### Frequency or trigger
+
+As requests are received. See [Data requests](../governance/data-requests.md) and [Sample request forms](../governance/data-requests.md#minimum-form-contents).
+
+### Systems and locations
+
+- [OpenSpecimen](../systems/openspecimen.md) — sample tracking
+- [Biobank](../systems/biobank.md) — data flow and templates
+- Sample request form and log
+
+### Inputs
+
+- approved sample request form
+- access to OpenSpecimen and biobank systems
+
+### Steps
+
+1. Receive and validate the sample request.
+2. Confirm request is approved and in scope.
+3. Prepare sample list or extract according to template.
+4. Coordinate with biobank for sample retrieval and transfer.
+5. Record what was shared and when.
+
+### Output
+
+- samples released as per approval
+- request logged
+
+### Quality checks
+
+- request has valid approval
+- sample identifiers are correct
+- transfer is documented
+
+### Escalation
+
+`TBD`
+
+---
+
+## Get numbers
+
+### Purpose
+
+Produce summary counts and numbers for reports, dashboards, or ad hoc requests (e.g. eligibility counts, recruitment status, visit completion).
+
+### Frequency or trigger
+
+As requested; may be weekly or monthly for routine reports.
+
+### Systems and locations
+
+- [Scripts and QC](../systems/scripts-and-qc.md) — scripts for summary counts
+- [Snowflake](../systems/snowflake.md) — structured data queries
+- [Castor](../systems/castor.md) — exports for counts
+
+### Inputs
+
+- access to relevant data sources
+- script or query for the requested numbers
+
+### Steps
+
+1. Clarify what numbers are needed and for what period.
+2. Identify the correct script, query, or export.
+3. Run the script or query.
+4. Validate the output (e.g. check against previous run).
+5. Deliver the numbers in the agreed format.
+
+### Output
+
+- numbers delivered
+- source and method documented for reproducibility
+
+### Quality checks
+
+- numbers are consistent with known totals where applicable
+- method can be repeated if asked again
+
+### Escalation
+
+`TBD`
+
+---
+
 ## Prepare checklist for data routine
 
 ### Purpose

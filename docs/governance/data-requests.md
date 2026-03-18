@@ -36,9 +36,18 @@ Before release, confirm:
 - identifiers and anonymisation level are appropriate
 - the deliverable can be reproduced if asked again later
 
+## Sample requests
+
+Sample requests follow the same workflow as data requests. In addition:
+
+- use [OpenSpecimen](../systems/openspecimen.md) for sample tracking
+- coordinate with biobank for retrieval and transfer
+- see [Sample requests](../operations/regular-tasks.md#sample-requests) for the operational task
+
 ## Suggested deliverables to maintain
 
-- public-facing request form
+- public-facing data request form
+- public-facing sample request form
 - internal review checklist
-- request log
+- request log (data and sample)
 - standard email templates for approval, revision, and rejection
