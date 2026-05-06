@@ -1,3 +1,31 @@
+# To-do
+
+- SOPs
+  - box data renaming 
+  - visit data log 
+  - subject id log
+- Systems guidance:
+  - Openspecimen
+    - Query - get all NMCB samples
+    - Field - PPID, Barcode, etc. 
+    - Columns - concentration, mother tube
+  - Castor 
+    - **Detail** for Castor database going to Live 
+    - Castor UAT and RDM QC workflow
+    - change management 
+    - Calculations (see GitHub)
+    - Suggestion for future: 
+      - 1. create data access matrix (who access what)
+      - 1. whenever there is update on Castor, inform data steward to update the codebook - otherwise, data requestor get confused by the new values (e.g., Stijn request)
+  - LDOT
+    - Data download specifications
+    - Do not add sensitive (personal identifiable) information on comments
+- ## Tasks
+- Just document for future:
+  - VU-AMS QC document
+  - myDRE setup  
+  - ECG data mount
+
 # Task template
 
 Use this template for every operational or technical task that needs to be handed over.
@@ -55,3 +83,4 @@ Avoid descriptions like:
 Prefer descriptions like:
 
 > Compare the latest Castor export with the previous export, review missing values in required fields, flag records with invalid visit status, and save the issue list in the QC folder.
+
