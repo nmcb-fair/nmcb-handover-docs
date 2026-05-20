@@ -1,5 +1,7 @@
 # Snowflake and structured data
 
+**Status:** Ongoing
+
 *Role: structured storage; modelling and eligibility outputs; extracts for requests and downstream use.*
 
 The board includes several tasks related to SQL and Snowflake, including setup testing, connection fixes, and automated eligibility ideas.

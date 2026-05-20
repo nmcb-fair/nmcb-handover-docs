@@ -1,5 +1,7 @@
 # Devices
 
+**Status:** Ongoing
+
 *Role: device outputs and visit-related measurements.*
 
 For the **flow** from capture to QC and scripts, see [Device data workflow](../workflows/device-data-workflow.md).

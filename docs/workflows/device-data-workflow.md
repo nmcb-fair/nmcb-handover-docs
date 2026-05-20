@@ -1,14 +1,16 @@
 # Device data workflow
 
+**Status:** Ongoing
+
 How device outputs move from capture through QC and into cleaning scripts / structured storage. Per-device setup detail stays in [Devices](../systems/devices.md); this page is the **flow** view.
 
 ## General rule
 
 For each device, the handover should make explicit:
 
-1. setup before use  
-2. raw output format  
-3. naming convention  
+1. setup before use
+2. raw output format
+3. naming convention
 4. where output is stored for QC (see [Scripts and QC](../systems/scripts-and-qc.md))
 
 ## Cadence (from current plan)
@@ -37,9 +39,10 @@ Device use at visit or home
 - VU-AMS abnormal reports and file patterns  
 - Amsterdam Cognitive Scan — link outputs to participant ID  
 - Nellcor date format (MM/DD/YY vs DD/MM/YY)  
-- iPad setup for home visits  
+- iPad setup for home visits
 
 ## Related
 
 - [Devices](../systems/devices.md) — Omron, Nellcor, Tanita, VU-AMS, ACS, iPads  
-- [CDL alert workflow](cdl-alert-workflow.md) — lab alerts (not a “device” but same data team cadence)  
+- [CDL alert workflow](cdl-alert-workflow.md) — lab alerts (not a “device” but same data team cadence)
+

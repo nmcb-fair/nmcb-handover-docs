@@ -12,7 +12,7 @@ Central Diagnostic Laboratory (CDL) blood results and alerts for NMCB participan
 ## Steps
 
 1. When a participant completes the visit, blood tubes are drawn by **research nurses** during the visit and delivered to the CRL lab. Two tubes are used for lab results exported as CDL data files.
-2. Every **Monday and Thursday**, new CDL data files together with the newest `**CRL admin`** file are transferred by **research assistants** from the NMCB data mailbox to Research Drive (target folder: `/organized/CDL/{YYYYMMDD}`). CDL data files are raw and not organised per participant; `**CRL admin`** links measurements to participants.
+2. Every **Monday and Thursday**, new CDL data files together with the newest `CRL admin` file are transferred by **research assistants** from the NMCB data mailbox to Research Drive (target folder: `/organized/CDL/{YYYYMMDD}`). CDL data files are raw and not organised per participant; `**CRL admin`** links measurements to participants.
 3. By the end of **Monday and Thursday**, these files are processed by the **data team**, producing two files per participant (see below). After processing, move processed files or folders to `**Archive`**.
   - **Lab result data file** — biomarker measures; CSV
   - **Lab alert file** — measures and reference ranges; indicates whether a participant is normal (`Normal`), abnormal (`Afwijkend`), or alert (`ALERT`)

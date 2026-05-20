@@ -1,5 +1,7 @@
 # Data requests
 
+**Status:** Ongoing
+
 The board includes tasks on standardising the data request procedure and developing and publishing sample and data request forms.
 
 ## Goal

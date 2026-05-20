@@ -1,5 +1,7 @@
 # OpenSpecimen
 
+**Status:** Ongoing
+
 *Role: sample tracking and sample request workflows.*
 
 OpenSpecimen is the biobank system used for tracking samples.

@@ -1378,7 +1378,7 @@
 
 
 
-<h1 id="cdl-alert-workflow">CDL alert workflow<a class="headerlink" href="#cdl-alert-workflow" title="Permanent link">&para;</a></h1>
+<h1 id="cdl-alert-workflow">CDL Alert Workflow<a class="headerlink" href="#cdl-alert-workflow" title="Permanent link">&para;</a></h1>
 <p>Central Diagnostic Laboratory (CDL) blood results and alerts for NMCB participants, from visit through clinical follow-up.</p>
 <h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1390,15 +1390,15 @@
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
 <ol>
 <li>When a participant completes the visit, blood tubes are drawn by <strong>research nurses</strong> during the visit and delivered to the CRL lab. Two tubes are used for lab results exported as CDL data files.</li>
-<li>Every <strong>Monday and Thursday</strong>, new CDL data files together with the newest <strong><code>CRL admin</code></strong> file are transferred by <strong>research assistants</strong> from the NMCB data mailbox to Research Drive (target folder: <code>/organized/CDL/{YYYYMMDD}</code>). CDL data files are raw and not organised per participant; <strong><code>CRL admin</code></strong> links measurements to participants.</li>
-<li>By the end of <strong>Monday and Thursday</strong>, these files are processed by the <strong>data team</strong>, producing two files per participant (see below). After processing, move processed files or folders to <strong><code>Archive</code></strong>.</li>
+<li>Every <strong>Monday and Thursday</strong>, new CDL data files together with the newest <code>CRL admin</code> file are transferred by <strong>research assistants</strong> from the NMCB data mailbox to Research Drive (target folder: <code>/organized/CDL/{YYYYMMDD}</code>). CDL data files are raw and not organised per participant; <code>**CRL admin</code>** links measurements to participants.</li>
+<li>By the end of <strong>Monday and Thursday</strong>, these files are processed by the <strong>data team</strong>, producing two files per participant (see below). After processing, move processed files or folders to <code>**Archive</code>**.</li>
 <li><strong>Lab result data file</strong> — biomarker measures; CSV</li>
-<li><strong>Lab alert file</strong> — measures and reference ranges; indicates whether a participant is normal (<code>Normal</code>), abnormal (<code>Abnormaal</code>), or alert (<code>Alert</code>)</li>
-<li>Every <strong>Friday and Tuesday</strong>, files in <strong><code>Alert</code></strong> and <strong><code>Abnormaal</code></strong> are reviewed by <strong>research nurses</strong> and <strong>physicians</strong>; participants are informed by phone or email depending on severity. After a participant is informed, move their CDL alert file to <strong><code>Archive</code></strong>.</li>
+<li><strong>Lab alert file</strong> — measures and reference ranges; indicates whether a participant is normal (<code>Normal</code>), abnormal (<code>Afwijkend</code>), or alert (<code>ALERT</code>)</li>
+<li>Every <strong>Friday and Tuesday</strong>, files in <code>ALERT</code> and <code>Afwijkend</code> are reviewed by <strong>research nurses</strong> and <strong>physicians</strong>; participants are informed by phone or email depending on severity. After a participant is informed, move their CDL alert file to <code>**Archived</code>**.</li>
 </ol>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../multicentre-sample-data-workflow/">Multi-centre sample data workflow</a> — blood tubes, RL file, boxing (separate from CDL alerts)</li>
+<li><a href="biobank-data-workflow.md">Biobank data workflow</a> — other blood / lab–adjacent flows</li>
 <li><a href="../device-data-workflow/">Device data workflow</a> — device QC cadence (CDL alert file cleaning appears on the data-team schedule)</li>
 <li><a href="../../systems/biobank/">Systems: Biobank</a> — sample and metadata context</li>
 </ul>

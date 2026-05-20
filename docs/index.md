@@ -1,5 +1,7 @@
 # NMCB hand-over documentation
 
+**Status:** Ongoing
+
 Welcome to the working hand-over for the **Netherlands ME/CFS Cohort and Biobank (NMCB)** data management and data infrastructure role.
 
 This documentation is written to make the role:
@@ -16,6 +18,12 @@ This documentation is written to make the role:
 | **Workflows** | CDL/RDL alerts, multicentre sample handling, devices, data and sample requests, recurring routines |
 | **Systems** | Reference documentation for Castor, devices, scripts, Snowflake, biobank |
 | **Governance** | Data request policy, escalation, SOPs, backlog, task template |
+
+## Page status
+
+- **Complete** — ready to use for hand-over; only routine maintenance expected.
+- **Ongoing** — useful now, but details still need confirmation, extension, or regular updates.
+- **Not started** — placeholder or draft page that still needs core content.
 
 ## How to use this documentation
 

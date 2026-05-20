@@ -1,5 +1,7 @@
 # LDOT
 
+**Status:** Not started
+
 *Lifecycle stages: `TBD`*
 
 ## Purpose

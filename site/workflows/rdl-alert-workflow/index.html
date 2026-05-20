@@ -516,10 +516,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#intended-shape-to-confirm-with-the-team" class="md-nav__link">
+  <a href="#roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Intended shape (to confirm with the team)
+        Roles
       
     </span>
   </a>
@@ -527,10 +527,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handover-notes" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handover notes
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference files
       
     </span>
   </a>
@@ -1329,10 +1340,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#intended-shape-to-confirm-with-the-team" class="md-nav__link">
+  <a href="#roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Intended shape (to confirm with the team)
+        Roles
       
     </span>
   </a>
@@ -1340,10 +1351,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handover-notes" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handover notes
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference files
       
     </span>
   </a>
@@ -1378,22 +1400,52 @@
 
 
 
-<h1 id="rdl-alert-workflow">RDL alert workflow<a class="headerlink" href="#rdl-alert-workflow" title="Permanent link">&para;</a></h1>
-<p><strong>Radboud Diagnostic Lab (RDL)</strong> data are planned to follow a pattern <strong>similar to CDL</strong> (raw exports, linking file, processing into per-participant results and alert-style routing). Exact folder names, file formats, and clinical follow-up cadence should be aligned with the CDL workflow once RDL onboarding is complete.</p>
-<h2 id="intended-shape-to-confirm-with-the-team">Intended shape (to confirm with the team)<a class="headerlink" href="#intended-shape-to-confirm-with-the-team" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Raw RDL exports and any <strong>admin / linkage file</strong> arrive on an agreed schedule and are placed under a defined path on Research Drive (TBD).</li>
-<li><strong>Data team</strong> runs agreed Python (or other) processing: raw → structured per-participant outputs, including any <strong>normal / abnormal / alert</strong> classification if applicable (TBD).</li>
-<li>Clinical or study follow-up for flagged results follows the same governance as CDL (TBD: which roles, which weekdays).</li>
-</ol>
-<h2 id="handover-notes">Handover notes<a class="headerlink" href="#handover-notes" title="Permanent link">&para;</a></h2>
+<h1 id="rdl-alert-workflow">RDL Alert Workflow<a class="headerlink" href="#rdl-alert-workflow" title="Permanent link">&para;</a></h1>
+<p><strong>Status:</strong> Complete</p>
+<p><strong>Radboud Diagnostic Lab (RDL)</strong> blood results and alerts for NMCB participants at the Radboud site. The flow parallels the <a href="../cdl-alert-workflow/">CDL alert workflow</a>: raw export, linkage via a visit log, processing into structured data and alert outputs, then clinical follow-up on abnormal results.</p>
+<h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Work plan: QC rules for RDL are to be written; treat this page as a <strong>placeholder</strong> until SOPs and paths are fixed.</li>
-<li>When live, mirror the evidence checklist used for CDL: sample raw file, processing script location, output layout, and archive rules.</li>
+<li><strong>Radboud UMC team</strong> — uploads raw RDL exports to Research Drive</li>
+<li><strong>Data steward</strong> — adds the latest visit log and organises files into dated folders</li>
+<li><strong>Data scientist</strong> — processes inputs into structured and alert exports</li>
+<li><strong>Physicians and research nurses</strong> — review alert outputs and inform participants when results are abnormal</li>
 </ul>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>The <strong>Radboud UMC team</strong> uploads a raw RDL export (<code>{YYYYMMDD}_RDL.xlsx</code>) to the organised RDL area on Research Drive (<code>organized/RDL/</code>).</li>
+<li>The <strong>data steward</strong> uploads the most recent <code>Radboud Visit Data Log</code>, then moves that file and the new RDL export into a dated subfolder (<code>organized/RDL/{YYYYMMDD}/</code>).</li>
+<li>The <strong>data scientist</strong> processes both inputs and produces two exports:</li>
+<li><strong>Processed RDL data file</strong> — structured lab results for downstream use (including Snowflake) and stored in <code>processed/RDL/{YYYYMMDD}/</code></li>
+<li><strong>RDL alert file</strong> — results with reference ranges for clinical review; used by physicians and nurses to inform participants of abnormal findings; stored in <code>analyzed/RDL/RDL_alert/</code>
+    <code>markdown
+    normal (`Normal`), abnormal (`Afwijkend`), or alert (`ALERT`)</code></li>
+</ol>
+<h2 id="reference-files">Reference files<a class="headerlink" href="#reference-files" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../files/rdl-alert-workflow/RDL%20vs%20CDL%20mapping%20JD.xlsx">RDL vs CDL mapping</a></td>
+<td>Crosswalk between RDL and CDL variables;</td>
+</tr>
+<tr>
+<td><a href="../../files/rdl-alert-workflow/20260518_RDL.xlsx">Example RDL export (2026-05-18)</a></td>
+<td>Sample raw RDL</td>
+</tr>
+<tr>
+<td><a href="../../files/rdl-alert-workflow/lab%20waarden%20AMC%20en%20Radboud%20vergelijking.docx">AMC and Radboud lab value comparison</a></td>
+<td>Comparison of lab values between AMC and Radboud</td>
+</tr>
+</tbody>
+</table>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../cdl-alert-workflow/">CDL alert workflow</a> — reference pattern</li>
+<li><a href="../cdl-alert-workflow/">CDL alert workflow</a> — Amsterdam CRL / CDL reference pattern</li>
 <li><a href="../multicentre-sample-data-workflow/">Multi-centre sample data workflow</a> — Radboud <strong>RL</strong> blood-tube file (separate from RDL diagnostic-lab alert exports)</li>
 </ul>
 

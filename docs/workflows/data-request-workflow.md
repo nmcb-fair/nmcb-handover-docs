@@ -1,5 +1,7 @@
 # Data request workflow
 
+**Status:** Ongoing
+
 Procedure from researcher request to **secure delivery** of study data. Governance context and form contents are summarised in [Data requests (governance)](../governance/data-requests.md).
 
 ## Goal

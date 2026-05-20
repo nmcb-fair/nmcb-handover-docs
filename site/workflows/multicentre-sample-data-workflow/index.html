@@ -563,6 +563,51 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sample boxing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-rename-box-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to rename box data files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to rename box data files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dna-pbmc-and-paxgene-radboud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNA, PBMC, and PAXGene (Radboud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serum-edta-plasma-and-similar-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serum, EDTA, plasma, and similar types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1348,6 +1393,51 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sample boxing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-rename-box-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to rename box data files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to rename box data files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dna-pbmc-and-paxgene-radboud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNA, PBMC, and PAXGene (Radboud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serum-edta-plasma-and-similar-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serum, EDTA, plasma, and similar types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1379,21 +1469,71 @@
 
 
 <h1 id="multi-centre-sample-data-workflow">Multi-centre sample data workflow<a class="headerlink" href="#multi-centre-sample-data-workflow" title="Permanent link">&para;</a></h1>
+<p><strong>Status:</strong> Ongoing</p>
 <h2 id="multi-centre-sample-processing">Multi-centre sample processing<a class="headerlink" href="#multi-centre-sample-processing" title="Permanent link">&para;</a></h2>
 <ol>
-<li>After blood tubes are drawn, <strong>research nurses</strong> open <code>Data lab NMCB  - Blood tubes file.xlsm</code>, use the 2nd column <strong><code>lab_sample_id</code></strong>, scan barcodes of all blood tubes, and add <strong>Participant ID</strong> in the 1st column <strong><code>participant_ID</code></strong>. Rename the file to <code>Data lab NMCB  - Blood tubes file.xlsm - {participant_id}</code> and send it to the lab that processes samples at the Radboud site.</li>
-<li>The Radboud lab (<strong>RL</strong>) completes the remainder of the file (e.g. <code>datetime_collection</code>, <code>start_datetime_processing</code>, <code>finish_datetime_processing</code>, <code>datetime_freezer</code>, <code>aliquot_nr</code>, …). Upload the raw <strong>RL</strong> file to the agreed location on Research Drive.</li>
-<li><strong>Data team</strong> processes the raw RL file with the agreed Python pipeline. Move the raw file to <code>organized/RL/archive</code> and upload the output to <code>processed/RL/</code> as <code>processed_{participant_ID}_RL.csv</code>.</li>
+<li>After blood tubes are drawn, <strong>research nurses</strong> open <code>Data lab NMCB  - Blood tubes file.xlsm</code>, use the 2nd column <code>**lab_sample_id</code><strong>, scan barcodes of all blood tubes, and add Participant ID in the 1st column <code>**participant_ID</code></strong>. Rename the file to <code>Data lab NMCB  - Blood tubes file - {participant_id}.xlsm</code>  and send it to the lab that processes samples at the Radboud site.</li>
+<li>The Radboud lab (<strong>RL</strong>) completes the remainder of the file (e.g. <code>datetime_collection</code>, <code>start_datetime_processing</code>, <code>finish_datetime_processing</code>, <code>datetime_freezer</code>, <code>aliquot_nr</code>, …). Upload the raw <strong>RL</strong> file to the agreed location on Research Drive.
+  Example raw RL file:
+   Example raw RL export</li>
+<li><strong>Data scientist</strong> processes the raw RL file with the agreed Python pipeline. Move the raw file to <code>Radboud/organized/RL/archive</code> and upload the output to <code>Radboud/processed/RL/</code> as <code>Radboud/processed_{participant_ID}_RL.csv</code>.</li>
 </ol>
 <p><strong>To improve:</strong> (1) guidance on how to fill in the <code>.xlsm</code> (2) SOP for uploading.</p>
 <hr />
 <h2 id="sample-boxing">Sample boxing<a class="headerlink" href="#sample-boxing" title="Permanent link">&para;</a></h2>
 <ol>
-<li>When a sample box is full and delivered to Amsterdam UMC biobank, upload the <strong>Box Data File</strong> to NMCB Research Drive. Each box needs a unique ID and naming per <strong>SOP: how to rename box data file</strong>.</li>
+<li>When a sample box is full and delivered to Amsterdam UMC biobank, upload the <strong>Box Data File</strong> to NMCB Research Drive (<code>Radboud/processed/Biobank/</code>). Rename the file and fill in the box ID as described in <a href="#how-to-rename-box-data-files">How to rename box data files</a> before upload.</li>
 <li><strong>Data team</strong> expands the Box Data File by adding columns from existing RL files—linking each sample row to the source participant and processing metadata. The result is the <strong>Biobank Submission File</strong>.</li>
 <li>Another <strong>data team</strong> member validates (spot-check or scripts). Send the validated file to the biobank via FileSender. Current contacts: Erik and Maureen.</li>
 </ol>
-<p><strong>To improve:</strong> (1) SOP on <strong>how to rename box data file</strong> (2) SOP on uploading.</p>
+<h3 id="how-to-rename-box-data-files">How to rename box data files<a class="headerlink" href="#how-to-rename-box-data-files" title="Permanent link">&para;</a></h3>
+<p>One box data file represents <strong>one physical box</strong>. Each box must have its <strong>own unique ID</strong>; the ID must <strong>not be empty</strong>.</p>
+<p>The box ID in the <strong>filename</strong> must match the value in the <strong>designated column</strong> inside that file.</p>
+<h4 id="dna-pbmc-and-paxgene-radboud">DNA, PBMC, and PAXGene (Radboud)<a class="headerlink" href="#dna-pbmc-and-paxgene-radboud" title="Permanent link">&para;</a></h4>
+<p>These sample types use a shared naming pattern at Radboud UMC:</p>
+<pre><code class="language-text">NMCB_{SAMPLETYPE}_R{nn}_{YYYYMMDD}.xlsx
+</code></pre>
+<ul>
+<li><code>**R**</code> — Radboud UMC  </li>
+<li><code>**{nn}**</code> — box sequence number (<code>01</code> = first box, <code>02</code> = second, …)  </li>
+<li><code>**{YYYYMMDD}**</code> — date the file is prepared or submitted</li>
+</ul>
+<p>Enter the box ID (without the date suffix) into the column shown below:</p>
+<table>
+<thead>
+<tr>
+<th>Sample type</th>
+<th>Example filename</th>
+<th>Column for box ID</th>
+<th>Enter this value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNA</td>
+<td><code>NMCB_DNA_R01_20260318.xlsx</code></td>
+<td><code>Container Id</code></td>
+<td><code>NMCB_DNA_R01</code></td>
+</tr>
+<tr>
+<td>PBMC</td>
+<td><code>NMCB_PBMC_R01_20260318.xlsx</code></td>
+<td><code>Doos</code></td>
+<td><code>NMCB_PBMC_R01</code></td>
+</tr>
+<tr>
+<td>PAXGene</td>
+<td><code>NMCB_PAXGENE_R01_20260318.xlsx</code></td>
+<td><code>Doos</code></td>
+<td><code>NMCB_PAXGENE_R01</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PAXGene:</strong> use the pattern above (e.g. <code>NMCB_PAXGENE_R01</code>), not the older style such as <code>NMCB_PAXgene_box013</code>. Continuing the old numbering risks mixing samples across boxes. If <code>NMCB_PAXgene_box013</code> was already used, start the new sequence at <code>NMCB_PAXGENE_R01</code> (or the next free <code>R{nn}</code>) and keep it consistent from then on.</p>
+<h4 id="serum-edta-plasma-and-similar-types">Serum, EDTA, plasma, and similar types<a class="headerlink" href="#serum-edta-plasma-and-similar-types" title="Permanent link">&para;</a></h4>
+<p>Box IDs for types such as <strong>Serum</strong>, <strong>EDTA</strong>, and <strong>Plasma</strong> are <strong>generated automatically when samples are scanned</strong>. Do not invent or assign box IDs manually for these files.</p>
+<p>DNA, PBMC, and PAXGene boxes are separate from Serum / EDTA / Plasma boxes; follow the rules for the sample type you are handling.</p>
+<p><strong>To improve:</strong> SOP for uploading box data files to Research Drive.</p>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../sample-request-workflow/">Sample request workflow</a></li>

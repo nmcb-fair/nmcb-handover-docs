@@ -1,5 +1,7 @@
 # Scripts and QC
 
+**Status:** Ongoing
+
 *Role: conversion and QC scripts; eligibility-related logic; extracts and summary counts.*
 
 The board indicates a substantial amount of scripting work in Python and R, including quality control of device outputs.

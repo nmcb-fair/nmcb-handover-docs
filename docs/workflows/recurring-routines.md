@@ -1,113 +1,196 @@
 # Recurring study routines
 
-Mailbox triage, logs, screeners, and ad hoc reporting—tasks that keep the study running but are not a single named “pipeline” like CDL or devices.
+**Status:** Ongoing
 
-## Weekly NMCB mailbox
+Operational tasks that keep NMCB running day to day: tracking visits and raw data collection, maintaining identifiers, and producing summary counts. These are not full end-to-end pipelines (see [Workflows](index.md) for CDL, devices, sample requests, etc.) but they feed those pipelines.
+
+
+| Routine                                                   | Typical cadence                        | Primary output                                 |
+| --------------------------------------------------------- | -------------------------------------- | ---------------------------------------------- |
+| [Regular visit data log](#regular-visit-data-log)         | Weekly (confirm with team)             | Per-participant raw data collection status     |
+| [Checklist for data routine](#checklist-for-data-routine) | Bi-weekly; before each data request    | QC sign-off that raw/processed data are usable |
+| [Regular subject ID log](#regular-subject-id-log)         | Bi-weekly; when new participants enrol | Consistent IDs across systems                  |
+| [Get numbers](#get-numbers)                               | Weekly/bi-weekly or on request         | Board tables and funnel plots                  |
+
+
+Complete locations and owners in [Where everything lives](../where-everything-lives.md). Formal SOP links in [SOPs](../governance/sops.md).
+
+---
+
+## Regular visit data log
 
 ### Purpose
 
-Monitor the shared mailbox so time-sensitive operational items are not missed.
+Track, per participant and visit, whether expected **raw data sources** were collected (devices, lab files, questionnaires, etc.). This log is the operational source of truth for “what still needs to be uploaded or fixed” after a visit.
+
+It supports:
+
+- follow-up with nurses and assistants on missing uploads  
+- [CDL](cdl-alert-workflow.md) and [RDL](rdl-alert-workflow.md) processing (visit linkage)  
+- [Device data workflow](device-data-workflow.md) QC cadence
 
 ### Frequency
 
-Weekly at minimum; more often during active recruitment or heavy participant contact.
+- **Weekly** during active visit periods (recommended minimum)  
+- **After each visit batch** when recruitment or scheduling is heavy  
+- Confirm exact weekday and owner with the study coordinator (currently `TBD` in [Where everything lives](../where-everything-lives.md))
 
 ### Inputs
 
-- access to the shared mailbox  
-- current contact list  
-- current routing rules or responsibilities  
+- completed visits for the period 
+- current visit data log (previous version)  
+- knowledge of which modalities apply per visit type (clinic vs home)  
+- access to Research Drive folders where raw files should appear (see [Research Drive](../systems/research-drive.md))
 
 ### Steps
 
-1. Review unread or new messages.  
-2. Classify: participant communication; scheduling / visit follow-up; data issue; device issue; researcher request; administrative.  
-3. Forward or assign when outside your ownership.  
-4. Record actions in the relevant log or tracker.  
-5. Flag unresolved items that need follow-up.
+1. Create a backup of the current version and move it to **archive** folder with a date in the filename (e.g. `visit_data_log__YYYYMMDD.xlsx`).before making changes.
+2. For each participant row, record at minimum:
+  - participant ID (Castor / study ID; max 7 characters — see Quality checks below)  
+  - visit date (optional: and visit type (clinic / home))
+  - per data source: stored or not, depending on the file setup.
+3. Compare against the previous log; flag **new** completions and **new** gaps.
+4. Cross-check high-impact sources:
+  - device exports (Omron, Tanita, Nellcor, VU-AMS, ACS as applicable)  
+  - lab-related handoffs where this participant should appear in CDL/RDL paths
+5. Assign follow-ups (upload, re-export, ID correction) and note due dates outside the inbox only.
 
-### Output
+### Example layout
 
-Mailbox triaged; urgent issues routed; actions logged.
+Use a stable column set so the log can be compared week to week.
+
+Example visit data log
+
+### Outputs
+
+- Updated visit data log (Excel or agreed format)  
+- Short list of participants with missing raw data and assigned owners
 
 ### Quality checks
 
-- No urgent participant-facing email left unassigned.  
-- Data problems have an owner.  
-- Follow-up deadlines visible outside the inbox.
+- Completed visits appear in the log with visit date and type filled.  
+- Incomplete or rescheduled visits are visibly flagged, not left blank.  
+- Participant IDs are **at most 7 characters** and match Castor / subject ID log.  
+- Each expected modality for that visit type has a clear collected / pending / N/A value.  
+- Downstream tasks (device QC, CDL/RDL folders) can be derived from the log without re-asking coordinators.
+
+### Related
+
+- [Device data workflow](device-data-workflow.md) — where raw device files should land  
+- [RDL alert workflow](rdl-alert-workflow.md) — uses `Radboud Visit Data Log` for linkage  
+- [Get numbers](#get-numbers) — visit **counts** from LDOT overview; this log tracks **raw file collection**
 
 ---
 
-## Weekly visit log
+## Checklist for data routine
 
 ### Purpose
 
-Accurate overview of completed, pending, and problematic visits.
+Confirm that raw, processed, and transformed data are **available, complete, and safe to use** before merging, reporting, or fulfilling a [data request](data-request-workflow.md). This is a structured QC pass, not a substitute for pipeline-specific workflows.
 
 ### Frequency
 
-Weekly.
+- **Bi-weekly** during active data collection  
+- **Always before** starting work on a formal data request or large extract  
+- After any known outage, export failure, or Castor/LDOT schema change
+
+### Systems
+
+- [Research Drive](../systems/research-drive.md) — raw and processed folders  
+- [Snowflake](../systems/snowflake.md) — structured counts and tables (when in use)  
+- [Scripts and QC](../systems/scripts-and-qc.md) — cleaning and validation scripts
 
 ### Steps
 
-1. Compare planned vs completed visits.  
-2. Update visit date, visit type, status.  
-3. Note rescheduling, incomplete procedures, or data issues.  
-4. Flag visits with pending downstream actions (upload, device return, etc.).
+1. **Scope** — List which sources are in scope for this run (e.g. devices, CDL, Castor exports, LDOT, Snowflake tables).
+2. **Raw layer** — For each source folder, check:
+  - files exist for the expected date range  
+  - file size is plausible (see table below)  
+  - naming convention matches SOP / device workflow
+3. **Row counts** — Where possible, compare:
+  - number of participants or visits in raw exports  
+  - number of rows in processed files or Snowflake tables for the same slice  
+  - large mismatches → stop and investigate before using data downstream
+4. **Identifiers** — Spot-check participant IDs:
+  - length ≤ 7 characters  
+  - no obvious duplicates or placeholder values  
+  - alignment with [subject ID log](#regular-subject-id-log) and Castor
+5. **Processed / transformed** — Confirm processed outputs exist for raw inputs you expect to be merged (dated subfolders, no empty “latest” only).
+6. **Sign-off** — Record date, checker name, sources checked, and any exceptions in a short log (email or checklist file).
+
+### File size and sanity checks
+
+
+| Check             | Rule of thumb                                                                                                                                 | If failed                                   |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| Empty file        | **0 B** is incorrect                                                                                                                          | Re-export or restore from backup            |
+| VU-AMS export     | ~**200 MB** per file can be normal; multiple or huge files may indicate abnormal export (see [Device data workflow](device-data-workflow.md)) | Escalate per device QC                      |
+| Delimited exports | Opens with expected row count in Excel/R                                                                                                      | Wrong delimiter or incomplete export        |
+| Participant ID    | **Max length 7**                                                                                                                              | Fix in Castor / subject ID log before merge |
+
+
+### Potential automation (future)
+
+- Automated row-count comparison: raw export vs Snowflake table for the same source and date  
+- Scripted file-size and naming checks in [Scripts and QC](../systems/scripts-and-qc.md) inventory
+
+Document any script used in the sign-off note.
+
+### Outputs
+
+- Completed checklist (dated)  
+- List of blocked sources with owner and target fix date
 
 ### Quality checks
 
-- Completed visits appear in the log.  
-- Incomplete visits visibly flagged.  
-- Data tasks can be derived from the log.
+- No source marked “OK” without a spot-check or count comparison.  
+- Exceptions are explicit (what was skipped and why).  
+- Data request work does not start while critical sources are red on the checklist.
 
 ---
 
-## Bi-weekly subject ID log
+## Regular subject ID log
 
 ### Purpose
 
-Keep participant identifiers consistent across operational and analytical systems.
+Keep **participant identifiers** consistent and traceable across operational and analytical systems (Castor, LDOT, device exports, lab files, Snowflake, sample tracking). The log is especially important for participants who have **completed a visit**, where PII and study ID must map correctly (see [Subject ID Log SOP](../governance/sops.md)).
 
 ### Frequency
 
-Bi-weekly and whenever new participants are added.
+- **Bi-weekly**  
+- **Whenever new participants are registered** or IDs are corrected  
+- After any reported duplicate-ID or merge issue ([escalation](../governance/escalation.md))
+
+### Inputs
+
+- current subject ID log  
+- [CRL admin](cdl-alert-workflow.md) or equivalent admin files where Castor IDs and **patient type** are maintained  
 
 ### Steps
 
-1. Identify new participants.  
-2. Assign or verify subject ID per agreed convention.  
-3. Check duplicates or reuse.  
-4. Confirm consistency in dependent systems.  
-5. Save the log in the agreed location.
+1. Create a backup of the current version before making any changes. Move the backup to the `archive` folder and include the date in the filename, e.g. `Subject_ID_Log_YYYYMMDD.xlsx`.
+2. Identify participants who have been added since the last log update.
+3. For each new participant, assign or verify the study ID according to the agreed convention. Do not create ad hoc ID formats.
+4. Record the mapping fields needed for joins, such as Castor ID, email, phone number, and name. Access to PII should be restricted to authorised roles only.
+5. Check for duplicates (e.g. the same person with two IDs) and gaps (e.g. missing ID for an active participant). This should be detected automatically by Excel validation, but please also check manually.
+6. For participants who have completed a visit, confirm that the same ID appears in dependent systems by spot-checking Castor, one device folder, and one lab path.
+
+### Outputs
+
+- Updated subject ID log  
+- Short note on any ID changes or merges applied
 
 ### Quality checks
 
-- No duplicate IDs; no accidental gaps.  
-- Mapping consistent across logs, Castor, and device outputs.
+- No duplicate active IDs for the same participant.  
+- No accidental gaps in the sequence (unless explained by study design).  
+- Mapping consistent across visit log, Castor, and device/lab outputs used that week.  
+- PII stored only where access is controlled (SOP target audience: authorised assistants or data manager).
 
----
+### Related
 
-## Bi-weekly send screeners to Linked2Trial
-
-### Purpose
-
-New participants receive general screeners within the expected window (board note: Laurian provides lists; **48-hour** turnaround after receipt).
-
-### Steps
-
-1. Check for a new participant list.  
-2. Validate identifiers and contact fields.  
-3. Prepare input file or upload package.  
-4. Send or upload per agreed workflow.  
-5. Record completion date.  
-6. Flag participants that could not be processed.
-
-### Quality checks
-
-- 48-hour target where possible.  
-- No duplicate participants.  
-- Failed transfers logged.
+- [Checklist for data routine](#checklist-for-data-routine) — ID length and duplicate checks  
+- [Get numbers](#get-numbers) — uses `CRL_admin.xlsx` for type/sex/age alignment in overview exports
 
 ---
 
@@ -115,40 +198,91 @@ New participants receive general screeners within the expected window (board not
 
 ### Purpose
 
-Summary counts for reports, dashboards, or ad hoc asks (eligibility, recruitment, visit completion).
+Produce standard NMCB recruitment and visit-progress counts for board updates, operational reports, and ad hoc questions (registered, screener sent/completed, waiting for call/video/visit, visit done, losses).
+
+For routine NMCB reporting, use the `**nmcb-overview`** repository rather than ad hoc Snowflake or Castor queries.
 
 ### Frequency
 
-As requested; may be weekly or monthly for routine reports.
+- Weekly or bi-weekly during active recruitment (typical board rhythm)
+- On demand when stakeholders ask for updated funnel or visit counts
+- Always after fresh LDOT/screener exports are available
 
-### Systems
+### Primary system
 
-- [Scripts and QC](../systems/scripts-and-qc.md)  
-- [Snowflake](../systems/snowflake.md)  
-- [Castor](../systems/castor.md)  
+- GitHub repository: `nmcb-fair/nmcb-overview`
+- Local entry point: `run_all.R` (runs overview build, then numbers/plots)
+- User-facing run instructions: `USER_GUIDE.Rmd` in that repository
+
+Related references:
+
+- [Scripts and QC](../systems/scripts-and-qc.md)
+- [Castor](../systems/castor.md) (source system for screeners; counts are derived via LDOT overview pipeline)
+- [Snowflake](../systems/snowflake.md) (use only for non-standard metrics not covered by `nmcb-overview`)
+
+### Prerequisites (data refresh)
+
+Before running, place the latest exports in `nmcb-overview/data/`:
+
+- `data/LDOT/` — latest LDOT participant and event exports (Amsterdam UMC, NMCB, Radboud)
+- `data/Screening/` — latest screener CSV exports (ME/CFS, Post-COVID, Lyme, legacy Castor screener if applicable)
+- `data/postcode/` — postcode radius reference files (`50km-pc4.csv`, AMC/Radboud radius files)
+- `data/CRL Admin/` — `CRL_admin.xlsx` (used to align participant type, sex, age, and deduplication)
+
+If any folder is stale, output numbers will reflect old data even if the script runs successfully.
 
 ### Steps
 
-1. Clarify metric and period.  
-2. Choose script, query, or export.  
-3. Run and validate (e.g. vs previous run).  
-4. Deliver in agreed format; document method for reproducibility.
+1. Confirm the reporting date (default: today). To re-run a previous date:
+  - set `NMCB_RUN_DATE=YYYYMMDD` before sourcing `run_all.R`.
+2. Open the project in RStudio (`Overview.Rproj`) from the `nmcb-overview` folder.
+3. Restore dependencies once per machine if needed: `renv::restore()`.
+4. Run `run_all.R` (Source).
+  - Step 1 builds participant overview: `ldot_overview.Rmd`
+  - Step 2 generates summary tables/plots: `scripts/get_numbers.R`
+5. Collect outputs and share in the agreed format (usually Excel + PDF slides).
+6. Record run date and input file versions used (for reproducibility).
 
----
+### Outputs
 
-## Prepare checklist for data routine
+Main outputs are written under `export/`:
 
-### Purpose
+- Participant-level dataset:
+  - `export/overview_participants/NMCB_Participants_LDOT__YYYYMMDD.xlsx`
+- Numbers and figures (dated subfolder):
+  - `export/numbers_and_figures/YYYYMMDD/overview_tables__YYYYMMDD.xlsx`
+  - `export/numbers_and_figures/YYYYMMDD/participant_flow_after_screener__YYYYMMDD.pdf`
+  - `export/numbers_and_figures/YYYYMMDD/participant_funnel_pe_participant_type.pdf__YYYYMMDD.pdf`
+  - `export/numbers_and_figures/YYYYMMDD/geo_by_type_no_screener__YYYYMMDD.pdf`
+  - `export/numbers_and_figures/YYYYMMDD/visit_sex_by_type__YYYYMMDD.pdf`
+  - `export/numbers_and_figures/YYYYMMDD/visit_dsq_by_type__YYYYMMDD.pdf`
 
-Reduce dependence on memory; standardise recurring work.
+### Which table answers which question
 
-### Frequency
+In `overview_tables__YYYYMMDD.xlsx`:
 
-Update monthly or when operational steps change.
 
-### Steps
+| Sheet / table             | Use when asked about                                                                                                              |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `overview_table`          | Overall funnel by participant type (`pt_type`): registered, screener sent/completed, waiting stages, visit done/scheduled, losses |
+| `geo_by_type_no_screener` | Registered participants without screener yet, split by distance to AMC/Radboud                                                    |
+| `visit_sex_by_type`       | Sex distribution among participants with visit done                                                                               |
+| `visit_dsq_by_type`       | DSQ criteria counts (CDC/CCC/IOM) among participants with visit done                                                              |
 
-1. List recurring tasks by week, month, and ad hoc trigger.  
-2. Add owner, backup, expected duration.  
-3. Link each item to documentation.  
-4. Version the checklist.
+
+### Quality checks
+
+- Compare `overview_table` totals to the previous run; large unexpected jumps usually indicate export or deduplication issues.
+- Confirm today’s (or requested) date appears in output filenames.
+- Spot-check a few known participants in `NMCB_Participants_LDOT__YYYYMMDD.xlsx` (ID, `pt_type`, `visit_status`, loss flags).
+- Verify screener and LDOT files in `data/` were updated before the run.
+- If script fails on missing columns, re-export source files with expected templates (see `USER_GUIDE.Rmd`).
+
+### When not to use this routine
+
+Use a different method (Snowflake query, Castor export, manual count) only when:
+
+- the requested metric is not implemented in `nmcb-overview`, or
+- a one-off historical slice is needed outside current export files.
+
+Document the alternative method in the report footnote.

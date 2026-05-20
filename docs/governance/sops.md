@@ -1,5 +1,7 @@
 # Data SOPs
 
+**Status:** Ongoing
+
 The board lists the Standard Operation Procedure (SOP) documents related to raw data collection in daily routine.
 
 ## SOP in main center

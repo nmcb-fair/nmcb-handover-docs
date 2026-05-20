@@ -1,5 +1,7 @@
 # Biobank data
 
+**Status:** Ongoing
+
 *Role in NMCB: sample metadata; sample preparation and request workflows.*
 
 End-to-end procedures are documented under **Workflows**:

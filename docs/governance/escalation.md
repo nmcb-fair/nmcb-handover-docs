@@ -1,5 +1,7 @@
 # Issue log and escalation
 
+**Status:** Complete
+
 A hand-over is incomplete without a simple rule for what to do when a task fails.
 
 ## Escalation model

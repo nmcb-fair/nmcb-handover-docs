@@ -1,5 +1,7 @@
 # Where everything lives
 
+**Status:** Not started
+
 This page should be completed and kept current. It is often the most useful part of a hand-over.
 
 ## Recommended structure

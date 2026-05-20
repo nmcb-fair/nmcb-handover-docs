@@ -1,5 +1,7 @@
 # Data architecture
 
+**Status:** Ongoing
+
 This page provides a systems-level overview. For procedures, see [Workflows](../workflows/index.md).
 
 ## Overview

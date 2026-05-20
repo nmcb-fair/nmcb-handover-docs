@@ -1,6 +1,8 @@
 # Sample Request Workflow
 
-This page documents the **Sample Request** project under `GitHub/Sample Request/`. The project turns CRL Admin, OpenSpecimen, and screening exports into reproducible **participant-level** and **specimen-level** outputs for sample release requests.
+**Status:** Complete
+
+This page documents the **Sample Request** project under `github.com/nmcb-fair/sample-request`. The project turns CRL Admin, OpenSpecimen, and screening exports into reproducible **participant-level** and **specimen-level** outputs for sample release requests.
 
 The workflow has two layers:
 

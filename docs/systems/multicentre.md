@@ -1,5 +1,7 @@
 # Multicentre data
 
+**Status:** Ongoing
+
 *Role: data transfer and coordination between study sites.*
 
 The board shows work around multicentre collaboration and data transfer between sites.

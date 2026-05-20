@@ -1,5 +1,7 @@
 # Scope of this hand-over
 
+**Status:** Complete
+
 ## Role summary
 
 This role supports the NMCB study as a bridge between:
