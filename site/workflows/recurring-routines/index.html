@@ -2205,29 +2205,27 @@
 </ul>
 <h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
 <ul>
-<li>planned or completed visits for the period (scheduling list, Castor/LDOT export, or coordinator list)  </li>
+<li>completed visits for the period </li>
 <li>current visit data log (previous version)  </li>
 <li>knowledge of which modalities apply per visit type (clinic vs home)  </li>
 <li>access to Research Drive folders where raw files should appear (see <a href="../../systems/research-drive/">Research Drive</a>)</li>
 </ul>
 <h3 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Export or copy the list of participants with a visit in the reporting period (or all open visits).</li>
+<li>Create a backup of the current version and move it to <strong>archive</strong> folder with a date in the filename (e.g. <code>visit_data_log__YYYYMMDD.xlsx</code>).before making changes.</li>
 <li>For each participant row, record at minimum:</li>
 <li>participant ID (Castor / study ID; max 7 characters — see Quality checks below)  </li>
-<li>visit date and visit type (clinic / home)  </li>
-<li>status: planned / completed / rescheduled / cancelled  </li>
-<li>per data source: collected yes/no, file location or “pending”, and owner if blocked</li>
+<li>visit date (optional: and visit type (clinic / home))</li>
+<li>per data source: stored or not, depending on the file setup.</li>
 <li>Compare against the previous log; flag <strong>new</strong> completions and <strong>new</strong> gaps.</li>
 <li>Cross-check high-impact sources:</li>
 <li>device exports (Omron, Tanita, Nellcor, VU-AMS, ACS as applicable)  </li>
 <li>lab-related handoffs where this participant should appear in CDL/RDL paths</li>
 <li>Assign follow-ups (upload, re-export, ID correction) and note due dates outside the inbox only.</li>
-<li>Save the log in the agreed location with a date in the filename (e.g. <code>visit_data_log__YYYYMMDD.xlsx</code>).</li>
 </ol>
 <h3 id="example-layout">Example layout<a class="headerlink" href="#example-layout" title="Permanent link">&para;</a></h3>
 <p>Use a stable column set so the log can be compared week to week.</p>
-<p><img alt="Example visit data log" src="../../files/recurring-routines/example-visit-data-log.png" /></p>
+<p>Example visit data log</p>
 <h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Updated visit data log (Excel or agreed format)  </li>
@@ -2342,19 +2340,17 @@
 </ul>
 <h3 id="inputs_1">Inputs<a class="headerlink" href="#inputs_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>new registrations from LDOT / Castor / coordinator list  </li>
 <li>current subject ID log  </li>
-<li><a href="../cdl-alert-workflow/">CRL admin</a> or equivalent admin files where Castor IDs are maintained  </li>
-<li>device or lab exports that expose participant ID fields</li>
+<li><a href="../cdl-alert-workflow/">CRL admin</a> or equivalent admin files where Castor IDs and <strong>patient type</strong> are maintained  </li>
 </ul>
 <h3 id="steps_2">Steps<a class="headerlink" href="#steps_2" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Identify participants added since the last log update.</li>
-<li>For each new participant, assign or <strong>verify</strong> study ID per agreed convention (do not invent ad hoc formats).</li>
-<li>Record mapping fields needed for joins (e.g. Castor ID, email hash, visit-done flag) per local SOP — restrict PII access to authorised roles only.</li>
-<li>Check for <strong>duplicates</strong> (same person, two IDs) and <strong>gaps</strong> (missing ID for an active participant).</li>
-<li>Confirm the same ID appears in dependent systems for visit-done participants (spot-check Castor, one device folder, one lab path).</li>
-<li>Save the log in the restricted location defined in the Subject ID Log SOP (<code>TBD</code> in governance table until path is finalised).</li>
+<li>Create a backup of the current version before making any changes. Move the backup to the <code>archive</code> folder and include the date in the filename, e.g. <code>Subject_ID_Log_YYYYMMDD.xlsx</code>.</li>
+<li>Identify participants who have been added since the last log update.</li>
+<li>For each new participant, assign or verify the study ID according to the agreed convention. Do not create ad hoc ID formats.</li>
+<li>Record the mapping fields needed for joins, such as Castor ID, email, phone number, and name. Access to PII should be restricted to authorised roles only.</li>
+<li>Check for duplicates (e.g. the same person with two IDs) and gaps (e.g. missing ID for an active participant). This should be detected automatically by Excel validation, but please also check manually.</li>
+<li>For participants who have completed a visit, confirm that the same ID appears in dependent systems by spot-checking Castor, one device folder, and one lab path.</li>
 </ol>
 <h3 id="outputs_2">Outputs<a class="headerlink" href="#outputs_2" title="Permanent link">&para;</a></h3>
 <ul>
