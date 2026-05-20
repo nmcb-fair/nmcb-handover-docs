@@ -59,7 +59,7 @@ It supports:
 
 Use a stable column set so the log can be compared week to week.
 
-Example visit data log
+![Example visit data log](../files/recurring-routines/example-visit-data-log.png)
 
 ### Outputs
 
@@ -200,7 +200,7 @@ Keep **participant identifiers** consistent and traceable across operational and
 
 Produce standard NMCB recruitment and visit-progress counts for board updates, operational reports, and ad hoc questions (registered, screener sent/completed, waiting for call/video/visit, visit done, losses).
 
-For routine NMCB reporting, use the `**nmcb-overview`** repository rather than ad hoc Snowflake or Castor queries.
+For routine NMCB reporting, use the **`nmcb-overview`** repository rather than ad hoc Snowflake or Castor queries.
 
 ### Frequency
 

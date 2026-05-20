@@ -4,13 +4,14 @@
 
 ## Multi-centre sample processing
 
-1. After blood tubes are drawn, **research nurses** open `Data lab NMCB  - Blood tubes file.xlsm`, use the 2nd column `**lab_sample_id`**, scan barcodes of all blood tubes, and add Participant ID in the 1st column `**participant_ID`**. Rename the file to `Data lab NMCB  - Blood tubes file - {participant_id}.xlsm`  and send it to the lab that processes samples at the Radboud site.
+1. After blood tubes are drawn, **research nurses** open `Data lab NMCB  - Blood tubes file.xlsm`, use the 2nd column `lab_sample_id`, scan barcodes of all blood tubes, and add Participant ID in the 1st column `participant_ID`. Rename the file to `Data lab NMCB  - Blood tubes file - {participant_id}.xlsm` and send it to the lab that processes samples at the Radboud site.
 2. The Radboud lab (**RL**) completes the remainder of the file (e.g. `datetime_collection`, `start_datetime_processing`, `finish_datetime_processing`, `datetime_freezer`, `aliquot_nr`, …). Upload the raw **RL** file to the agreed location on Research Drive.
-  Example raw RL file:
-   Example raw RL export
-3. **Data scientist** processes the raw RL file with the agreed Python pipeline. Move the raw file to `Radboud/organized/RL/archive` and upload the output to `Radboud/processed/RL/` as `Radboud/processed_{participant_ID}_RL.csv`.
 
-**To improve:** (1) guidance on how to fill in the `.xlsm` (2) SOP for uploading.
+   **Example raw RL export:**
+
+   ![Example raw RL export](../files/multicentre-sample-data-workflow/example-raw-rl-export.png)
+
+3. **Data scientist** processes the raw RL file with the agreed Python pipeline. Move the raw file to `Radboud/organized/RL/archive` and upload the output to `Radboud/processed/RL/` as `Radboud/processed_{participant_ID}_RL.csv`.
 
 ---
 
