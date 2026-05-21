@@ -1052,6 +1052,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#blood-tube-labels-nmcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blood tube labels (NMCB)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contacts-amsterdam-umc-biobank" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1568,6 +1579,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#blood-tube-labels-nmcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blood tube labels (NMCB)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contacts-amsterdam-umc-biobank" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1654,27 +1676,31 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../../files/biobank/nmcb-biobank-mappings-variables.xlsx">NMCB biobank Mappings v1</a></td>
+<td><a href="../../files/biobank/nmcb-biobank-mappings-variables.xlsx">NMCB biobank mappings v1</a></td>
 <td>Variable definitions and mapping rules</td>
 </tr>
 <tr>
 <td><a href="../../files/biobank/Understnd%20OS.xlsx">Understand OpenSpecimen</a></td>
 <td>OpenSpecimen fields and how they relate to NMCB</td>
 </tr>
+<tr>
+<td><a href="../../files/cdl-alert-workflow/NMCB%20Blood%20Label.xlsx">NMCB Blood Label</a></td>
+<td>Blood tube index: ID, cap colour, sample type</td>
+</tr>
 </tbody>
 </table>
 <h2 id="external-lab-biobank-mappings">External lab → biobank mappings<a class="headerlink" href="#external-lab-biobank-mappings" title="Permanent link">&para;</a></h2>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>Map fields from the external-lab template to biobank variables:</p>
-<p>Variable mappings: external lab to biobank</p>
+<p><img alt="Variable mappings: external lab to biobank" src="../../files/biobank/nmcb-biobank-mappings-variables.png" /></p>
 <p><em>Figure: variable mappings (external lab → biobank).</em></p>
 <h3 id="sample-types">Sample types<a class="headerlink" href="#sample-types" title="Permanent link">&para;</a></h3>
 <p>Map external-lab sample type labels to biobank sample types:</p>
-<p>Sample type mappings: external lab to biobank</p>
+<p><img alt="Sample type mappings: external lab to biobank" src="../../files/biobank/nmcb-biobank-mappings-sampletypes.png" /></p>
 <p><em>Figure: sample type mappings (external lab → biobank).</em></p>
 <h2 id="biobank-data-flow">Biobank data flow<a class="headerlink" href="#biobank-data-flow" title="Permanent link">&para;</a></h2>
 <p>End-to-end path from collection through storage and requests (internal and external):</p>
-<p>Biobank data flow: internal and external paths</p>
+<p><img alt="Biobank data flow: internal and external paths" src="../../files/biobank/biobank-data-flow.png" /></p>
 <p><em>Figure: biobank data flow.</em></p>
 <table>
 <thead>
@@ -1685,13 +1711,97 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../../files/biobank/biobank%20data%20flow.drawio">Biobank data flow drawio (editable)</a></td>
-<td>Source file for the workflow</td>
+<td><a href="../../files/biobank/biobank%20data%20flow.drawio">Biobank data flow (draw.io)</a></td>
+<td>Editable source for the workflow diagram</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Radboud / multi-centre detail:</strong> RL file processing, <a href="../../workflows/multicentre-sample-data-workflow/#how-to-rename-box-data-files">box file naming</a>, expansion into a <strong>Biobank Submission File</strong>, validation, and FileSender delivery — see <a href="../../workflows/multicentre-sample-data-workflow/">Multi-centre sample data workflow</a>.</p>
 <p><strong>Sample requests:</strong> selection and pseudonymized exports — see <a href="../../workflows/sample-request-workflow/">Sample request workflow</a>.</p>
+<h2 id="blood-tube-labels-nmcb">Blood tube labels (NMCB)<a class="headerlink" href="#blood-tube-labels-nmcb" title="Permanent link">&para;</a></h2>
+<p>Index of blood tubes used at visit: cap colour and sample type. Full reference: <a href="../../files/cdl-alert-workflow/NMCB%20Blood%20Label.xlsx">NMCB Blood Label</a>.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Color</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Purple small</td>
+<td>EDTA for DNA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Red</td>
+<td>Serum</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Purple large</td>
+<td>EDTA Plasma 01</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Green</td>
+<td>PBMC Na-Heparin</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Green</td>
+<td>PBMC Na-Heparin</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Green</td>
+<td>PBMC Na-Heparin</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Green</td>
+<td>Heparin Plasma</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Purple large</td>
+<td>EDTA Plasma 02</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Blue</td>
+<td>Citrate 01</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Blue</td>
+<td>Citrate 02</td>
+</tr>
+<tr>
+<td>—</td>
+<td>PAXGene Eigen Sticker</td>
+<td>PAXGene RNA 01</td>
+</tr>
+<tr>
+<td>—</td>
+<td>PAXGene Eigen Sticker</td>
+<td>PAXGene RNA 02</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Camouflage</td>
+<td>PBMC CPT 01</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Camouflage</td>
+<td>PBMC CPT 02</td>
+</tr>
+</tbody>
+</table>
+<p><em>Figure: NMCB Blood Label.</em></p>
 <h2 id="contacts-amsterdam-umc-biobank">Contacts (Amsterdam UMC biobank)<a class="headerlink" href="#contacts-amsterdam-umc-biobank" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1718,6 +1828,7 @@
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../openspecimen/">OpenSpecimen</a> — sample tracking system</li>
+<li><a href="../../workflows/cdl-alert-workflow/">CDL alert workflow</a> — CRL / CDL lab results (blood label xlsx stored with CDL files)</li>
 <li><a href="../../workflows/multicentre-sample-data-workflow/">Multi-centre sample data workflow</a> — RL file, boxing, submission</li>
 <li><a href="../../workflows/sample-request-workflow/">Sample request workflow</a> — requesting samples from the biobank</li>
 <li><a href="../research-drive/">Research Drive</a> — shared storage layout</li>
