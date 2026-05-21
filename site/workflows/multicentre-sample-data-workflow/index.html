@@ -665,6 +665,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../device-setup-for-visit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device setup for visit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../data-request-workflow/" class="md-nav__link">
         
   
@@ -1473,12 +1501,14 @@
 <h2 id="multi-centre-sample-processing">Multi-centre sample processing<a class="headerlink" href="#multi-centre-sample-processing" title="Permanent link">&para;</a></h2>
 <ol>
 <li>After blood tubes are drawn, <strong>research nurses</strong> open <code>Data lab NMCB  - Blood tubes file.xlsm</code>, use the 2nd column <code>lab_sample_id</code>, scan barcodes of all blood tubes, and add Participant ID in the 1st column <code>participant_ID</code>. Rename the file to <code>Data lab NMCB  - Blood tubes file - {participant_id}.xlsm</code> and send it to the lab that processes samples at the Radboud site.</li>
-<li>The Radboud lab (<strong>RL</strong>) completes the remainder of the file (e.g. <code>datetime_collection</code>, <code>start_datetime_processing</code>, <code>finish_datetime_processing</code>, <code>datetime_freezer</code>, <code>aliquot_nr</code>, …). Upload the raw <strong>RL</strong> file to the agreed location on Research Drive.</li>
-</ol>
-<p><strong>Example raw RL export:</strong></p>
-<p><img alt="Example raw RL export" src="../../files/multicentre-sample-data-workflow/example-raw-rl-export.png" /></p>
-<ol>
-<li><strong>Data scientist</strong> processes the raw RL file with the agreed Python pipeline. Move the raw file to <code>Radboud/organized/RL/archive</code> and upload the output to <code>Radboud/processed/RL/</code> as <code>Radboud/processed_{participant_ID}_RL.csv</code>.</li>
+<li>
+<p>The Radboud lab (<strong>RL</strong>) completes the remainder of the file (e.g. <code>datetime_collection</code>, <code>start_datetime_processing</code>, <code>finish_datetime_processing</code>, <code>datetime_freezer</code>, <code>aliquot_nr</code>, …). Upload the raw <strong>RL</strong> file to the agreed location on Research Drive.
+  <strong>Example raw RL export:</strong>
+   Example raw RL export</p>
+</li>
+<li>
+<p><strong>Data scientist</strong> processes the raw RL file with the agreed Python pipeline. Move the raw file to <code>Radboud/organized/RL/archive</code> and upload the output to <code>Radboud/processed/RL/</code> as <code>Radboud/processed_{participant_ID}_RL.csv</code>.</p>
+</li>
 </ol>
 <hr />
 <h2 id="sample-boxing">Sample boxing<a class="headerlink" href="#sample-boxing" title="Permanent link">&para;</a></h2>

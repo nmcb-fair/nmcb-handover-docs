@@ -2,114 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.github.io/nmcb-handover/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/getting-started/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/where-everything-lives/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/governance/backlog/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/governance/data-requests/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/governance/escalation/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/governance/sops/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/governance/task-template/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/biobank/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/castor/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/data-architecture/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/devices/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/github/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/ldot/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/multicentre/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/mydre/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/openspecimen/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/research-drive/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/scripts-and-qc/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/systems/snowflake/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/cdl-alert-workflow/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/data-request-workflow/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/device-data-workflow/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
+    </url>
+    <url>
+         <loc>https://example.github.io/nmcb-handover/workflows/device-setup-for-visit/</loc>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/multicentre-sample-data-workflow/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/rdl-alert-workflow/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/recurring-routines/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
     <url>
          <loc>https://example.github.io/nmcb-handover/workflows/sample-request-workflow/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-21</lastmod>
     </url>
 </urlset>
