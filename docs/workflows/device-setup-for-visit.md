@@ -10,11 +10,13 @@ Install and configure study devices on the **iPad** (and laptop where noted) bef
 
 ### Install
 
-| Where | Software | Link |
-|-------|----------|------|
-| iPad | `coreControl` | [VU-AMS Core app ecosystem](https://vu-ams.nl/vu-ams-core-app-ecosystem/) |
-| Laptop (analysis only) | VU-AMS Core | [Analysis software](https://vu-ams.nl/analysis-software-for-vu-ams-core-vu-dams-beta/) |
-| Laptop (analysis only) | Java 21 SDK | [Oracle Java 21 downloads](https://www.oracle.com/java/technologies/downloads/#java21) |
+
+| Where                  | Software      | Link                                                                                   |
+| ---------------------- | ------------- | -------------------------------------------------------------------------------------- |
+| iPad                   | `coreControl` | [VU-AMS Core app ecosystem](https://vu-ams.nl/vu-ams-core-app-ecosystem/)              |
+| Laptop (analysis only) | VU-AMS Core   | [Analysis software](https://vu-ams.nl/analysis-software-for-vu-ams-core-vu-dams-beta/) |
+| Laptop (analysis only) | Java 21 SDK   | [Oracle Java 21 downloads](https://www.oracle.com/java/technologies/downloads/#java21) |
+
 
 ### Storage and file types
 
@@ -25,9 +27,15 @@ Install and configure study devices on the **iPad** (and laptop where noted) bef
 
 A normal recording should look similar to this:
 
-![Example VU-AMS ECG trace](../files/device-setup-for-visit/example-vu-ams.png)
+Example VU-AMS ECG trace
 
 *Figure: example VU-AMS ECG graph for QC reference.*
+
+### Contact Person
+
+Martin: [m.j.gevonden@vu.nl](mailto:m.j.gevonden@vu.nl)
+
+Kor: [cjj.stoof@vu.nl](mailto:cjj.stoof@vu.nl)
 
 ---
 
@@ -98,3 +106,4 @@ The license is issued via **Tanita Service** (typically from `logistics@tanita.e
 - [Device data workflow](device-data-workflow.md) — export, QC cadence, and cleaning
 - [Devices](../systems/devices.md) — per-device handover notes and risks
 - [Scripts and QC](../systems/scripts-and-qc.md) — conversion and QC scripts
+

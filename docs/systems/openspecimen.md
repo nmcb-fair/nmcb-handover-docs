@@ -4,7 +4,7 @@
 
 *Role: sample tracking and sample request workflows.*
 
-OpenSpecimen is the biobank system used for tracking samples.
+OpenSpecimen is the biobank system used for tracking samples. Field notes and how OS relates to NMCB variables are in [Biobank data](biobank.md).
 
 ## Purpose
 
@@ -18,6 +18,6 @@ Document:
 
 - access and roles
 - how sample data is exported or linked to other systems
-- relationship to [Biobank](biobank.md) data flow and templates
+- relationship to [Biobank](biobank.md) mappings, codebook, and data flow
 - sample request workflow integration
 
