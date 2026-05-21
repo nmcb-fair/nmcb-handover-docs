@@ -38,7 +38,7 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 | File                                                                  | Description                                     |
 | --------------------------------------------------------------------- | ----------------------------------------------- |
-| [Biobank codebook v1](../files/biobank/nmcb_codebook_biobank_v1.xlsx) | Variable definitions and mapping rules          |
+| [NMCB biobank Mappings v1](../files/biobank/nmcb-biobank-mappings-variables.xlsx) | Variable definitions and mapping rules          |
 | [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx)       | OpenSpecimen fields and how they relate to NMCB |
 
 
