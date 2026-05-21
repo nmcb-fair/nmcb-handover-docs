@@ -2,6 +2,8 @@
 
 Central Diagnostic Laboratory (CDL) blood results and alerts for NMCB participants, from visit through clinical follow-up.
 
+**Status:** Complete
+
 ## Roles
 
 - **Research nurses** — blood draw during visit; later review of Alert / Abnormal folders with physicians

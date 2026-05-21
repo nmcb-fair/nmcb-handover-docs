@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.github.io/nmcb-handover/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/getting-started/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/getting-started/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/where-everything-lives/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/where-everything-lives/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/governance/backlog/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/governance/backlog/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/governance/data-requests/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/governance/data-requests/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/governance/escalation/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/governance/escalation/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/governance/sops/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/governance/sops/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/governance/task-template/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/governance/task-template/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/biobank/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/biobank/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/castor/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/castor/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/data-architecture/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/data-architecture/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/devices/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/devices/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/github/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/github/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/ldot/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/ldot/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/multicentre/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/multicentre/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/mydre/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/mydre/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/openspecimen/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/openspecimen/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/research-drive/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/research-drive/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/scripts-and-qc/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/scripts-and-qc/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/systems/snowflake/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/snowflake/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/cdl-alert-workflow/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/cdl-alert-workflow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/data-request-workflow/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/data-request-workflow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/device-data-workflow/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/device-data-workflow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/device-setup-for-visit/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/device-setup-for-visit/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/multicentre-sample-data-workflow/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/multicentre-sample-data-workflow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/rdl-alert-workflow/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/rdl-alert-workflow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/recurring-routines/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/recurring-routines/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://example.github.io/nmcb-handover/workflows/sample-request-workflow/</loc>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/workflows/sample-request-workflow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
 </urlset>

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://example.github.io/nmcb-handover/systems/openspecimen/">
+        <link rel="canonical" href="https://nmcb-fair.github.io/nmcb-handover-docs/systems/openspecimen/">
       
       
         <link rel="prev" href="../multicentre/">
@@ -1008,10 +1008,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handover-priorities" class="md-nav__link">
+  <a href="#access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handover priorities
+        Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-fields-exports-and-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key fields (exports and queries)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmcb-sample-type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NMCB sample type mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-for-sample-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export for sample requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handover-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handover checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
       
     </span>
   </a>
@@ -1357,10 +1423,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handover-priorities" class="md-nav__link">
+  <a href="#access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handover priorities
+        Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-fields-exports-and-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key fields (exports and queries)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmcb-sample-type-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NMCB sample type mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-for-sample-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export for sample requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handover-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handover checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
       
     </span>
   </a>
@@ -1386,21 +1518,201 @@
 
 <h1 id="openspecimen">OpenSpecimen<a class="headerlink" href="#openspecimen" title="Permanent link">&para;</a></h1>
 <p><strong>Status:</strong> Ongoing</p>
-<p><em>Role: sample tracking and sample request workflows.</em></p>
-<p>OpenSpecimen is the biobank system used for tracking samples. Field notes and how OS relates to NMCB variables are in <a href="../biobank/">Biobank data</a>.</p>
+<p><em>Role: authoritative sample inventory for the Amsterdam UMC biobank; supports sample request and status reporting.</em></p>
+<p>OpenSpecimen tracks <strong>where</strong> each aliquot is stored and <strong>what</strong> it is. Broader biobank context—submission files, external-lab mappings, and data flow—is in <a href="../biobank/">Biobank data</a>.</p>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Sample inventory and tracking</li>
-<li>Links samples to participants and visits</li>
-<li>Supports sample request workflows</li>
+<li>Sample inventory and storage location (container, box, position)</li>
+<li>Link specimens to participants and visits</li>
+<li>Feed <a href="../../workflows/sample-request-workflow/">Sample request workflow</a> via CSV exports</li>
 </ul>
-<h2 id="handover-priorities">Handover priorities<a class="headerlink" href="#handover-priorities" title="Permanent link">&para;</a></h2>
-<p>Document:</p>
+<h2 id="access">Access<a class="headerlink" href="#access" title="Permanent link">&para;</a></h2>
+<p>OpenSpecimen access is granted by the biobank team. For new accounts or role changes, contact <strong>Erik van Iperen</strong> (see <a href="../biobank/#contacts-amsterdam-umc-biobank">Biobank contacts</a>).</p>
+<p>Document who on the data team has which role once access is stable.</p>
+<h2 id="key-fields-exports-and-queries">Key fields (exports and queries)<a class="headerlink" href="#key-fields-exports-and-queries" title="Permanent link">&para;</a></h2>
+<p>When you export or build a query, use these fields consistently:</p>
+<table>
+<thead>
+<tr>
+<th>OpenSpecimen field</th>
+<th>Use in NMCB</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Participant.PPID</code></td>
+<td>Participant / internal ID</td>
+<td>Use <strong>PPID</strong>, not a generic “Participant ID” label in exports</td>
+</tr>
+<tr>
+<td><code>Specimen.Barcode</code></td>
+<td>Specimen identifier</td>
+<td>Used in sample-request scripts and aliquot selection</td>
+</tr>
+<tr>
+<td><code>Specimen.Type</code></td>
+<td>Sample type (with additive / container)</td>
+<td>See <a href="#nmcb-sample-type-mapping">sample type mapping</a> below</td>
+</tr>
+<tr>
+<td><code>Specimen.Additive</code></td>
+<td>Distinguishes plasma sub-types</td>
+<td>Required when <code>Specimen.Type</code> alone is ambiguous</td>
+</tr>
+<tr>
+<td><code>Specimen.Collection.Container</code></td>
+<td>Tube / container label</td>
+<td>Second discriminator for some types</td>
+</tr>
+<tr>
+<td>Concentration fields</td>
+<td>e.g. PBMC Ficoll totals</td>
+<td>Document exact column names in your saved query export</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Participant ID linkage:</strong> <code>Participant.PPID</code> aligns with NMCB <strong>Internal_ID</strong> / Castor participant identifiers used in CRL Admin and sample-request pipelines.</p>
+<h2 id="nmcb-sample-type-mapping">NMCB sample type mapping<a class="headerlink" href="#nmcb-sample-type-mapping" title="Permanent link">&para;</a></h2>
+<p>NMCB standardises sample types in scripts (e.g. <code>track_biobank.Rmd</code>). In OpenSpecimen, the same material may appear under different <code>Specimen.Type</code>, <code>Specimen.Additive</code>, and container combinations. Use this table when defining queries or interpreting exports:</p>
+<table>
+<thead>
+<tr>
+<th>NMCB sample type</th>
+<th><code>Specimen.Type</code> (contains)</th>
+<th><code>Specimen.Additive</code> (contains)</th>
+<th><code>Specimen.Collection.Container</code> (equals)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNA</td>
+<td>DNA</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>SERUM</td>
+<td>Serum</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>EDTA</td>
+<td>Plasma</td>
+<td>EDTA</td>
+<td>—</td>
+</tr>
+<tr>
+<td>EDTA</td>
+<td>Plasma</td>
+<td>—</td>
+<td>BD Vacutainer EDTA 10 mL</td>
+</tr>
+<tr>
+<td>HEP</td>
+<td>Plasma</td>
+<td>Heparin</td>
+<td>—</td>
+</tr>
+<tr>
+<td>HEP</td>
+<td>Plasma</td>
+<td>—</td>
+<td>BD Vacutainer Heparin (gel) 3 mL</td>
+</tr>
+<tr>
+<td>CITRAAT</td>
+<td>Plasma</td>
+<td>Citrate</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CITRAAT</td>
+<td>Plasma</td>
+<td>—</td>
+<td>BD Vacutainer Citrate 2.7 mL</td>
+</tr>
+<tr>
+<td>PAXGENE RNA</td>
+<td>Blood</td>
+<td>PAXgene RNA</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PAXGENE RNA</td>
+<td>Blood</td>
+<td>—</td>
+<td>BD Vacutainer PAXgene RNA Tube 10 mL</td>
+</tr>
+<tr>
+<td>PBMC FICOLL</td>
+<td>Cells - PBMC (Peripheral Blood Mono Nuclear Cells)</td>
+<td>Heparin</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PBMC FICOLL</td>
+<td>Cells - PBMC (Peripheral Blood Mono Nuclear Cells)</td>
+<td>—</td>
+<td>BD Vacutainer Heparin 9 mL</td>
+</tr>
+<tr>
+<td>PBMC CPT</td>
+<td>Cells - PBMC (Peripheral Blood Mono Nuclear Cells)</td>
+<td>Na-Citrate (CPT)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PBMC CPT</td>
+<td>Cells - PBMC (Peripheral Blood Mono Nuclear Cells)</td>
+<td>—</td>
+<td>BD Vacutainer CPT 8 mL</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="../../files/biobank/Understnd%20OS.xlsx">Understand OpenSpecimen</a> (same rules as above; maintained in the biobank file set).</p>
+<h2 id="reference-materials">Reference materials<a class="headerlink" href="#reference-materials" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../files/biobank/Understnd%20OS.xlsx">Understand OpenSpecimen</a></td>
+<td>Field notes and sample-type mapping rules</td>
+</tr>
+<tr>
+<td><a href="../../files/openspecimen/Quick%20Start%20on%20Using%20OpenSpecimen.pptx">Quick Start on Using OpenSpecimen</a></td>
+<td>Introductory slides for new users</td>
+</tr>
+</tbody>
+</table>
+<h2 id="export-for-sample-requests">Export for sample requests<a class="headerlink" href="#export-for-sample-requests" title="Permanent link">&para;</a></h2>
+<p>The <a href="../../workflows/sample-request-workflow/">Sample request workflow</a> expects a recent OpenSpecimen CSV export, typically:</p>
+<pre><code class="language-text">data/openspecimen/query_198_*.csv
+</code></pre>
+<p><strong>Suggested routine:</strong></p>
+<ol>
+<li>Run or refresh the saved query that returns <strong>all NMCB samples</strong> (include PPID, barcode, type, additive, container, concentration, and mother-tube fields needed for requests).</li>
+<li>Save the export with a dated filename under the sample-request project <code>data/openspecimen/</code> folder.</li>
+<li>Run <code>track_biobank.Rmd</code> before generating a new request so specimen and participant status files use the latest inventory.</li>
+</ol>
+<h2 id="handover-checklist">Handover checklist<a class="headerlink" href="#handover-checklist" title="Permanent link">&para;</a></h2>
 <ul>
-<li>access and roles</li>
-<li>how sample data is exported or linked to other systems</li>
-<li>relationship to <a href="../biobank/">Biobank</a> mappings, codebook, and data flow</li>
-<li>sample request workflow integration</li>
+<li>Document the saved query name/ID for “all NMCB samples” and who may edit it</li>
+<li>Confirm export column list matches <code>track_biobank.Rmd</code> expectations</li>
+<li>Record access roles (view vs edit) for data team members</li>
+<li>After OpenSpecimen or container naming changes, update <a href="../../files/biobank/Understnd%20OS.xlsx">Understand OpenSpecimen</a> and this mapping table if rules change</li>
+</ul>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../biobank/">Biobank data</a> — codebook, biobank flow, and Amsterdam UMC contacts</li>
+<li><a href="../../workflows/sample-request-workflow/">Sample request workflow</a> — <code>track_biobank.Rmd</code> and request generation</li>
+<li><a href="../../workflows/multicentre-sample-data-workflow/">Multi-centre sample data workflow</a> — data before specimens enter OpenSpecimen</li>
 </ul>
 
 

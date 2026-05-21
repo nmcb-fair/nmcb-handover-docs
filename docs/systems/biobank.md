@@ -1,6 +1,6 @@
 # Biobank data
 
-**Status:** Ongoing
+**Status:** Complete
 
 *Role in NMCB: sample metadata, storage location, and hand-off between labs, Research Drive, OpenSpecimen, and sample requests.*
 
@@ -48,25 +48,28 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 Map fields from the external-lab template to biobank variables:
 
-Mapping between external-lab template fields and biobank variables
-
-*Figure: variable mappings (external lab → biobank).*
+<figure markdown>
+  ![Variable mappings: external lab to biobank](/files/biobank/nmcb-biobank-mappings-variables.png){ width="100%" }
+  <figcaption>Figure: variable mappings (external lab → biobank).</figcaption>
+</figure>
 
 ### Sample types
 
 Map external-lab sample type labels to biobank sample types:
 
-Mapping between external-lab sample types and biobank sample types
-
-*Figure: sample type mappings (external lab → biobank).*
+<figure markdown>
+  ![Sample type mappings: external lab to biobank](/files/biobank/nmcb-biobank-mappings-sampletypes.png){ width="100%" }
+  <figcaption>Figure: sample type mappings (external lab → biobank).</figcaption>
+</figure>
 
 ## Biobank data flow
 
 End-to-end path from collection through storage and requests (internal and external):
 
-Biobank data flow — internal and external paths
-
-*Figure: biobank data flow.*
+<figure markdown>
+  ![Biobank data flow: internal and external paths](/files/biobank/biobank-data-flow.png){ width="100%" }
+  <figcaption>Figure: biobank data flow.</figcaption>
+</figure>
 
 **Radboud / multi-centre detail:** RL file processing, [box file naming](../workflows/multicentre-sample-data-workflow.md#how-to-rename-box-data-files), expansion into a **Biobank Submission File**, validation, and FileSender delivery — see [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md).
 
@@ -75,12 +78,11 @@ Biobank data flow — internal and external paths
 ## Contacts (Amsterdam UMC biobank)
 
 
-| Role            | Contact                                                                       |
-| --------------- | ----------------------------------------------------------------------------- |
-| General         | [biobank@amsterdamumc.nl](mailto:biobank@amsterdamumc.nl)                     |
-| Maureen         | [m.e.s.vanderarend@amsterdamumc.nl](mailto:m.e.s.vanderarend@amsterdamumc.nl) |
-| Erik van Iperen | [e.p.vaniperen@amsterdamumc.nl](mailto:e.p.vaniperen@amsterdamumc.nl)         |
-
+| Role             | Contact                                                                       |
+| ---------------- | ----------------------------------------------------------------------------- |
+| General          | [biobank@amsterdamumc.nl](mailto:biobank@amsterdamumc.nl)                     |
+| Maureen          | [m.e.s.vanderarend@amsterdamumc.nl](mailto:m.e.s.vanderarend@amsterdamumc.nl) |
+| Erik van Iperen | [e.p.vaniperen@amsterdamumc.nl](mailto:e.p.vaniperen@amsterdamumc.nl) — can grant **OpenSpecimen** access |
 
 ## Related
 
