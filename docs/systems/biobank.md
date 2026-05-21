@@ -38,7 +38,7 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 | File                                                                  | Description                                     |
 | --------------------------------------------------------------------- | ----------------------------------------------- |
-| [Biobank codebook v1](../files/biobank/nmcb-biobank-mappings-variables.xlsx) | Variable definitions and mapping rules          |
+| [Biobank codebook v1](../files/biobank/nmcb_codebook_biobank_v1.xlsx) | Variable definitions and mapping rules          |
 | [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx)       | OpenSpecimen fields and how they relate to NMCB |
 
 
@@ -48,7 +48,7 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 Map fields from the external-lab template to biobank variables:
 
-![Variable mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-variables.png){ width="100%" }
+![Variable mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-variables.png)
 
 *Figure: variable mappings (external lab → biobank).*
 
@@ -56,7 +56,7 @@ Map fields from the external-lab template to biobank variables:
 
 Map external-lab sample type labels to biobank sample types:
 
-![Sample type mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-sampletypes.png){ width="100%" }
+![Sample type mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-sampletypes.png)
 
 *Figure: sample type mappings (external lab → biobank).*
 
@@ -64,7 +64,7 @@ Map external-lab sample type labels to biobank sample types:
 
 End-to-end path from collection through storage and requests (internal and external):
 
-![Biobank data flow: internal and external paths](../files/biobank/biobank-data-flow.png){ width="100%" }
+![Biobank data flow: internal and external paths](../files/biobank/biobank-data-flow.png)
 
 *Figure: biobank data flow.*
 
