@@ -2,7 +2,7 @@
 
 **Status:** Ongoing
 
-How device outputs move from capture through QC and into cleaning scripts / structured storage. Per-device setup detail stays in [Devices](../systems/devices.md); this page is the **flow** view.
+How device outputs move from capture through QC and into cleaning scripts / structured storage. Install apps and devices before a visit in [Device setup for visit](device-setup-for-visit.md); per-device risks and notes stay in [Devices](../systems/devices.md). This page is the **flow** view.
 
 ## General rule
 
@@ -43,6 +43,7 @@ Device use at visit or home
 
 ## Related
 
+- [Device setup for visit](device-setup-for-visit.md) — install and configure devices on iPad/laptop before capture  
 - [Devices](../systems/devices.md) — Omron, Nellcor, Tanita, VU-AMS, ACS, iPads  
 - [CDL alert workflow](cdl-alert-workflow.md) — lab alerts (not a “device” but same data team cadence)
 

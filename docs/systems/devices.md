@@ -4,7 +4,7 @@
 
 *Role: device outputs and visit-related measurements.*
 
-For the **flow** from capture to QC and scripts, see [Device data workflow](../workflows/device-data-workflow.md).
+For **setup before a visit**, see [Device setup for visit](../workflows/device-setup-for-visit.md). For the **flow** from capture to QC and scripts, see [Device data workflow](../workflows/device-data-workflow.md).
 
 The task board shows several device-related workflows. Device data capture needs explicit documentation because it often contains tacit operational knowledge.
 
@@ -80,7 +80,7 @@ Document the setup, output format, and how output is linked back to the particip
 
 ## iPads for home visits
 
-If iPads are used for data collection or participant-facing workflows, document:
+Install Castor, Omron, VU-AMS, and other visit apps as described in [Device setup for visit](../workflows/device-setup-for-visit.md). If iPads are used for data collection or participant-facing workflows, also document:
 
 - setup checklist
 - installed apps
