@@ -1,6 +1,6 @@
 # OpenSpecimen
 
-**Status:** Ongoing
+**Status:** Complete
 
 *Role: authoritative sample inventory for the Amsterdam UMC biobank; supports sample request and status reporting.*
 

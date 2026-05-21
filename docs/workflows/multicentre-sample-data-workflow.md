@@ -8,10 +8,7 @@
 2. The Radboud lab (**RL**) completes the remainder of the file (e.g. `datetime_collection`, `start_datetime_processing`, `finish_datetime_processing`, `datetime_freezer`, `aliquot_nr`, …). Upload the raw **RL** file to the agreed location on Research Drive.
   **Example raw RL export:**
    Example raw RL export
-
-
-
-1. **Data scientist** processes the raw RL file with the agreed Python pipeline. Move the raw file to `Radboud/organized/RL/archive` and upload the output to `Radboud/processed/RL/` as `Radboud/processed_{participant_ID}_RL.csv`.
+3. **Data scientist** processes the raw RL file with the agreed Python pipeline. Move the raw file to `Radboud/organized/RL/archive` and upload the output to `Radboud/processed/RL/` as `Radboud/processed_{participant_ID}_RL.csv`.
 
 ---
 
@@ -56,8 +53,6 @@ Enter the box ID (without the date suffix) into the column shown below:
 Box IDs for types such as **Serum**, **EDTA**, and **Plasma** are **generated automatically when samples are scanned**. Do not invent or assign box IDs manually for these files.
 
 DNA, PBMC, and PAXGene boxes are separate from Serum / EDTA / Plasma boxes; follow the rules for the sample type you are handling.
-
-**To improve:** SOP for uploading box data files to Research Drive.
 
 ## Related
 

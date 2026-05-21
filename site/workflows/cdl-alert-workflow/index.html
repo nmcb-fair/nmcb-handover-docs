@@ -510,6 +510,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mappings-by-hand-versus-by-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mappings: by-hand versus by-machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mappings: by-hand versus by-machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exact-matching-same-bepcode-and-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exact matching (same BEPCODE and name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-counts-by-hand-only-vs-machine-aggregate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differential counts: by-hand only vs machine aggregate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1379,6 +1418,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mappings-by-hand-versus-by-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mappings: by-hand versus by-machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mappings: by-hand versus by-machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exact-matching-same-bepcode-and-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exact matching (same BEPCODE and name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-counts-by-hand-only-vs-machine-aggregate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differential counts: by-hand only vs machine aggregate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1419,15 +1497,224 @@
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
 <ol>
 <li>When a participant completes the visit, blood tubes are drawn by <strong>research nurses</strong> during the visit and delivered to the CRL lab. Two tubes are used for lab results exported as CDL data files.</li>
-<li>Every <strong>Monday and Thursday</strong>, new CDL data files together with the newest <code>CRL admin</code> file are transferred by <strong>research assistants</strong> from the NMCB data mailbox to Research Drive (target folder: <code>/organized/CDL/{YYYYMMDD}</code>). CDL data files are raw and not organised per participant; <code>**CRL admin</code>** links measurements to participants.</li>
-<li>By the end of <strong>Monday and Thursday</strong>, these files are processed by the <strong>data team</strong>, producing two files per participant (see below). After processing, move processed files or folders to <code>**Archive</code>**.</li>
+<li>Every <strong>Monday and Thursday</strong>, new CDL data files together with the newest <code>CRL admin</code> file are transferred by <strong>research assistants</strong> from the NMCB data mailbox to Research Drive (target folder: <code>/organized/CDL/{YYYYMMDD}</code>). CDL data files are raw and not organised per participant; <code>CRL admin</code> links measurements to participants.</li>
+<li>By the end of <strong>Monday and Thursday</strong>, these files are processed by the <strong>data team</strong>, producing two files per participant (see below). After processing, move processed files or folders to <code>Archive</code>.</li>
 <li><strong>Lab result data file</strong> — biomarker measures; CSV</li>
 <li><strong>Lab alert file</strong> — measures and reference ranges; indicates whether a participant is normal (<code>Normal</code>), abnormal (<code>Afwijkend</code>), or alert (<code>ALERT</code>)</li>
-<li>Every <strong>Friday and Tuesday</strong>, files in <code>ALERT</code> and <code>Afwijkend</code> are reviewed by <strong>research nurses</strong> and <strong>physicians</strong>; participants are informed by phone or email depending on severity. After a participant is informed, move their CDL alert file to <code>**Archived</code>**.</li>
+<li>Every <strong>Friday and Tuesday</strong>, files in <code>ALERT</code> and <code>Afwijkend</code> are reviewed by <strong>research nurses</strong> and <strong>physicians</strong>; participants are informed by phone or email depending on severity. After a participant is informed, move their CDL alert file to <code>Archived</code>.</li>
 </ol>
+<h2 id="mappings-by-hand-versus-by-machine">Mappings: by-hand versus by-machine<a class="headerlink" href="#mappings-by-hand-versus-by-machine" title="Permanent link">&para;</a></h2>
+<p>When the analyser is temporarily unreliable, the lab runs selected tests <strong>by hand</strong> (order set <strong>180070</strong>) instead of <strong>by machine</strong> (order set <strong>1003885</strong>). Processing scripts must map hand codes to machine codes so results stay comparable in the CDL pipeline.</p>
+<p>Full comparison (including examples and CRL comments): <a href="../../files/cdl-alert-workflow/Mappings%20between%20by-hand%20and%20by-machine.xlsx">Mappings between by-hand and by-machine</a>.</p>
+<h3 id="exact-matching-same-bepcode-and-name">Exact matching (same BEPCODE and name)<a class="headerlink" href="#exact-matching-same-bepcode-and-name" title="Permanent link">&para;</a></h3>
+<p>These analytes use the same code whether measured by hand or by machine:</p>
+<table>
+<thead>
+<tr>
+<th>Hand / machine BEPCODE</th>
+<th>BEPNAAM (label)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RKRE</td>
+<td>Kreatinine</td>
+</tr>
+<tr>
+<td>RNAT</td>
+<td>Natrium</td>
+</tr>
+<tr>
+<td>RKAL</td>
+<td>Kalium</td>
+</tr>
+<tr>
+<td>RCAL</td>
+<td>Calcium</td>
+</tr>
+<tr>
+<td>ALBU</td>
+<td>Albumine</td>
+</tr>
+<tr>
+<td>RFOS</td>
+<td>Fosfaat</td>
+</tr>
+<tr>
+<td>RCPK</td>
+<td>CPK</td>
+</tr>
+<tr>
+<td>CRPR</td>
+<td>CRP</td>
+</tr>
+<tr>
+<td>EFER</td>
+<td>Ferritine</td>
+</tr>
+<tr>
+<td>TSHR</td>
+<td>TSH</td>
+</tr>
+<tr>
+<td>EFT4</td>
+<td>Free T4</td>
+</tr>
+<tr>
+<td>RGGT</td>
+<td>Gamma-GT</td>
+</tr>
+<tr>
+<td>RPT</td>
+<td>ALAT(SGPT)</td>
+</tr>
+<tr>
+<td>EB12</td>
+<td>Vitamine B12</td>
+</tr>
+<tr>
+<td>H1CI</td>
+<td>Hb-A1-c IFCC</td>
+</tr>
+<tr>
+<td>CKDEPI</td>
+<td>eGFR (CKD-EPI)</td>
+</tr>
+<tr>
+<td>HHB</td>
+<td>Hemoglobine</td>
+</tr>
+<tr>
+<td>HHT</td>
+<td>Hematocriet</td>
+</tr>
+<tr>
+<td>HMCV</td>
+<td>MCV</td>
+</tr>
+<tr>
+<td>HLEU</td>
+<td>Leukocyten</td>
+</tr>
+<tr>
+<td>DIFA</td>
+<td>Leukodiff</td>
+</tr>
+</tbody>
+</table>
+<h3 id="differential-counts-by-hand-only-vs-machine-aggregate">Differential counts: by-hand only vs machine aggregate<a class="headerlink" href="#differential-counts-by-hand-only-vs-machine-aggregate" title="Permanent link">&para;</a></h3>
+<p>For white-cell differentials, the machine often reports <strong>one</strong> population where by-hand reports <strong>several</strong> lines. Use the decision rules below when cleaning or validating CDL exports.</p>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>By-hand (180070)</th>
+<th>By-machine (1003885)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact matching</td>
+<td>HLYM# — Lymfocyten#</td>
+<td>HLYA — #Lymfocyten</td>
+<td>Match absolute count</td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HLYM — Lymfocyten (%)</td>
+<td>—</td>
+<td>Machine does not use separate % line</td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HATY — Atypische lymfocyten</td>
+<td>—</td>
+<td>Machine groups with lymphocytes</td>
+</tr>
+<tr>
+<td>—</td>
+<td><em>(CRL: hand lines above = one “lymfocyten” population on machine)</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Exact matching</td>
+<td>HEOS# — Eosinofielen#</td>
+<td>HEOA — #Eosinofielen</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HEOS — Eosinofielen (%)</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>Exact matching</td>
+<td>HBAS# — Basofielen#</td>
+<td>HBAA — #Basofielen</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HBAS — Basofielen (%)</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>Exact matching</td>
+<td>HMON# — Monocyten#</td>
+<td>HMOA — #Monocyten</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HMON — Monocyten (%)</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>Sum matches</td>
+<td>HSEG# + HSTA# — Segmenten# + Staven#</td>
+<td>HNEA — #Neutrofielen</td>
+<td>Sum of hand # lines equals machine neutrophil count</td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HSEG, HSTA — Segmenten / Staven (%)</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>—</td>
+<td><em>(CRL: hand segment + stab = one “neutrofielen” population on machine)</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Different logic</td>
+<td>HMEM, HMYE, HPRM — Metamyelocyten, Myelocyten, Promyelocyten</td>
+<td>HIGA — #Immature Granulocyten</td>
+<td>By-hand: abnormal if value between 0 and 2; alarm if value ≥ 2. Machine uses single immature-granulocyte count</td>
+</tr>
+<tr>
+<td>—</td>
+<td><em>(CRL: three hand lines = one “Immature granulocyten” population on machine)</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore</td>
+<td>HTOX — Toxische korreling</td>
+<td>—</td>
+<td>Not reported by machine</td>
+</tr>
+</tbody>
+</table>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="biobank-data-workflow.md">Biobank data workflow</a> — other blood / lab–adjacent flows</li>
+<li><a href="../rdl-alert-workflow/">RDL alert workflow</a> — Radboud lab pattern (includes CDL vs RDL mapping reference)</li>
 <li><a href="../device-data-workflow/">Device data workflow</a> — device QC cadence (CDL alert file cleaning appears on the data-team schedule)</li>
 <li><a href="../../systems/biobank/">Systems: Biobank</a> — sample and metadata context</li>
 </ul>

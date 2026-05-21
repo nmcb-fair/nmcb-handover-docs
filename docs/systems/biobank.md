@@ -36,10 +36,10 @@ Use the codebook and mapping figures below when building or validating biobank s
 ## Reference files
 
 
-| File                                                                  | Description                                     |
-| --------------------------------------------------------------------- | ----------------------------------------------- |
+| File                                                                              | Description                                     |
+| --------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [NMCB biobank Mappings v1](../files/biobank/nmcb-biobank-mappings-variables.xlsx) | Variable definitions and mapping rules          |
-| [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx)       | OpenSpecimen fields and how they relate to NMCB |
+| [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx)                   | OpenSpecimen fields and how they relate to NMCB |
 
 
 ## External lab → biobank mappings
@@ -48,7 +48,7 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 Map fields from the external-lab template to biobank variables:
 
-![Variable mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-variables.png)
+Variable mappings: external lab to biobank
 
 *Figure: variable mappings (external lab → biobank).*
 
@@ -56,7 +56,7 @@ Map fields from the external-lab template to biobank variables:
 
 Map external-lab sample type labels to biobank sample types:
 
-![Sample type mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-sampletypes.png)
+Sample type mappings: external lab to biobank
 
 *Figure: sample type mappings (external lab → biobank).*
 
@@ -64,9 +64,15 @@ Map external-lab sample type labels to biobank sample types:
 
 End-to-end path from collection through storage and requests (internal and external):
 
-![Biobank data flow: internal and external paths](../files/biobank/biobank-data-flow.png)
+Biobank data flow: internal and external paths
 
 *Figure: biobank data flow.*
+
+
+| File                                                                             | Description                  |
+| -------------------------------------------------------------------------------- | ---------------------------- |
+| [Biobank data flow drawio (editable)](../files/biobank/biobank data flow.drawio) | Source file for the workflow |
+
 
 **Radboud / multi-centre detail:** RL file processing, [box file naming](../workflows/multicentre-sample-data-workflow.md#how-to-rename-box-data-files), expansion into a **Biobank Submission File**, validation, and FileSender delivery — see [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md).
 
@@ -75,11 +81,18 @@ End-to-end path from collection through storage and requests (internal and exter
 ## Contacts (Amsterdam UMC biobank)
 
 
-| Role             | Contact                                                                       |
-| ---------------- | ----------------------------------------------------------------------------- |
-| General          | [biobank@amsterdamumc.nl](mailto:biobank@amsterdamumc.nl)                     |
-| Maureen          | [m.e.s.vanderarend@amsterdamumc.nl](mailto:m.e.s.vanderarend@amsterdamumc.nl) |
+| Role            | Contact                                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------------------------- |
+| General         | [biobank@amsterdamumc.nl](mailto:biobank@amsterdamumc.nl)                                                 |
+| Maureen         | [m.e.s.vanderarend@amsterdamumc.nl](mailto:m.e.s.vanderarend@amsterdamumc.nl)                             |
 | Erik van Iperen | [e.p.vaniperen@amsterdamumc.nl](mailto:e.p.vaniperen@amsterdamumc.nl) — can grant **OpenSpecimen** access |
+
+
+## Additional Information
+
+The index of blood tubes and their label.
+
+*Figure: NMCB Blood Label.*
 
 ## Related
 

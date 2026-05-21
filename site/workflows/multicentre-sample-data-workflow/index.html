@@ -1501,14 +1501,10 @@
 <h2 id="multi-centre-sample-processing">Multi-centre sample processing<a class="headerlink" href="#multi-centre-sample-processing" title="Permanent link">&para;</a></h2>
 <ol>
 <li>After blood tubes are drawn, <strong>research nurses</strong> open <code>Data lab NMCB  - Blood tubes file.xlsm</code>, use the 2nd column <code>lab_sample_id</code>, scan barcodes of all blood tubes, and add Participant ID in the 1st column <code>participant_ID</code>. Rename the file to <code>Data lab NMCB  - Blood tubes file - {participant_id}.xlsm</code> and send it to the lab that processes samples at the Radboud site.</li>
-<li>
-<p>The Radboud lab (<strong>RL</strong>) completes the remainder of the file (e.g. <code>datetime_collection</code>, <code>start_datetime_processing</code>, <code>finish_datetime_processing</code>, <code>datetime_freezer</code>, <code>aliquot_nr</code>, …). Upload the raw <strong>RL</strong> file to the agreed location on Research Drive.
+<li>The Radboud lab (<strong>RL</strong>) completes the remainder of the file (e.g. <code>datetime_collection</code>, <code>start_datetime_processing</code>, <code>finish_datetime_processing</code>, <code>datetime_freezer</code>, <code>aliquot_nr</code>, …). Upload the raw <strong>RL</strong> file to the agreed location on Research Drive.
   <strong>Example raw RL export:</strong>
-   Example raw RL export</p>
-</li>
-<li>
-<p><strong>Data scientist</strong> processes the raw RL file with the agreed Python pipeline. Move the raw file to <code>Radboud/organized/RL/archive</code> and upload the output to <code>Radboud/processed/RL/</code> as <code>Radboud/processed_{participant_ID}_RL.csv</code>.</p>
-</li>
+   Example raw RL export</li>
+<li><strong>Data scientist</strong> processes the raw RL file with the agreed Python pipeline. Move the raw file to <code>Radboud/organized/RL/archive</code> and upload the output to <code>Radboud/processed/RL/</code> as <code>Radboud/processed_{participant_ID}_RL.csv</code>.</li>
 </ol>
 <hr />
 <h2 id="sample-boxing">Sample boxing<a class="headerlink" href="#sample-boxing" title="Permanent link">&para;</a></h2>
@@ -1564,7 +1560,6 @@
 <h4 id="serum-edta-plasma-and-similar-types">Serum, EDTA, plasma, and similar types<a class="headerlink" href="#serum-edta-plasma-and-similar-types" title="Permanent link">&para;</a></h4>
 <p>Box IDs for types such as <strong>Serum</strong>, <strong>EDTA</strong>, and <strong>Plasma</strong> are <strong>generated automatically when samples are scanned</strong>. Do not invent or assign box IDs manually for these files.</p>
 <p>DNA, PBMC, and PAXGene boxes are separate from Serum / EDTA / Plasma boxes; follow the rules for the sample type you are handling.</p>
-<p><strong>To improve:</strong> SOP for uploading box data files to Research Drive.</p>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../sample-request-workflow/">Sample request workflow</a></li>

@@ -1,6 +1,6 @@
 # Devices
 
-**Status:** Ongoing
+**Status:** Complete
 
 *Role: device outputs and visit-related measurements.*
 
@@ -29,7 +29,7 @@ For each device, document:
 
 ## Omron
 
-Logi in is required for using the `OMRON connect` application, and login in detail can be found at: https://amsterdamumc.sharepoint.com/sites/CoreTeam/Shared%20Documents/Team%20Management/Login%20details?csf=1&web=1&e=wMYiGW
+Logi in is required for using the `OMRON connect` application, and login in detail can be found at: [https://amsterdamumc.sharepoint.com/sites/CoreTeam/Shared%20Documents/Team%20Management/Login%20details?csf=1&web=1&e=wMYiGW](https://amsterdamumc.sharepoint.com/sites/CoreTeam/Shared%20Documents/Team%20Management/Login%20details?csf=1&web=1&e=wMYiGW)
 
 ## Nellcor
 
@@ -86,3 +86,4 @@ Install Castor, Omron, VU-AMS, and other visit apps as described in [Device setu
 - installed apps
 - account or login dependencies
 - reset or handover procedure after use
+
