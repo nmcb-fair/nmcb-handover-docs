@@ -38,7 +38,7 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 | File                                                                  | Description                                     |
 | --------------------------------------------------------------------- | ----------------------------------------------- |
-| [Biobank codebook v1](../files/biobank/nmcb_codebook_biobank_v1.xlsx) | Variable definitions and mapping rules          |
+| [Biobank codebook v1](../files/biobank/nmcb-biobank-mappings-variables.xlsx) | Variable definitions and mapping rules          |
 | [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx)       | OpenSpecimen fields and how they relate to NMCB |
 
 
@@ -48,28 +48,25 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 Map fields from the external-lab template to biobank variables:
 
-<figure markdown>
-  ![Variable mappings: external lab to biobank](/files/biobank/nmcb-biobank-mappings-variables.png){ width="100%" }
-  <figcaption>Figure: variable mappings (external lab → biobank).</figcaption>
-</figure>
+![Variable mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-variables.png){ width="100%" }
+
+*Figure: variable mappings (external lab → biobank).*
 
 ### Sample types
 
 Map external-lab sample type labels to biobank sample types:
 
-<figure markdown>
-  ![Sample type mappings: external lab to biobank](/files/biobank/nmcb-biobank-mappings-sampletypes.png){ width="100%" }
-  <figcaption>Figure: sample type mappings (external lab → biobank).</figcaption>
-</figure>
+![Sample type mappings: external lab to biobank](../files/biobank/nmcb-biobank-mappings-sampletypes.png){ width="100%" }
+
+*Figure: sample type mappings (external lab → biobank).*
 
 ## Biobank data flow
 
 End-to-end path from collection through storage and requests (internal and external):
 
-<figure markdown>
-  ![Biobank data flow: internal and external paths](/files/biobank/biobank-data-flow.png){ width="100%" }
-  <figcaption>Figure: biobank data flow.</figcaption>
-</figure>
+![Biobank data flow: internal and external paths](../files/biobank/biobank-data-flow.png){ width="100%" }
+
+*Figure: biobank data flow.*
 
 **Radboud / multi-centre detail:** RL file processing, [box file naming](../workflows/multicentre-sample-data-workflow.md#how-to-rename-box-data-files), expansion into a **Biobank Submission File**, validation, and FileSender delivery — see [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md).
 
