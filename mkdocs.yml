@@ -33,8 +33,6 @@ nav:
       - Multi-centre sample data workflow: workflows/multicentre-sample-data-workflow.md
       - Device data workflow: workflows/device-data-workflow.md
       - Device setup for visit: workflows/device-setup-for-visit.md
-      - Data request workflow: workflows/data-request-workflow.md
-      - Sample request workflow: workflows/sample-request-workflow.md
       - Recurring study routines: workflows/recurring-routines.md
   - Systems:
       - Data architecture: systems/data-architecture.md
@@ -55,3 +53,8 @@ nav:
       - SOPs and documentation: governance/sops.md
       - Risks and improvement backlog: governance/backlog.md
       - Task template: governance/task-template.md
+  - Tasks:
+      - Data request: tasks/data-request.md
+      - Sample request: tasks/sample-request.md
+      - ACS data clean: tasks/acs-data-clean.md
+      - Patient resume: tasks/patient-resume.md

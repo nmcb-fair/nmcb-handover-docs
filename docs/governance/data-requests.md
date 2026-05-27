@@ -10,7 +10,7 @@ Create a request process that is clear for researchers and manageable for the te
 
 ## Minimum request workflow
 
-Step-by-step detail: [Data request workflow](../workflows/data-request-workflow.md). Summary:
+Step-by-step detail: [Data request](../tasks/data-request.md). Summary:
 
 1. Receive request form.
 2. Check completeness.
@@ -46,7 +46,7 @@ Sample requests follow the same high-level pattern as data requests. In addition
 
 - use [OpenSpecimen](../systems/openspecimen.md) for sample tracking
 - coordinate with biobank for retrieval and transfer
-- follow the [Sample request workflow](../workflows/sample-request-workflow.md)
+- follow the [Sample request](../tasks/sample-request.md)
 
 ## Suggested deliverables to maintain
 

@@ -1,4 +1,4 @@
-# Data request workflow
+# Data request
 
 **Status:** Ongoing
 

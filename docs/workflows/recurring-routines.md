@@ -86,7 +86,7 @@ Use a stable column set so the log can be compared week to week.
 
 ### Purpose
 
-Confirm that raw, processed, and transformed data are **available, complete, and safe to use** before merging, reporting, or fulfilling a [data request](data-request-workflow.md). This is a structured QC pass, not a substitute for pipeline-specific workflows.
+Confirm that raw, processed, and transformed data are **available, complete, and safe to use** before merging, reporting, or fulfilling a [data request](../tasks/data-request.md). This is a structured QC pass, not a substitute for pipeline-specific workflows.
 
 ### Frequency
 

@@ -22,7 +22,7 @@ Central Diagnostic Laboratory (CDL) blood results and alerts for NMCB participan
 
 ## Mappings: by-hand versus by-machine
 
-When the analyser is temporarily unreliable, the lab runs selected tests **by hand** (order set **180070**) instead of **by machine** (order set **1003885**). Processing scripts must map hand codes to machine codes so results stay comparable in the CDL pipeline.
+When the analyser is temporarily unreliable, the lab runs selected tests **by hand** (e.g., **180070**) instead of **by machine** (e.g.,) **1003885**). Processing scripts must map hand codes to machine codes so results stay comparable in the CDL pipeline.
 
 Full comparison (including examples and CRL comments): [Mappings between by-hand and by-machine](../files/cdl-alert-workflow/Mappings%20between%20by-hand%20and%20by-machine.xlsx).
 
@@ -79,7 +79,6 @@ For white-cell differentials, the machine often reports **one** population where
 | Different logic | HMEM, HMYE, HPRM — Metamyelocyten, Myelocyten, Promyelocyten                  | HIGA — #Immature Granulocyten | By-hand: abnormal if value between 0 and 2; alarm if value ≥ 2. Machine uses single immature-granulocyte count |
 | —               | *(CRL: three hand lines = one “Immature granulocyten” population on machine)* |                               |                                                                                                                |
 | Ignore          | HTOX — Toxische korreling                                                     | —                             | Not reported by machine                                                                                        |
-
 
 
 ## Related

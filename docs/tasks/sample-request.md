@@ -1,4 +1,4 @@
-# Sample Request Workflow
+# Sample request
 
 **Status:** Complete
 
@@ -262,6 +262,6 @@ The runner now stops early with a friendly message if Pandoc is missing.
 
 ## Related
 
-- [Data request workflow](data-request-workflow.md)
-- [Multi-centre sample data workflow](multicentre-sample-data-workflow.md)
+- [Data request](data-request.md)
+- [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md)
 

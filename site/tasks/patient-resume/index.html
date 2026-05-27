@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://nmcb-fair.github.io/nmcb-handover-docs/workflows/data-request-workflow/">
+        <link rel="canonical" href="https://nmcb-fair.github.io/nmcb-handover-docs/tasks/patient-resume/">
       
       
-        <link rel="prev" href="../device-setup-for-visit/">
+        <link rel="prev" href="../acs-data-clean/">
       
-      
-        <link rel="next" href="../sample-request-workflow/">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>Data request workflow - NMCB Hand-over Documentation</title>
+        <title>Patient resume - NMCB Hand-over Documentation</title>
       
     
     
@@ -68,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-request-workflow" class="md-skip">
+        <a href="#patient-resume" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data request workflow
+              Patient resume
             
           </span>
         </div>
@@ -343,8 +341,6 @@
       
   
   
-    
-  
   
   
     
@@ -357,11 +353,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -382,7 +380,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -400,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../workflows/" class="md-nav__link">
         
   
   
@@ -428,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cdl-alert-workflow/" class="md-nav__link">
+      <a href="../../workflows/cdl-alert-workflow/" class="md-nav__link">
         
   
   
@@ -456,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rdl-alert-workflow/" class="md-nav__link">
+      <a href="../../workflows/rdl-alert-workflow/" class="md-nav__link">
         
   
   
@@ -484,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multicentre-sample-data-workflow/" class="md-nav__link">
+      <a href="../../workflows/multicentre-sample-data-workflow/" class="md-nav__link">
         
   
   
@@ -512,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../device-data-workflow/" class="md-nav__link">
+      <a href="../../workflows/device-data-workflow/" class="md-nav__link">
         
   
   
@@ -540,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../device-setup-for-visit/" class="md-nav__link">
+      <a href="../../workflows/device-setup-for-visit/" class="md-nav__link">
         
   
   
@@ -565,179 +563,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data request workflow
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data request workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Goal
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minimum-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum workflow
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#internal-review-before-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Internal review before release
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delivery-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery channels
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-artefacts-to-maintain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Suggested artefacts to maintain
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../sample-request-workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Sample request workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../recurring-routines/" class="md-nav__link">
+      <a href="../../workflows/recurring-routines/" class="md-nav__link">
         
   
   
@@ -1363,6 +1192,375 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acs-data-clean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACS data clean
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patient resume
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patient resume
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-participant-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure participant IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-modules-individually" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run modules individually
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-pipeline-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the pipeline does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privacy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1390,10 +1588,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goal" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Goal
+        Purpose
       
     </span>
   </a>
@@ -1401,10 +1599,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#minimum-workflow" class="md-nav__link">
+  <a href="#when-to-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Minimum workflow
+        When to run
       
     </span>
   </a>
@@ -1412,10 +1610,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#internal-review-before-release" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Internal review before release
+        Inputs
       
     </span>
   </a>
@@ -1423,10 +1621,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#delivery-channels" class="md-nav__link">
+  <a href="#how-to-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delivery channels
+        How to run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-participant-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure participant IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-modules-individually" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run modules individually
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-pipeline-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the pipeline does
       
     </span>
   </a>
@@ -1434,10 +1682,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-artefacts-to-maintain" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Suggested artefacts to maintain
+        Outputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privacy
       
     </span>
   </a>
@@ -1449,6 +1719,17 @@
     <span class="md-ellipsis">
       
         Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
       
     </span>
   </a>
@@ -1472,45 +1753,173 @@
 
 
 
-<h1 id="data-request-workflow">Data request workflow<a class="headerlink" href="#data-request-workflow" title="Permanent link">&para;</a></h1>
-<p><strong>Status:</strong> Ongoing</p>
-<p>Procedure from researcher request to <strong>secure delivery</strong> of study data. Governance context and form contents are summarised in <a href="../../governance/data-requests/">Data requests (governance)</a>.</p>
-<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>A process that is clear for researchers and manageable for the team, with traceability and reproducibility.</p>
-<h2 id="minimum-workflow">Minimum workflow<a class="headerlink" href="#minimum-workflow" title="Permanent link">&para;</a></h2>
+<h1 id="patient-resume">Patient resume<a class="headerlink" href="#patient-resume" title="Permanent link">&para;</a></h1>
+<p><strong>Status:</strong> Active</p>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>Generate one <strong>Excel patient summary (resumé)</strong> per participant from Castor EDC exports and supporting study files. The pipeline fills a fixed template (<code>Resumé</code> sheet plus illness, medication, NASA test, and laboratory sheets) for ME/CFS screening review, visit preparation, or data-request packages.</p>
+<p>Canonical code repository: <a href="https://github.com/nmcb-fair/patient-resume"><code>nmcb-fair/patient-resume</code></a></p>
+<h2 id="when-to-run">When to run<a class="headerlink" href="#when-to-run" title="Permanent link">&para;</a></h2>
+<ul>
+<li>When a participant summary workbook is needed for screening or visit review</li>
+<li>After refreshing Castor exports or supporting inputs (visit, DSQ2, CRL admin, NASA lean, CDL alert)</li>
+<li>Before sharing summary files outside the study team — review <code>field_capture_report.csv</code> first</li>
+</ul>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<p>Place or update files under <code>input/</code> before running. The loader picks the <strong>newest matching file</strong> in each folder (by modification time).</p>
+<table>
+<thead>
+<tr>
+<th>Folder / file</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input/screening/</code></td>
+<td>Latest <code>NMCB_Study_ME_CFS_Screener_*export_*.csv/.xlsx</code> — main screener (<code>df_me_cfs</code>)</td>
+</tr>
+<tr>
+<td><code>input/screening/</code></td>
+<td>Optional <code>NMCB_Screening_excel_export_*.xlsx</code> — <code>ME_CFS_Screener</code> sheet for gap-filling</td>
+</tr>
+<tr>
+<td><code>input/visit/</code></td>
+<td>Latest <code>NMCB_Study_*export_*.csv/.xlsx</code> — visit data; hand grip → D26, <code>visit_meds*</code> → medication</td>
+</tr>
+<tr>
+<td><code>input/visit/</code> or <code>input/</code></td>
+<td>Optional <code>NMCB_Measurements_Questionnaires_*export_*</code> — legacy fallback for older participants</td>
+</tr>
+<tr>
+<td><code>input/dsq_2/</code></td>
+<td>Latest <code>NMCB_Study_Symptomen_frequentie_en_ernst_hiervan_*export_*</code> — Survey Progress → D30</td>
+</tr>
+<tr>
+<td><code>input/vragenlijsten/</code></td>
+<td>Optional <code>NMCB_Study_Vragenlijsten_*export_*</code> — supplemental Castor source when primary fields are missing</td>
+</tr>
+<tr>
+<td><code>input/CRL admin/CRL_Admin.xlsx</code></td>
+<td>Patient type → D32</td>
+</tr>
+<tr>
+<td><code>input/Omron/NASA_LEAN_TEST.csv</code></td>
+<td>NASA lean rows copied to <strong>NASA test</strong> sheet</td>
+</tr>
+<tr>
+<td><code>input/CDL_alert/</code> (and subfolders)</td>
+<td>Lab CSVs whose filename contains the participant ID → <strong>Laboratorium</strong> sheet</td>
+</tr>
+<tr>
+<td><code>template/template.xlsx</code></td>
+<td>Excel template (main sheet name: <code>Resumé</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-run">How to run<a class="headerlink" href="#how-to-run" title="Permanent link">&para;</a></h2>
+<p>From the project root in R:</p>
+<pre><code class="language-r">source(&quot;run_all.R&quot;)
+</code></pre>
+<h3 id="configure-participant-ids">Configure participant IDs<a class="headerlink" href="#configure-participant-ids" title="Permanent link">&para;</a></h3>
+<p>Edit <code>run_all.R</code>:</p>
+<ul>
+<li><strong>Manual mode</strong> (default): set <code>use_random_ids &lt;- FALSE</code> and list IDs in <code>participant_ids_manual</code></li>
+<li><strong>Random sample</strong>: set <code>use_random_ids &lt;- TRUE</code>, adjust <code>n_random_participants</code> and optional <code>random_seed</code></li>
+</ul>
+<p>Other settings in the same file: <code>template_path</code>, <code>output_dir</code> (<code>exports_resume</code>), <code>sheet_name</code> (<code>Resumé</code>).</p>
+<h3 id="run-modules-individually">Run modules individually<a class="headerlink" href="#run-modules-individually" title="Permanent link">&para;</a></h3>
+<pre><code class="language-r">source(&quot;01_load_libraries.R&quot;)
+source(&quot;02_load_data.R&quot;)
+source(&quot;03_mapping.R&quot;)
+source(&quot;04_helper_functions.R&quot;)
+source(&quot;05_export_function.R&quot;)
+
+export_participants_resume(
+  df = df_me_cfs,
+  ids = c(&quot;1000175&quot;, &quot;0000005&quot;),
+  map = map_resume,
+  template_path = &quot;template/template.xlsx&quot;,
+  sheet = &quot;Resumé&quot;,
+  out_dir = &quot;exports_resume&quot;,
+  df_visit = df_visit,
+  df_dsq2 = df_dsq2,
+  df_crl_admin = df_crl_admin,
+  df_nasa_lean = df_nasa_lean,
+  df_measurements = df_measurements,
+  df_vragenlijsten = df_vragenlijsten,
+  df_screening_bmi = df_screening_bmi,
+  df_screening_excel_me_cfs = df_screening_excel_me_cfs,
+  cdl_alert_dir = &quot;input/CDL_alert&quot;
+)
+</code></pre>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>R with packages <strong><code>readr</code></strong> and <strong><code>openxlsx</code></strong></li>
+<li>Install once if needed: <code>install.packages(c("readr", "openxlsx"))</code></li>
+</ul>
+<h2 id="what-the-pipeline-does">What the pipeline does<a class="headerlink" href="#what-the-pipeline-does" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Receive</strong> request (form or equivalent).</li>
-<li><strong>Check</strong> completeness.</li>
-<li><strong>Confirm</strong> scientific and governance fit (in scope, approvals).</li>
-<li><strong>Confirm</strong> requested data or variable scope against the codebook / Snowflake.</li>
-<li><strong>Prepare</strong> extract or response (scripts, queries, MyDRE or agreed channel).</li>
-<li><strong>Record</strong> what was shared, to whom, and when (request log).</li>
+<li><strong><code>01_load_libraries.R</code></strong> — loads <code>readr</code> and <code>openxlsx</code></li>
+<li><strong><code>02_load_data.R</code></strong> — reads Castor exports and supporting files from <code>input/</code></li>
+<li><strong><code>03_mapping.R</code></strong> — defines <code>map_resume</code> (variable → Excel cell or sheet behaviour)</li>
+<li><strong><code>04_helper_functions.R</code></strong> — cell parsing, value transforms (<code>ja</code>/<code>nee</code>, <code>vrouw</code>/<code>man</code>), diagnosis text helpers</li>
+<li><strong><code>05_export_function.R</code></strong> — <code>export_participants_resume()</code> builds one workbook per ID</li>
 </ol>
-<h2 id="internal-review-before-release">Internal review before release<a class="headerlink" href="#internal-review-before-release" title="Permanent link">&para;</a></h2>
+<p>For each participant, the exporter:</p>
 <ul>
-<li>Requested data exists and is correct for the ask.  </li>
-<li>Request is in scope.  </li>
-<li>Identifiers and anonymisation level are appropriate.  </li>
-<li>The deliverable can be reproduced if asked again later.</li>
+<li>Normalizes column names and fuzzy-matches mapped variables</li>
+<li>Matches IDs across datasets (with or without leading zeros)</li>
+<li>Writes direct mappings to the <strong>Resumé</strong> sheet</li>
+<li>Builds illness and medication lists on separate sheets</li>
+<li>Derives fields such as grip-strength average (D26), DSQ survey progress (D30), CRL patient type (D32), NASA/POTS-related summaries, and lab priority from CDL alert</li>
+<li>Copies NASA lean rows and matching CDL lab CSV content into dedicated sheets</li>
 </ul>
-<h2 id="delivery-channels">Delivery channels<a class="headerlink" href="#delivery-channels" title="Permanent link">&para;</a></h2>
-<p>Define and document:</p>
+<p>Variable-to-cell rules live in <strong><code>03_mapping.R</code></strong> — change mappings there, not in the export function.</p>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>exports_resume/Participant_&lt;ID&gt;.xlsx</code></td>
+<td>One filled workbook per participant</td>
+</tr>
+<tr>
+<td><code>exports_resume/field_capture_report.csv</code></td>
+<td>Audit log: field, target cell, status, value preview, source dataset</td>
+</tr>
+</tbody>
+</table>
+<p>Review <strong><code>field_capture_report.csv</code></strong> for missing mappings, skipped fields, or unexpected empty values before distributing files.</p>
+<p>IDs not found in the ME/CFS screener export are skipped with a console warning.</p>
+<h2 id="quality-checks">Quality checks<a class="headerlink" href="#quality-checks" title="Permanent link">&para;</a></h2>
 <ul>
-<li>when delivery is via <strong>myDRE</strong> vs file transfer vs other approved route  </li>
-<li>rules for Excel or file exports vs query-only access  </li>
+<li>Confirm the latest Castor exports are in the correct <code>input/</code> subfolders (check file dates)</li>
+<li>Ensure <code>CRL_Admin.xlsx</code> and <code>NASA_LEAN_TEST.csv</code> are current when D32 or NASA sheets matter</li>
+<li>Place CDL alert CSVs under <code>input/CDL_alert/</code> with participant ID in the filename</li>
+<li>Open a sample <code>Participant_&lt;ID&gt;.xlsx</code> against the template layout</li>
+<li>Scan <code>field_capture_report.csv</code> for <code>status</code> values that indicate gaps</li>
+<li>Do <strong>not</strong> commit or share real participant data in issues, screenshots, or git history</li>
 </ul>
-<h2 id="suggested-artefacts-to-maintain">Suggested artefacts to maintain<a class="headerlink" href="#suggested-artefacts-to-maintain" title="Permanent link">&para;</a></h2>
-<ul>
-<li>public or internal <strong>data request form</strong>  </li>
-<li><strong>internal review checklist</strong>  </li>
-<li><strong>request log</strong>  </li>
-<li>standard email templates for approval, revision, and rejection  </li>
-</ul>
+<h2 id="privacy">Privacy<a class="headerlink" href="#privacy" title="Permanent link">&para;</a></h2>
+<p>Do not upload real participant exports or generated resumes to GitHub issues, pull requests, commits, or public logs. Use synthetic or redacted examples when reporting bugs.</p>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../governance/data-requests/">Governance: Data requests</a> — forms and policy  </li>
-<li><a href="../../governance/backlog/">Governance: Backlog</a> — improvement and risk tracking  </li>
-<li><a href="../../systems/mydre/">myDRE</a> — secure sharing environment  </li>
+<li><a href="../../systems/castor/">Castor EDC</a> — source of screening and visit exports</li>
+<li><a href="../../workflows/cdl-alert-workflow/">CDL alert workflow</a> — laboratory alert files used for the <strong>Laboratorium</strong> sheet</li>
+<li><a href="../../workflows/recurring-routines/">Recurring study routines</a> — CRL admin and patient type maintenance</li>
+<li><a href="../../systems/github/">GitHub</a> — repository list including <code>patient-resume</code></li>
+<li>Upstream repository README: <a href="https://github.com/nmcb-fair/patient-resume">patient-resume</a></li>
+</ul>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Legacy workflow: <code>generate_patient_resume.Rmd</code> (reference only; use the modular <code>.R</code> scripts)</li>
+<li>Modules must be sourced in order (<code>01</code> → <code>05</code>)</li>
+<li>Mapping operations include direct writes, <code>ja_nee</code>, <code>vrouw_man</code>, <code>no_decimal</code>, <code>add_to_list</code>, <code>add_to_sheet</code>, and <code>add_text_to_sheet</code> — see <code>03_mapping.R</code> for the full table</li>
 </ul>
 
 

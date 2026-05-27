@@ -10,7 +10,7 @@ OpenSpecimen tracks **where** each aliquot is stored and **what** it is. Broader
 
 - Sample inventory and storage location (container, box, position)
 - Link specimens to participants and visits
-- Feed [Sample request workflow](../workflows/sample-request-workflow.md) via CSV exports
+- Feed [Sample request](../tasks/sample-request.md) via CSV exports
 
 ## Access
 
@@ -71,7 +71,7 @@ Source: [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx) (same ru
 
 ## Export for sample requests
 
-The [Sample request workflow](../workflows/sample-request-workflow.md) expects a recent OpenSpecimen CSV export, typically:
+The [Sample request](../tasks/sample-request.md) expects a recent OpenSpecimen CSV export, typically:
 
 ```text
 data/openspecimen/query_198_*.csv
@@ -93,6 +93,6 @@ data/openspecimen/query_198_*.csv
 ## Related
 
 - [Biobank data](biobank.md) — codebook, biobank flow, and Amsterdam UMC contacts
-- [Sample request workflow](../workflows/sample-request-workflow.md) — `track_biobank.Rmd` and request generation
+- [Sample request](../tasks/sample-request.md) — `track_biobank.Rmd` and request generation
 - [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md) — data before specimens enter OpenSpecimen
 

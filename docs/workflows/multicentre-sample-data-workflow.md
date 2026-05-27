@@ -56,6 +56,6 @@ DNA, PBMC, and PAXGene boxes are separate from Serum / EDTA / Plasma boxes; foll
 
 ## Related
 
-- [Sample request workflow](sample-request-workflow.md)
+- [Sample request](../tasks/sample-request.md)
 - [Systems: Biobank](../systems/biobank.md) — short system pointer
 
