@@ -1837,15 +1837,15 @@
 <h2 id="how-to-run">How to run<a class="headerlink" href="#how-to-run" title="Permanent link">&para;</a></h2>
 <h3 id="standard-batch-files-16">Standard batch (files 1–6)<a class="headerlink" href="#standard-batch-files-16" title="Permanent link">&para;</a></h3>
 <p>From the project root:</p>
-<pre><code class="language-bash">Rscript process_acs.R
-</code></pre>
+<div class="highlight"><pre><span></span><code>Rscript<span class="w"> </span>process_acs.R
+</code></pre></div>
 <p>This processes <code>raw/acs-nmcb-1.csv</code> through <code>acs-nmcb-6.csv</code> with their matching headers.</p>
 <h3 id="single-file">Single file<a class="headerlink" href="#single-file" title="Permanent link">&para;</a></h3>
-<pre><code class="language-bash">Rscript process_acs.R --raw raw/acs-nmcb-2.csv --header header/nmcb-acs-header-2.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>Rscript<span class="w"> </span>process_acs.R<span class="w"> </span>--raw<span class="w"> </span>raw/acs-nmcb-2.csv<span class="w"> </span>--header<span class="w"> </span>header/nmcb-acs-header-2.csv
+</code></pre></div>
 <p>Optional explicit output path:</p>
-<pre><code class="language-bash">Rscript process_acs.R --raw raw/acs-nmcb-2.csv --header header/nmcb-acs-header-2.csv --out export/YYYYMMDD/acs-nmcb-2.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>Rscript<span class="w"> </span>process_acs.R<span class="w"> </span>--raw<span class="w"> </span>raw/acs-nmcb-2.csv<span class="w"> </span>--header<span class="w"> </span>header/nmcb-acs-header-2.csv<span class="w"> </span>--out<span class="w"> </span>export/YYYYMMDD/acs-nmcb-2.csv
+</code></pre></div>
 <h3 id="token-filtering-nmcb-default">Token filtering (NMCB default)<a class="headerlink" href="#token-filtering-nmcb-default" title="Permanent link">&para;</a></h3>
 <p>By default, only rows where <code>O_token</code> starts with <code>**nmcb**</code> are kept (test rows such as <code>marysetest</code> are excluded).</p>
 <ul>

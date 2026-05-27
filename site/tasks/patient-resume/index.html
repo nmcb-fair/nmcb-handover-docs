@@ -1818,8 +1818,8 @@
 </table>
 <h2 id="how-to-run">How to run<a class="headerlink" href="#how-to-run" title="Permanent link">&para;</a></h2>
 <p>From the project root in R:</p>
-<pre><code class="language-r">source(&quot;run_all.R&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nf">source</span><span class="p">(</span><span class="s">&quot;run_all.R&quot;</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="configure-participant-ids">Configure participant IDs<a class="headerlink" href="#configure-participant-ids" title="Permanent link">&para;</a></h3>
 <p>Edit <code>run_all.R</code>:</p>
 <ul>
@@ -1828,30 +1828,30 @@
 </ul>
 <p>Other settings in the same file: <code>template_path</code>, <code>output_dir</code> (<code>exports_resume</code>), <code>sheet_name</code> (<code>Resumé</code>).</p>
 <h3 id="run-modules-individually">Run modules individually<a class="headerlink" href="#run-modules-individually" title="Permanent link">&para;</a></h3>
-<pre><code class="language-r">source(&quot;01_load_libraries.R&quot;)
-source(&quot;02_load_data.R&quot;)
-source(&quot;03_mapping.R&quot;)
-source(&quot;04_helper_functions.R&quot;)
-source(&quot;05_export_function.R&quot;)
+<div class="highlight"><pre><span></span><code><span class="nf">source</span><span class="p">(</span><span class="s">&quot;01_load_libraries.R&quot;</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;02_load_data.R&quot;</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;03_mapping.R&quot;</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;04_helper_functions.R&quot;</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;05_export_function.R&quot;</span><span class="p">)</span>
 
-export_participants_resume(
-  df = df_me_cfs,
-  ids = c(&quot;1000175&quot;, &quot;0000005&quot;),
-  map = map_resume,
-  template_path = &quot;template/template.xlsx&quot;,
-  sheet = &quot;Resumé&quot;,
-  out_dir = &quot;exports_resume&quot;,
-  df_visit = df_visit,
-  df_dsq2 = df_dsq2,
-  df_crl_admin = df_crl_admin,
-  df_nasa_lean = df_nasa_lean,
-  df_measurements = df_measurements,
-  df_vragenlijsten = df_vragenlijsten,
-  df_screening_bmi = df_screening_bmi,
-  df_screening_excel_me_cfs = df_screening_excel_me_cfs,
-  cdl_alert_dir = &quot;input/CDL_alert&quot;
-)
-</code></pre>
+<span class="nf">export_participants_resume</span><span class="p">(</span>
+<span class="w">  </span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_me_cfs</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;1000175&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;0000005&quot;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map_resume</span><span class="p">,</span>
+<span class="w">  </span><span class="n">template_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;template/template.xlsx&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Resumé&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">out_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;exports_resume&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_visit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_visit</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_dsq2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_dsq2</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_crl_admin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_crl_admin</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_nasa_lean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_nasa_lean</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_measurements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_measurements</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_vragenlijsten</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_vragenlijsten</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_screening_bmi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_screening_bmi</span><span class="p">,</span>
+<span class="w">  </span><span class="n">df_screening_excel_me_cfs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_screening_excel_me_cfs</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cdl_alert_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;input/CDL_alert&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <ul>
 <li>R with packages <strong><code>readr</code></strong> and <strong><code>openxlsx</code></strong></li>
