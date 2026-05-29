@@ -24,7 +24,7 @@
     - Do not add sensitive (personal identifiable) information on comments
 - ## Tasks
 - Just document for future:
-  - VU-AMS QC document
+  - [Improve VU-AMS](../tasks/improve-vu-ams.md) — QC protocol, folder structure, file-size checks
   - myDRE setup  
   - ECG data mount
 

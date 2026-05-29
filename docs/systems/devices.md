@@ -67,6 +67,8 @@ The board notes abnormal reports. It also mentions that multiple or unexpectedly
 
 ### Handover note
 
+Active improvement work: [Improve VU-AMS](../tasks/improve-vu-ams.md) (QC protocol, Research Drive layout, abnormal file sizes).
+
 Document:
 
 - expected file pattern

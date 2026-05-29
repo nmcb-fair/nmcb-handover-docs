@@ -61,5 +61,6 @@ nav:
   - Tasks:
       - Data request: tasks/data-request.md
       - Sample request: tasks/sample-request.md
+      - Improve VU-AMS: tasks/improve-vu-ams.md
       - ACS data clean: tasks/acs-data-clean.md
       - Patient resume: tasks/patient-resume.md

@@ -19,7 +19,7 @@ Operational cleaning load is uneven by device. Typical assignments include:
 
 - **Weekly** cleaning: Omron, Nellcor, Tanita (onsite / field variants as applicable)
 - **Twice weekly** cleaning: **CDL alert file** (see [CDL alert workflow](cdl-alert-workflow.md) for the full lab pipeline)
-- **VU-AMS** — ongoing QC; watch for abnormal export patterns (multiple or oversized files)
+- **VU-AMS** — ongoing QC; watch for abnormal export patterns (see [Improve VU-AMS](../tasks/improve-vu-ams.md))
 
 Document exact weekdays and owners in project SOPs as they stabilise.
 
@@ -44,6 +44,7 @@ Device use at visit or home
 ## Related
 
 - [Device setup for visit](device-setup-for-visit.md) — install and configure devices on iPad/laptop before capture  
+- [Improve VU-AMS](../tasks/improve-vu-ams.md) — QC protocol, folder structure, abnormal file sizes  
 - [Devices](../systems/devices.md) — Omron, Nellcor, Tanita, VU-AMS, ACS, iPads  
 - [CDL alert workflow](cdl-alert-workflow.md) — lab alerts (not a “device” but same data team cadence)
 
