@@ -1757,7 +1757,7 @@
 <p><strong>Status:</strong> Active</p>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
 <p>Generate one <strong>Excel patient summary (resumé)</strong> per participant from Castor EDC exports and supporting study files. The pipeline fills a fixed template (<code>Resumé</code> sheet plus illness, medication, NASA test, and laboratory sheets) for ME/CFS screening review, visit preparation, or data-request packages.</p>
-<p>Canonical code repository: <a href="https://github.com/nmcb-fair/patient-resume"><code>nmcb-fair/patient-resume</code></a></p>
+<p>Canonical code repository: <code>[nmcb-fair/patient-resume](https://github.com/nmcb-fair/patient-resume)</code></p>
 <h2 id="when-to-run">When to run<a class="headerlink" href="#when-to-run" title="Permanent link">&para;</a></h2>
 <ul>
 <li>When a participant summary workbook is needed for screening or visit review</li>
@@ -1784,7 +1784,7 @@
 </tr>
 <tr>
 <td><code>input/visit/</code></td>
-<td>Latest <code>NMCB_Study_*export_*.csv/.xlsx</code> — visit data; hand grip → D26, <code>visit_meds*</code> → medication</td>
+<td>Latest <code>NMCB_Study_*export_*.csv/.xlsx</code> — visit data; hand grip → D26, <code>visit_meds</code>* → medication</td>
 </tr>
 <tr>
 <td><code>input/visit/</code> or <code>input/</code></td>
@@ -1854,16 +1854,16 @@
 </code></pre></div>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <ul>
-<li>R with packages <strong><code>readr</code></strong> and <strong><code>openxlsx</code></strong></li>
+<li>R with packages <code>**readr**</code> and <code>**openxlsx**</code></li>
 <li>Install once if needed: <code>install.packages(c("readr", "openxlsx"))</code></li>
 </ul>
 <h2 id="what-the-pipeline-does">What the pipeline does<a class="headerlink" href="#what-the-pipeline-does" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong><code>01_load_libraries.R</code></strong> — loads <code>readr</code> and <code>openxlsx</code></li>
-<li><strong><code>02_load_data.R</code></strong> — reads Castor exports and supporting files from <code>input/</code></li>
-<li><strong><code>03_mapping.R</code></strong> — defines <code>map_resume</code> (variable → Excel cell or sheet behaviour)</li>
-<li><strong><code>04_helper_functions.R</code></strong> — cell parsing, value transforms (<code>ja</code>/<code>nee</code>, <code>vrouw</code>/<code>man</code>), diagnosis text helpers</li>
-<li><strong><code>05_export_function.R</code></strong> — <code>export_participants_resume()</code> builds one workbook per ID</li>
+<li><code>**01_load_libraries.R**</code> — loads <code>readr</code> and <code>openxlsx</code></li>
+<li><code>**02_load_data.R**</code> — reads Castor exports and supporting files from <code>input/</code></li>
+<li><code>**03_mapping.R**</code> — defines <code>map_resume</code> (variable → Excel cell or sheet behaviour)</li>
+<li><code>**04_helper_functions.R**</code> — cell parsing, value transforms (<code>ja</code>/<code>nee</code>, <code>vrouw</code>/<code>man</code>), diagnosis text helpers</li>
+<li><code>**05_export_function.R**</code> — <code>export_participants_resume()</code> builds one workbook per ID</li>
 </ol>
 <p>For each participant, the exporter:</p>
 <ul>
@@ -1874,7 +1874,7 @@
 <li>Derives fields such as grip-strength average (D26), DSQ survey progress (D30), CRL patient type (D32), NASA/POTS-related summaries, and lab priority from CDL alert</li>
 <li>Copies NASA lean rows and matching CDL lab CSV content into dedicated sheets</li>
 </ul>
-<p>Variable-to-cell rules live in <strong><code>03_mapping.R</code></strong> — change mappings there, not in the export function.</p>
+<p>Variable-to-cell rules live in <code>**03_mapping.R</code>** — change mappings there, not in the export function.</p>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1894,7 +1894,7 @@
 </tr>
 </tbody>
 </table>
-<p>Review <strong><code>field_capture_report.csv</code></strong> for missing mappings, skipped fields, or unexpected empty values before distributing files.</p>
+<p>Review <code>**field_capture_report.csv**</code> for missing mappings, skipped fields, or unexpected empty values before distributing files.</p>
 <p>IDs not found in the ME/CFS screener export are skipped with a console warning.</p>
 <h2 id="quality-checks">Quality checks<a class="headerlink" href="#quality-checks" title="Permanent link">&para;</a></h2>
 <ul>

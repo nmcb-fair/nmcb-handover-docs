@@ -6,7 +6,7 @@
 
 Generate one **Excel patient summary (resumé)** per participant from Castor EDC exports and supporting study files. The pipeline fills a fixed template (`Resumé` sheet plus illness, medication, NASA test, and laboratory sheets) for ME/CFS screening review, visit preparation, or data-request packages.
 
-Canonical code repository: [`nmcb-fair/patient-resume`](https://github.com/nmcb-fair/patient-resume)
+Canonical code repository: `[nmcb-fair/patient-resume](https://github.com/nmcb-fair/patient-resume)`
 
 ## When to run
 
@@ -18,18 +18,20 @@ Canonical code repository: [`nmcb-fair/patient-resume`](https://github.com/nmcb-
 
 Place or update files under `input/` before running. The loader picks the **newest matching file** in each folder (by modification time).
 
-| Folder / file | Contents |
-| ------------- | -------- |
-| `input/screening/` | Latest `NMCB_Study_ME_CFS_Screener_*export_*.csv/.xlsx` — main screener (`df_me_cfs`) |
-| `input/screening/` | Optional `NMCB_Screening_excel_export_*.xlsx` — `ME_CFS_Screener` sheet for gap-filling |
-| `input/visit/` | Latest `NMCB_Study_*export_*.csv/.xlsx` — visit data; hand grip → D26, `visit_meds*` → medication |
-| `input/visit/` or `input/` | Optional `NMCB_Measurements_Questionnaires_*export_*` — legacy fallback for older participants |
-| `input/dsq_2/` | Latest `NMCB_Study_Symptomen_frequentie_en_ernst_hiervan_*export_*` — Survey Progress → D30 |
-| `input/vragenlijsten/` | Optional `NMCB_Study_Vragenlijsten_*export_*` — supplemental Castor source when primary fields are missing |
-| `input/CRL admin/CRL_Admin.xlsx` | Patient type → D32 |
-| `input/Omron/NASA_LEAN_TEST.csv` | NASA lean rows copied to **NASA test** sheet |
-| `input/CDL_alert/` (and subfolders) | Lab CSVs whose filename contains the participant ID → **Laboratorium** sheet |
-| `template/template.xlsx` | Excel template (main sheet name: `Resumé`) |
+
+| Folder / file                       | Contents                                                                                                   |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `input/screening/`                  | Latest `NMCB_Study_ME_CFS_Screener_*export_*.csv/.xlsx` — main screener (`df_me_cfs`)                      |
+| `input/screening/`                  | Optional `NMCB_Screening_excel_export_*.xlsx` — `ME_CFS_Screener` sheet for gap-filling                    |
+| `input/visit/`                      | Latest `NMCB_Study_*export_*.csv/.xlsx` — visit data; hand grip → D26, `visit_meds`* → medication          |
+| `input/visit/` or `input/`          | Optional `NMCB_Measurements_Questionnaires_*export_*` — legacy fallback for older participants             |
+| `input/dsq_2/`                      | Latest `NMCB_Study_Symptomen_frequentie_en_ernst_hiervan_*export_*` — Survey Progress → D30                |
+| `input/vragenlijsten/`              | Optional `NMCB_Study_Vragenlijsten_*export_*` — supplemental Castor source when primary fields are missing |
+| `input/CRL admin/CRL_Admin.xlsx`    | Patient type → D32                                                                                         |
+| `input/Omron/NASA_LEAN_TEST.csv`    | NASA lean rows copied to **NASA test** sheet                                                               |
+| `input/CDL_alert/` (and subfolders) | Lab CSVs whose filename contains the participant ID → **Laboratorium** sheet                               |
+| `template/template.xlsx`            | Excel template (main sheet name: `Resumé`)                                                                 |
+
 
 ## How to run
 
@@ -78,16 +80,16 @@ export_participants_resume(
 
 ### Requirements
 
-- R with packages **`readr`** and **`openxlsx`**
+- R with packages `**readr**` and `**openxlsx**`
 - Install once if needed: `install.packages(c("readr", "openxlsx"))`
 
 ## What the pipeline does
 
-1. **`01_load_libraries.R`** — loads `readr` and `openxlsx`
-2. **`02_load_data.R`** — reads Castor exports and supporting files from `input/`
-3. **`03_mapping.R`** — defines `map_resume` (variable → Excel cell or sheet behaviour)
-4. **`04_helper_functions.R`** — cell parsing, value transforms (`ja`/`nee`, `vrouw`/`man`), diagnosis text helpers
-5. **`05_export_function.R`** — `export_participants_resume()` builds one workbook per ID
+1. `**01_load_libraries.R**` — loads `readr` and `openxlsx`
+2. `**02_load_data.R**` — reads Castor exports and supporting files from `input/`
+3. `**03_mapping.R**` — defines `map_resume` (variable → Excel cell or sheet behaviour)
+4. `**04_helper_functions.R**` — cell parsing, value transforms (`ja`/`nee`, `vrouw`/`man`), diagnosis text helpers
+5. `**05_export_function.R**` — `export_participants_resume()` builds one workbook per ID
 
 For each participant, the exporter:
 
@@ -98,16 +100,18 @@ For each participant, the exporter:
 - Derives fields such as grip-strength average (D26), DSQ survey progress (D30), CRL patient type (D32), NASA/POTS-related summaries, and lab priority from CDL alert
 - Copies NASA lean rows and matching CDL lab CSV content into dedicated sheets
 
-Variable-to-cell rules live in **`03_mapping.R`** — change mappings there, not in the export function.
+Variable-to-cell rules live in `**03_mapping.R`** — change mappings there, not in the export function.
 
 ## Outputs
 
-| Output | Purpose |
-| ------ | ------- |
-| `exports_resume/Participant_<ID>.xlsx` | One filled workbook per participant |
+
+| Output                                    | Purpose                                                              |
+| ----------------------------------------- | -------------------------------------------------------------------- |
+| `exports_resume/Participant_<ID>.xlsx`    | One filled workbook per participant                                  |
 | `exports_resume/field_capture_report.csv` | Audit log: field, target cell, status, value preview, source dataset |
 
-Review **`field_capture_report.csv`** for missing mappings, skipped fields, or unexpected empty values before distributing files.
+
+Review `**field_capture_report.csv**` for missing mappings, skipped fields, or unexpected empty values before distributing files.
 
 IDs not found in the ME/CFS screener export are skipped with a console warning.
 
@@ -137,3 +141,4 @@ Do not upload real participant exports or generated resumes to GitHub issues, pu
 - Legacy workflow: `generate_patient_resume.Rmd` (reference only; use the modular `.R` scripts)
 - Modules must be sourced in order (`01` → `05`)
 - Mapping operations include direct writes, `ja_nee`, `vrouw_man`, `no_decimal`, `add_to_list`, `add_to_sheet`, and `add_text_to_sheet` — see `03_mapping.R` for the full table
+
