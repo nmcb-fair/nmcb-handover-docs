@@ -38,20 +38,20 @@ Use the codebook and mapping figures below when building or validating biobank s
 
 | File                                                                              | Description                                     |
 | --------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [NMCB biobank mappings v1](../files/biobank/nmcb-biobank-mappings-variables.xlsx) | Variable definitions and mapping rules          |
+| [NMCB biobank codebook v1](../files/biobank/nmcb_codebook_biobank_v1.xlsx) | Variable definitions and mapping rules          |
 | [Understand OpenSpecimen](../files/biobank/Understnd%20OS.xlsx)                   | OpenSpecimen fields and how they relate to NMCB |
 | [NMCB Blood Label](../files/cdl-alert-workflow/NMCB%20Blood%20Label.xlsx)         | Blood tube index: ID, cap colour, sample type   |
 
 
 ## External lab → biobank mappings
 
-
+<!-- FIGURES: keep the <img> tags below — required for images on the published site -->
 
 ### Variables
 
 Map fields from the external-lab template to biobank variables:
 
-Variable mappings: external lab to biobank
+<p><img src="../../files/biobank/nmcb-biobank-mappings-variables.png" alt="Variable mappings: external lab to biobank" /></p>
 
 *Figure: variable mappings (external lab → biobank).*
 
@@ -59,7 +59,7 @@ Variable mappings: external lab to biobank
 
 Map external-lab sample type labels to biobank sample types:
 
-Sample type mappings: external lab to biobank
+<p><img src="../../files/biobank/nmcb-biobank-mappings-sampletypes.png" alt="Sample type mappings: external lab to biobank" /></p>
 
 *Figure: sample type mappings (external lab → biobank).*
 
@@ -67,7 +67,7 @@ Sample type mappings: external lab to biobank
 
 End-to-end path from collection through storage and requests (internal and external):
 
-Biobank data flow: internal and external paths
+<p><img src="../../files/biobank/biobank-data-flow.png" alt="Biobank data flow: internal and external paths" /></p>
 
 *Figure: biobank data flow.*
 
