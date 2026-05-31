@@ -1,6 +1,5 @@
 # NMCB Core distribution list
 
-**Status:** Complete
 
 *Role: shared Amsterdam UMC mailing list for the NMCB core team (announcements, coordination, data-management threads).*
 
@@ -70,6 +69,6 @@ As list owner, work through the KB steps to edit membership. Only the **owner** 
 
 ## Related
 
-- [Where everything lives](../where-everything-lives.md) — add this list to the communications row when maintaining the map
+- [Where data lives](../where-data-lives.md#other-useful-locations-not-raw-study-data) — communications and ops resources
 - [Keep in mind (GDPR)](../index.md#keep-in-mind-gdpr-and-data-sharing) — mailing lists are internal; still apply data-minimization for attachments
 

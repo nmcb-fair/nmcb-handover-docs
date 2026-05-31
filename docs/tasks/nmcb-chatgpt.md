@@ -1,6 +1,5 @@
 # NMCB ChatGPT (codebook assistant)
 
-**Status:** Complete
 
 Custom GPT that helps researchers and data staff **find relevant variables** in the NMCB codebook using **bilingual** (Dutch + English) concept matching.
 

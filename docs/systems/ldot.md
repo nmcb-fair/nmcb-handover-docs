@@ -1,6 +1,5 @@
 # LDOT
 
-**Status:** Ongoing
 
 *Role: participant registry and study logistics (screening, locations, postcodes) for NMCB; exports feed overview and eligibility pipelines.*
 
@@ -86,4 +85,4 @@ After bulk migration of 1300+ legacy participants into LDOT, many postcodes were
 
 - [Recurring study routines](../workflows/recurring-routines.md) — LDOT export cadence and overview
 - [Castor](castor.md) — clinical capture (separate from LDOT logistics)
-- [Where everything lives](../where-everything-lives.md) — record LDOT paths and owners when known
+- [Where data lives](../where-data-lives.md) — record LDOT paths and owners when known

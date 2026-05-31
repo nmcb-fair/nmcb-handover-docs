@@ -14,7 +14,7 @@
       
       
       
-        <link rel="next" href="where-everything-lives/">
+        <link rel="next" href="where-data-lives/">
       
       
         
@@ -321,17 +321,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#page-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Page status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-to-use-this-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -357,14 +346,14 @@
   
   
     <li class="md-nav__item">
-      <a href="where-everything-lives/" class="md-nav__link">
+      <a href="where-data-lives/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Where everything lives
+    Where data lives
   
 
     
@@ -779,34 +768,6 @@
   
   
     <li class="md-nav__item">
-      <a href="systems/scripts-and-qc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts and QC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="systems/snowflake/" class="md-nav__link">
         
   
@@ -871,34 +832,6 @@
     
   
     Biobank
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="systems/multicentre/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Multicentre data
   
 
     
@@ -1689,17 +1622,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#page-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Page status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-to-use-this-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1728,7 +1650,6 @@
 
 
 <h1 id="nmcb-hand-over-documentation">NMCB hand-over documentation<a class="headerlink" href="#nmcb-hand-over-documentation" title="Permanent link">&para;</a></h1>
-<p><strong>Status:</strong> Ongoing</p>
 <p>Welcome to the working hand-over for the <strong>Netherlands ME/CFS Cohort and Biobank (NMCB)</strong> data management and data infrastructure role.</p>
 <h2 id="keep-in-mind-gdpr-and-data-sharing">Keep in mind (GDPR and data sharing)<a class="headerlink" href="#keep-in-mind-gdpr-and-data-sharing" title="Permanent link">&para;</a></h2>
 <p>These rules apply to <strong>every</strong> export, list, myDRE delivery, or biobank hand-off. Source: Amsterdam UMC RDM (Paulo Heemskerk, myDRE / data-request discussions, Aug 2025).</p>
@@ -1770,8 +1691,8 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Where everything lives</strong></td>
-<td>Paths, owners, and key locations (start here)</td>
+<td><strong>Where data lives</strong></td>
+<td>Where raw, processed, and final data sit (Research Drive, Castor, OpenSpecimen, …) — start here</td>
 </tr>
 <tr>
 <td><strong>Workflows</strong></td>
@@ -1791,14 +1712,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="page-status">Page status<a class="headerlink" href="#page-status" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Complete</strong> — ready to use for hand-over; only routine maintenance expected.</li>
-<li><strong>Ongoing</strong> — useful now, but details still need confirmation, extension, or regular updates.</li>
-<li><strong>Not started</strong> — placeholder or draft page that still needs core content.</li>
-</ul>
 <h2 id="how-to-use-this-documentation">How to use this documentation<a class="headerlink" href="#how-to-use-this-documentation" title="Permanent link">&para;</a></h2>
-<p>Start with <a href="where-everything-lives/">Where everything lives</a>, then open the <strong>workflow</strong> or <strong>system</strong> page for the task at hand. Use <strong>Tasks</strong> for runnable procedures (data packages, sample requests, tooling).</p>
+<p>Start with <a href="where-data-lives/">Where data lives</a> and the <a href="systems/data-architecture/#end-to-end-data-flow">end-to-end data flow</a> diagram, then open the <strong>workflow</strong> or <strong>system</strong> page for the task at hand. Use <strong>Tasks</strong> for runnable procedures (data packages, sample requests, tooling).</p>
 <p>Each task page should answer:</p>
 <ol>
 <li>Why does this task exist?</li>
@@ -1866,6 +1781,8 @@
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="javascripts/mermaid-config.js"></script>
       
     
   </body>

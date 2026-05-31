@@ -1,6 +1,5 @@
 # Multi-centre sample data workflow
 
-**Status:** Ongoing
 
 ## Multi-centre sample processing
 

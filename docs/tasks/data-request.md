@@ -1,6 +1,5 @@
 # Data request
 
-**Status:** Complete
 
 This page documents the **data-request** project at [github.com/nmcb-fair/data-request](https://github.com/nmcb-fair/data-request). The repository builds researcher-facing **data packages** (CSV exports with pseudonyms) from Castor, device, and related sources in `data pool/`.
 
@@ -201,4 +200,4 @@ Older projects may still use explicit participant-pool files and request workboo
 - [Sample request](sample-request.md) — biobank sample releases (separate repo)
 - [myDRE](../systems/mydre.md) — secure analysis environment for some deliveries (including [Snowflake issuing via myDRE](../systems/mydre.md#issuing-snowflake-data-via-mydre))
 - [Snowflake](../systems/snowflake.md) — structured data and extracts
-- [Scripts and QC](../systems/scripts-and-qc.md) — upstream cleaning before data pool
+- [Devices](../systems/devices.md) · [Device data workflow](../workflows/device-data-workflow.md) — upstream cleaning before `data pool/`

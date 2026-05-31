@@ -1,6 +1,5 @@
 # NMCB Research Drive
 
-**Status:** Complete
 
 ## Overview
 
@@ -44,24 +43,7 @@ Detailed documentation is available in folder-specific README files.
 
 ## Data journey (document this over time)
 
-RDM asked the team to write out how data **travel** from capture to analysis — e.g. device → QC → Research Drive → Snowflake → requests / myDRE. Use [Data architecture](data-architecture.md) as the living overview; below is a starter aligned with current NMCB practice.
-
-```mermaid
-flowchart LR
-  DEV[Device / Castor / LDOT / lab export]
-  RAW[Research Drive<br/>raw / organized]
-  QC[Scripts & QC<br/>new version]
-  PROC[Research Drive<br/>processed]
-  SF[Snowflake]
-  OUT[Data request / myDRE]
-
-  DEV --> RAW
-  RAW --> QC
-  QC --> PROC
-  PROC --> SF
-  SF --> OUT
-  PROC --> OUT
-```
+RDM asked the team to write out how data **travel** from capture to analysis — e.g. device → QC → Research Drive → Snowflake → requests / myDRE. The **clickable end-to-end diagram** (with links to every workflow) is on [Data architecture — End-to-end data flow](data-architecture.md#end-to-end-data-flow).
 
 **Versioning rule (RDM):**
 
@@ -72,7 +54,7 @@ flowchart LR
 
 ## Folder for IT / data management team
 
-Use Research Drive as the **hand-off surface** with central IT / data management: create a folder they can **read and write**, separate from participant-facing raw areas where possible. Document the path in [Where everything lives](../where-everything-lives.md) when finalized.
+Use Research Drive as the **hand-off surface** with central IT / data management: create a folder they can **read and write**, separate from participant-facing raw areas where possible. Document the path in [Where data lives](../where-data-lives.md) when finalized.
 
 ---
 

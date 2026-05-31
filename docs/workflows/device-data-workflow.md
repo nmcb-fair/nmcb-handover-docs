@@ -1,6 +1,5 @@
 # Device data workflow
 
-**Status:** Ongoing
 
 How device outputs move from capture through QC and into cleaning scripts / structured storage. Install apps and devices before a visit in [Device setup for visit](device-setup-for-visit.md); per-device risks and notes stay in [Devices](../systems/devices.md). This page is the **flow** view.
 
@@ -11,7 +10,7 @@ For each device, the handover should make explicit:
 1. setup before use
 2. raw output format
 3. naming convention
-4. where output is stored for QC (see [Scripts and QC](../systems/scripts-and-qc.md))
+4. where output is stored for QC (see [Devices](../systems/devices.md))
 
 ## Cadence (from current plan)
 

@@ -229,14 +229,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../where-everything-lives/" class="md-nav__link">
+      <a href="../../where-data-lives/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Where everything lives
+    Where data lives
   
 
     
@@ -651,34 +651,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/scripts-and-qc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts and QC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../systems/snowflake/" class="md-nav__link">
         
   
@@ -743,34 +715,6 @@
     
   
     Biobank
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../systems/multicentre/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Multicentre data
   
 
     
@@ -1796,7 +1740,6 @@
 
 
 <h1 id="omop-cdm-mapping">OMOP CDM mapping<a class="headerlink" href="#omop-cdm-mapping" title="Permanent link">&para;</a></h1>
-<p><strong>Status:</strong> Not started</p>
 <p><em>Map NMCB variables to the </em><em><a href="https://www.ohdsi.org/data-standardization/the-common-data-model/">OMOP Common Data Model</a></em><em> for interoperable analytics with OHDSI tools. Implementation lives in </em><em><code>nmcb-codebook/omop/</code></em><em>; the older Hamdi conceptual model is </em><em>superseded</em><em> (kept for reference only).</em></p>
 <hr />
 <h2 id="canonical-implementation">Canonical implementation<a class="headerlink" href="#canonical-implementation" title="Permanent link">&para;</a></h2>
@@ -1941,7 +1884,7 @@
 <li>[ ] Confirm OHDSI / OMOP target version (CDM v5.x) and vocabulary snapshots used for concept IDs</li>
 <li>[ ] Extend <code>omop/metadata/tables/*.yaml</code> for next domains (visits, conditions, labs)</li>
 <li>[ ] Run / document ETL scripts under <code>omop/sql/omop_etl/</code> against Snowflake or staging DB</li>
-<li>[ ] Copy Rowdy training decks and Hamdi PDF into <code>docs/files/fair/omop/</code> or link Research Drive path in <a href="../../where-everything-lives/">Where everything lives</a></li>
+<li>[ ] Copy Rowdy training decks and Hamdi PDF into <code>docs/files/fair/omop/</code> or link Research Drive path in <a href="../../where-data-lives/">Where data lives</a></li>
 <li>[ ] Align with board task “mapping NMCB data toward OMOP” in <a href="../../systems/data-architecture/">Data architecture</a></li>
 </ul>
 <hr />
@@ -2011,6 +1954,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-config.js"></script>
       
     
   </body>

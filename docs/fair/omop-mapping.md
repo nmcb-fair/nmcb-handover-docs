@@ -1,6 +1,5 @@
 # OMOP CDM mapping
 
-**Status:** Not started
 
 *Map NMCB variables to the **[OMOP Common Data Model](https://www.ohdsi.org/data-standardization/the-common-data-model/)** for interoperable analytics with OHDSI tools. Implementation lives in **`nmcb-codebook/omop/`**; the older Hamdi conceptual model is **superseded** (kept for reference only).*
 
@@ -92,7 +91,7 @@ Both export through `linkml/scripts/export_excel.py` into the unified codebook w
 - [ ] Confirm OHDSI / OMOP target version (CDM v5.x) and vocabulary snapshots used for concept IDs
 - [ ] Extend `omop/metadata/tables/*.yaml` for next domains (visits, conditions, labs)
 - [ ] Run / document ETL scripts under `omop/sql/omop_etl/` against Snowflake or staging DB
-- [ ] Copy Rowdy training decks and Hamdi PDF into `docs/files/fair/omop/` or link Research Drive path in [Where everything lives](../where-everything-lives.md)
+- [ ] Copy Rowdy training decks and Hamdi PDF into `docs/files/fair/omop/` or link Research Drive path in [Where data lives](../where-data-lives.md)
 - [ ] Align with board task “mapping NMCB data toward OMOP” in [Data architecture](../systems/data-architecture.md)
 
 ---

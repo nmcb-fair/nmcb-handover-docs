@@ -1,6 +1,5 @@
 # GitHub
 
-**Status:** Complete
 
 *Role: version control for study code and related analysis artefacts.*
 

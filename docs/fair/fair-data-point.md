@@ -1,6 +1,5 @@
 # FAIR Data Point (Amsterdam UMC)
 
-**Status:** Not started
 
 *A **FAIR Data Point (FDP)** publishes machine-readable metadata about datasets (catalogues, datasets, distributions) using RDF. Amsterdam UMC and Health-RI use FDPs in the **national health data catalogue** ecosystem.*
 

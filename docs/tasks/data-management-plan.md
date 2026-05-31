@@ -1,6 +1,5 @@
 # Data management plan (DMP)
 
-**Status:** Ongoing
 
 *Maintain the main NMCB DMP and help sub-projects complete aligned sub-project DMPs without duplicating the master document.*
 
@@ -24,7 +23,7 @@ Optional **Training materials** may sit alongside these files on Research Drive 
 
 ## Where the DMP lives
 
-Keep the canonical set on **Research Drive** under the NMCB **data management** area (exact path: document in [Where everything lives](../where-everything-lives.md) when confirmed). The copies in this hand-over repo are **reference attachments** for the successor; update Research Drive when the PDF or template changes.
+Keep the canonical set on **Research Drive** under the NMCB **data management** area (exact path: document in [Where data lives](../where-data-lives.md) when confirmed). The copies in this hand-over repo are **reference attachments** for the successor; update Research Drive when the PDF or template changes.
 
 | Hand-over copy | Filename in repo |
 | -------------- | ---------------- |

@@ -1,7 +1,5 @@
 # NMCB hand-over documentation
 
-**Status:** Ongoing
-
 Welcome to the working hand-over for the **Netherlands ME/CFS Cohort and Biobank (NMCB)** data management and data infrastructure role.
 
 ## Keep in mind (GDPR and data sharing)
@@ -42,21 +40,15 @@ This documentation is written to make the role:
 
 | Section | Purpose |
 |---------|---------|
-| **Where everything lives** | Paths, owners, and key locations (start here) |
+| **Where data lives** | Where raw, processed, and final data sit (Research Drive, Castor, OpenSpecimen, …) — start here |
 | **Workflows** | CDL/RDL alerts, multicentre sample handling, devices, recurring routines |
 | **Systems** | Castor, devices, scripts, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub |
 | **Tasks** | Step-by-step procedures (data request, sample request, DMP, ChatGPT, device QC, etc.) |
 | **FAIR** | Metadata, catalogues, controlled vocabulary, OMOP — [overview](fair/index.md) (no active follow-up; documented for handover) |
 
-## Page status
-
-- **Complete** — ready to use for hand-over; only routine maintenance expected.
-- **Ongoing** — useful now, but details still need confirmation, extension, or regular updates.
-- **Not started** — placeholder or draft page that still needs core content.
-
 ## How to use this documentation
 
-Start with [Where everything lives](where-everything-lives.md), then open the **workflow** or **system** page for the task at hand. Use **Tasks** for runnable procedures (data packages, sample requests, tooling).
+Start with [Where data lives](where-data-lives.md) and the [end-to-end data flow](systems/data-architecture.md#end-to-end-data-flow) diagram, then open the **workflow** or **system** page for the task at hand. Use **Tasks** for runnable procedures (data packages, sample requests, tooling).
 
 Each task page should answer:
 

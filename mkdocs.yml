@@ -13,6 +13,9 @@ theme:
     - search.highlight
     - content.code.copy
 
+extra_javascript:
+  - javascripts/mermaid-config.js
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -28,7 +31,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Where everything lives: where-everything-lives.md
+  - Where data lives: where-data-lives.md
   - Workflows:
       - Overview: workflows/index.md
       - CDL alert workflow: workflows/cdl-alert-workflow.md
@@ -41,11 +44,9 @@ nav:
       - Data architecture: systems/data-architecture.md
       - Castor EDC: systems/castor.md
       - Devices: systems/devices.md
-      - Scripts and QC: systems/scripts-and-qc.md
       - Snowflake and structured data: systems/snowflake.md
       - Research Drive: systems/research-drive.md
       - Biobank: systems/biobank.md
-      - Multicentre data: systems/multicentre.md
       - OpenSpecimen: systems/openspecimen.md
       - myDRE: systems/mydre.md
       - LDOT: systems/ldot.md

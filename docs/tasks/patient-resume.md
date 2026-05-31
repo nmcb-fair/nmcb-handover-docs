@@ -1,6 +1,5 @@
 # Patient resume
 
-**Status:** Active
 
 ## Purpose
 

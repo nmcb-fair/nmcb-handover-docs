@@ -1,6 +1,5 @@
 # ACS data clean
 
-**Status:** Complete
 
 ## Purpose
 

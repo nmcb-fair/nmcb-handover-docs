@@ -1,6 +1,5 @@
 # Ontology harmonization (SNOMED CT, LOINC, NCIT)
 
-**Status:** Not started
 
 *Map NMCB / PCNN variables to **existing biomedical ontologies** and produce **machine-readable variable–term pairs**, integrated with the PCNN codebook. Published workflow; next steps: **LinkML** representation and **expert review** with AI/LLM support.*
 

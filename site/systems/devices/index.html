@@ -16,7 +16,7 @@
         <link rel="prev" href="../castor/">
       
       
-        <link rel="next" href="../scripts-and-qc/">
+        <link rel="next" href="../snowflake/">
       
       
         
@@ -229,14 +229,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../where-everything-lives/" class="md-nav__link">
+      <a href="../../where-data-lives/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Where everything lives
+    Where data lives
   
 
     
@@ -892,34 +892,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../scripts-and-qc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts and QC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../snowflake/" class="md-nav__link">
         
   
@@ -984,34 +956,6 @@
     
   
     Biobank
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multicentre/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Multicentre data
   
 
     
@@ -1952,7 +1896,6 @@
 
 
 <h1 id="devices">Devices<a class="headerlink" href="#devices" title="Permanent link">&para;</a></h1>
-<p><strong>Status:</strong> Complete</p>
 <p><em>Role: device outputs and visit-related measurements.</em></p>
 <p>For <strong>setup before a visit</strong>, see <a href="../../workflows/device-setup-for-visit/">Device setup for visit</a>. For the <strong>flow</strong> from capture to QC and scripts, see <a href="../../workflows/device-data-workflow/">Device data workflow</a>.</p>
 <p>The task board shows several device-related workflows. Device data capture needs explicit documentation because it often contains tacit operational knowledge.</p>
@@ -1972,7 +1915,7 @@
 <li>setup before use</li>
 <li>raw output format</li>
 <li>naming convention</li>
-<li>where output is stored for QC (see <a href="../scripts-and-qc/">Scripts and QC</a>)</li>
+<li>where output is stored for QC (see <a href="../../workflows/device-data-workflow/">Device data workflow</a> and <a href="../../where-data-lives/">Where data lives</a>)</li>
 </ol>
 <h2 id="omron">Omron<a class="headerlink" href="#omron" title="Permanent link">&para;</a></h2>
 <p>Logi in is required for using the <code>OMRON connect</code> application, and login in detail can be found at: <a href="https://amsterdamumc.sharepoint.com/sites/CoreTeam/Shared%20Documents/Team%20Management/Login%20details?csf=1&amp;web=1&amp;e=wMYiGW">https://amsterdamumc.sharepoint.com/sites/CoreTeam/Shared%20Documents/Team%20Management/Login%20details?csf=1&amp;web=1&amp;e=wMYiGW</a></p>
@@ -1994,7 +1937,7 @@
 <ul>
 <li>what fields differ between device versions</li>
 <li>whether a field mapping table exists</li>
-<li>how outputs are standardised (see <a href="../scripts-and-qc/">Scripts and QC</a>)</li>
+<li>how outputs are standardised (conversion scripts in <a href="../github/">GitHub</a> repos)</li>
 </ul>
 <h2 id="vu-ams">VU-AMS<a class="headerlink" href="#vu-ams" title="Permanent link">&para;</a></h2>
 <h3 id="current-board-signal_2">Current board signal<a class="headerlink" href="#current-board-signal_2" title="Permanent link">&para;</a></h3>
@@ -2062,11 +2005,11 @@
 <li>expected file pattern (~200 MB; flag outliers per table above)</li>
 <li>known abnormal export patterns</li>
 <li>whether all files should be preserved</li>
-<li>QC procedure (see <a href="../scripts-and-qc/">Scripts and QC</a>)</li>
+<li>QC procedure (see <a href="../../workflows/device-data-workflow/">Device data workflow</a>)</li>
 <li>confirmed WebDAV mount letter and path prefix used in production (<code>R:\</code> or equivalent)</li>
 </ul>
 <h2 id="amsterdam-cognitive-scan">Amsterdam Cognitive Scan<a class="headerlink" href="#amsterdam-cognitive-scan" title="Permanent link">&para;</a></h2>
-<p>Document the setup, output format, and how output is linked back to the participant ID. QC checks are in <a href="../scripts-and-qc/">Scripts and QC</a>.</p>
+<p>Document the setup, output format, and how output is linked back to the participant ID. QC cadence is in <a href="../../workflows/device-data-workflow/">Device data workflow</a>.</p>
 <h2 id="ipads-for-home-visits">iPads for home visits<a class="headerlink" href="#ipads-for-home-visits" title="Permanent link">&para;</a></h2>
 <p>Install Castor, Omron, VU-AMS, and other visit apps as described in <a href="../../workflows/device-setup-for-visit/">Device setup for visit</a>. If iPads are used for data collection or participant-facing workflows, also document:</p>
 <ul>
@@ -2134,6 +2077,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-config.js"></script>
       
     
   </body>

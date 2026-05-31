@@ -1,6 +1,5 @@
 # Snowflake and structured data
 
-**Status:** Ongoing
 
 *Role: structured storage; modelling and eligibility outputs; extracts for requests and downstream use.*
 

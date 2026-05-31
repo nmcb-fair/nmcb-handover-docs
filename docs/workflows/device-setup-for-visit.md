@@ -1,6 +1,5 @@
 # Device setup for visit
 
-**Status:** Ongoing
 
 Install and configure study devices on the **iPad** (and laptop where noted) before a participant visit. For what happens after capture—storage, QC, and cleaning—see [Device data workflow](device-data-workflow.md).
 
@@ -105,5 +104,5 @@ The license is issued via **Tanita Service** (typically from `logistics@tanita.e
 
 - [Device data workflow](device-data-workflow.md) — export, QC cadence, and cleaning
 - [Devices](../systems/devices.md) — per-device handover notes and risks
-- [Scripts and QC](../systems/scripts-and-qc.md) — conversion and QC scripts
+- [GitHub](../systems/github.md) — device conversion and QC scripts in `nmcb-fair` repos
 

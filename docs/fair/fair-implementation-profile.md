@@ -1,6 +1,5 @@
 # FAIR Implementation Profile (FIP)
 
-**Status:** Ongoing
 
 *NMCB’s FIP records **which FAIR Enabling Resources (FERs)** the consortium chose to implement the [FAIR Guiding Principles](https://www.go-fair.org/fair-principles/). It supports alignment with national infrastructure (Health-RI, BBMRI, DataverseNL) and with ontology / OMOP work documented elsewhere in this folder.*
 

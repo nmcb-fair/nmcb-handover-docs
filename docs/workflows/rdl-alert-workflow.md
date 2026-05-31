@@ -1,6 +1,5 @@
 # RDL Alert Workflow
 
-**Status:** Complete
 
 **Radboud Diagnostic Lab (RDL)** blood results and alerts for NMCB participants at the Radboud site. The flow parallels the [CDL alert workflow](cdl-alert-workflow.md): raw export, linkage via a visit log, processing into structured data and alert outputs, then clinical follow-up on abnormal results.
 

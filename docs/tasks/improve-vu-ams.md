@@ -1,6 +1,5 @@
 # Improve VU-AMS
 
-**Status:** Ongoing
 
 Operational improvements for **VU-AMS** (ECG / autonomic monitoring) data: quality-check protocol, Research Drive folder layout, and investigation of abnormal export file sizes.
 
@@ -30,7 +29,7 @@ Compare against a normal ECG appearance (see [Device setup for visit — VU-AMS]
 
 - Draft QC protocol document (slides or SOP) covering raw → filtered workflow.
 - **Contact VU-AMS** to review the protocol (one onsite visit took place; formal QC slides were deferred due to capacity).
-- Link the approved protocol from [Scripts and QC](../systems/scripts-and-qc.md) once published.
+- Link the approved protocol from [Devices](../systems/devices.md) or Research Drive `data infrastructure/` once published.
 
 ---
 
@@ -148,7 +147,7 @@ For each file:
 
 - Cross-check each ID against visit log / Castor (visit completed vs early stop).
 - Open suspect files in VU-AMS Core (priority: `1000886_VU_AMS` at 3 MB).
-- Escalate device issues to the study device lead or central IT as appropriate (document contacts in [Where everything lives](../where-everything-lives.md)).
+- Escalate device issues to the study device lead or central IT as appropriate (document contacts in [Where data lives](../where-data-lives.md)).
 
 ---
 
@@ -163,6 +162,6 @@ For each file:
 - [Device setup for visit](../workflows/device-setup-for-visit.md)
 - [Device data workflow](../workflows/device-data-workflow.md)
 - [Devices](../systems/devices.md)
-- [Scripts and QC](../systems/scripts-and-qc.md)
+- [Devices](../systems/devices.md) · [GitHub](../systems/github.md)
 - [Research Drive](../systems/research-drive.md)
 

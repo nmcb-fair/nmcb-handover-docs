@@ -1,6 +1,5 @@
 # Workflows
 
-**Status:** Ongoing
 
 End-to-end procedures for lab alerts, biobank, and devices. Use this section together with [Systems](../systems/data-architecture.md) for tools and paths. Data and sample **requests** are documented under [Tasks](../tasks/data-request.md).
 

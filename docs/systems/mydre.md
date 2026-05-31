@@ -1,6 +1,5 @@
 # myDRE
 
-**Status:** Ongoing
 
 *Role: secure analysis environment for sharing sensitive NMCB data with approved researchers without broad file export.*
 

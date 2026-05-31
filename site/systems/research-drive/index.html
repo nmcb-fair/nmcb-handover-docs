@@ -229,14 +229,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../where-everything-lives/" class="md-nav__link">
+      <a href="../../where-data-lives/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Where everything lives
+    Where data lives
   
 
     
@@ -651,34 +651,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../scripts-and-qc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts and QC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../snowflake/" class="md-nav__link">
         
   
@@ -944,34 +916,6 @@
     
   
     Biobank
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multicentre/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Multicentre data
   
 
     
@@ -1872,7 +1816,6 @@
 
 
 <h1 id="nmcb-research-drive">NMCB Research Drive<a class="headerlink" href="#nmcb-research-drive" title="Permanent link">&para;</a></h1>
-<p><strong>Status:</strong> Complete</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p><strong>NMCB choice:</strong> <strong>Research Drive</strong> is the primary shared file store for cohort operations, device outputs, biobank hand-offs, scripts, and collaboration with the data management / IT team. <strong>YoDa</strong> (on <strong>iRODS</strong>) is <strong>not</strong> in routine use today but is the approved option when <strong>sensitive</strong> data cannot sit on Research Drive.</p>
 <p>This Research Drive project folder contains the shared data, documentation, and infrastructure resources for the Netherlands ME/CFS Cohort and Biobank (NMCB).</p>
@@ -1926,21 +1869,7 @@
 <p><strong>RDM contact (storage policy):</strong> Paulo Heemskerk — <a href="mailto:p.f.heemskerk@amsterdamumc.nl">p.f.heemskerk@amsterdamumc.nl</a>.</p>
 <hr />
 <h2 id="data-journey-document-this-over-time">Data journey (document this over time)<a class="headerlink" href="#data-journey-document-this-over-time" title="Permanent link">&para;</a></h2>
-<p>RDM asked the team to write out how data <strong>travel</strong> from capture to analysis — e.g. device → QC → Research Drive → Snowflake → requests / myDRE. Use <a href="../data-architecture/">Data architecture</a> as the living overview; below is a starter aligned with current NMCB practice.</p>
-<pre class="mermaid"><code>flowchart LR
-  DEV[Device / Castor / LDOT / lab export]
-  RAW[Research Drive&lt;br/&gt;raw / organized]
-  QC[Scripts &amp; QC&lt;br/&gt;new version]
-  PROC[Research Drive&lt;br/&gt;processed]
-  SF[Snowflake]
-  OUT[Data request / myDRE]
-
-  DEV --&gt; RAW
-  RAW --&gt; QC
-  QC --&gt; PROC
-  PROC --&gt; SF
-  SF --&gt; OUT
-  PROC --&gt; OUT</code></pre>
+<p>RDM asked the team to write out how data <strong>travel</strong> from capture to analysis — e.g. device → QC → Research Drive → Snowflake → requests / myDRE. The <strong>clickable end-to-end diagram</strong> (with links to every workflow) is on <a href="../data-architecture/#end-to-end-data-flow">Data architecture — End-to-end data flow</a>.</p>
 <p><strong>Versioning rule (RDM):</strong></p>
 <ul>
 <li>Keep <strong>untouched raw</strong> data in a dedicated location (do not overwrite in place).</li>
@@ -1948,7 +1877,7 @@
 </ul>
 <hr />
 <h2 id="folder-for-it-data-management-team">Folder for IT / data management team<a class="headerlink" href="#folder-for-it-data-management-team" title="Permanent link">&para;</a></h2>
-<p>Use Research Drive as the <strong>hand-off surface</strong> with central IT / data management: create a folder they can <strong>read and write</strong>, separate from participant-facing raw areas where possible. Document the path in <a href="../../where-everything-lives/">Where everything lives</a> when finalized.</p>
+<p>Use Research Drive as the <strong>hand-off surface</strong> with central IT / data management: create a folder they can <strong>read and write</strong>, separate from participant-facing raw areas where possible. Document the path in <a href="../../where-data-lives/">Where data lives</a> when finalized.</p>
 <hr />
 <h2 id="top-level-folder-structure">Top-Level Folder Structure<a class="headerlink" href="#top-level-folder-structure" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>NMCB (Projectfolder)
@@ -2099,6 +2028,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-config.js"></script>
       
     
   </body>

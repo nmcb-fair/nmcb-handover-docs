@@ -1,6 +1,5 @@
 # Health-RI core metadata schema
 
-**Status:** Not started
 
 *The **[Health-RI Core metadata schema](https://github.com/Health-RI/health-ri-metadata)** powers the **National Health Data Catalogue** and aligns with the **European Health Data Space (EHDS)** via **HealthDCAT-AP**.*
 

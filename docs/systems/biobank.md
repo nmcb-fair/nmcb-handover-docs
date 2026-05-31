@@ -1,6 +1,5 @@
 # Biobank data
 
-**Status:** Complete
 
 *Role in NMCB: sample metadata, storage location, and hand-off between labs, Research Drive, OpenSpecimen, and sample requests.*
 

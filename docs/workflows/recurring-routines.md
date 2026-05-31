@@ -1,6 +1,5 @@
 # Recurring study routines
 
-**Status:** Ongoing
 
 Operational tasks that keep NMCB running day to day: tracking visits and raw data collection, maintaining identifiers, and producing summary counts. These are not full end-to-end pipelines (see [Workflows](index.md) for CDL, devices, sample requests, etc.) but they feed those pipelines.
 
@@ -13,7 +12,7 @@ Operational tasks that keep NMCB running day to day: tracking visits and raw dat
 | [Get numbers](#get-numbers)                               | Weekly/bi-weekly or on request         | Board tables and funnel plots                  |
 
 
-Complete locations and owners in [Where everything lives](../where-everything-lives.md). Formal SOPs live in the project Research Drive / team documentation (not duplicated here).
+Complete locations and owners in [Where data lives](../where-data-lives.md). Formal SOPs live in the project Research Drive / team documentation (not duplicated here).
 
 ---
 
@@ -33,7 +32,7 @@ It supports:
 
 - **Weekly** during active visit periods (recommended minimum)  
 - **After each visit batch** when recruitment or scheduling is heavy  
-- Confirm exact weekday and owner with the study coordinator (currently `TBD` in [Where everything lives](../where-everything-lives.md))
+- Confirm exact weekday and owner with the study coordinator (currently `TBD` in [Where data lives](../where-data-lives.md))
 
 ### Inputs
 
@@ -98,7 +97,7 @@ Confirm that raw, processed, and transformed data are **available, complete, and
 
 - [Research Drive](../systems/research-drive.md) — raw and processed folders  
 - [Snowflake](../systems/snowflake.md) — structured counts and tables (when in use)  
-- [Scripts and QC](../systems/scripts-and-qc.md) — cleaning and validation scripts
+- [GitHub](../systems/github.md) — cleaning and validation scripts in `nmcb-fair` repos
 
 ### Steps
 
@@ -132,7 +131,7 @@ Confirm that raw, processed, and transformed data are **available, complete, and
 ### Potential automation (future)
 
 - Automated row-count comparison: raw export vs Snowflake table for the same source and date  
-- Scripted file-size and naming checks in [Scripts and QC](../systems/scripts-and-qc.md) inventory
+- Scripted file-size and naming checks (document in relevant repo README or [Devices](../systems/devices.md))
 
 Document any script used in the sign-off note.
 
@@ -216,7 +215,7 @@ For routine NMCB reporting, use the **`nmcb-overview`** repository rather than a
 
 Related references:
 
-- [Scripts and QC](../systems/scripts-and-qc.md)
+- [Device data workflow](device-data-workflow.md) · [GitHub](../systems/github.md)
 - [Castor](../systems/castor.md) (source system for screeners; counts are derived via LDOT overview pipeline)
 - [Snowflake](../systems/snowflake.md) (use only for non-standard metrics not covered by `nmcb-overview`)
 

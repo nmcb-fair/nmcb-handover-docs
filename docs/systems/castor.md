@@ -1,6 +1,5 @@
 # Castor EDC
 
-**Status:** Ongoing
 
 Castor is the main data capture environment for study forms, survey logic, and participant-related study data.
 

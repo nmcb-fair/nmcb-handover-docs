@@ -1,6 +1,5 @@
 # PAIS metadata schema coordination
 
-**Status:** Not started
 
 *Cross-initiative alignment on **study-level metadata** for **Post-acute infection syndromes (PAIS)** in the **European Health Data Space (EHDS)**. Variable-level semantics (SNOMED CT, LOINC, NCIT) are covered separately under [Controlled vocabulary — Ontology harmonization](ontology-harmonization.md).*
 

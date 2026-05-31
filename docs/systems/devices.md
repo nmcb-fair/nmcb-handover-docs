@@ -1,6 +1,5 @@
 # Devices
 
-**Status:** Complete
 
 *Role: device outputs and visit-related measurements.*
 
@@ -25,7 +24,7 @@ For each device, document:
 1. setup before use
 2. raw output format
 3. naming convention
-4. where output is stored for QC (see [Scripts and QC](scripts-and-qc.md))
+4. where output is stored for QC (see [Device data workflow](../workflows/device-data-workflow.md) and [Where data lives](../where-data-lives.md))
 
 ## Omron
 
@@ -57,7 +56,7 @@ Document:
 
 - what fields differ between device versions
 - whether a field mapping table exists
-- how outputs are standardised (see [Scripts and QC](scripts-and-qc.md))
+- how outputs are standardised (conversion scripts in [GitHub](github.md) repos)
 
 ## VU-AMS
 
@@ -116,12 +115,12 @@ Document:
 - expected file pattern (~200 MB; flag outliers per table above)
 - known abnormal export patterns
 - whether all files should be preserved
-- QC procedure (see [Scripts and QC](scripts-and-qc.md))
+- QC procedure (see [Device data workflow](../workflows/device-data-workflow.md))
 - confirmed WebDAV mount letter and path prefix used in production (`R:\` or equivalent)
 
 ## Amsterdam Cognitive Scan
 
-Document the setup, output format, and how output is linked back to the participant ID. QC checks are in [Scripts and QC](scripts-and-qc.md).
+Document the setup, output format, and how output is linked back to the participant ID. QC cadence is in [Device data workflow](../workflows/device-data-workflow.md).
 
 ## iPads for home visits
 

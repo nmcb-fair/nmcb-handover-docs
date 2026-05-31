@@ -1,7 +1,5 @@
 # FAIR-related projects 
 
-**Status:** Not started
-
 *These initiatives are **not** part of day-to-day NMCB operations and currently have **no dedicated follow-up** in the team. They remain documented here for **hand-over** so work can resume (catalogues, PAIS metadata, ontology mapping, OMOP, FDP) without losing context.*
 
 Metadata is a **core component** of FAIR (Findable, Accessible, Interoperable, Reusable). NMCB’s operational metadata today lives mainly in the [codebook](../tasks/nmcb-chatgpt.md), Castor, and [DMP](../tasks/data-management-plan.md); the projects below target **cohort-wide / national / EHDS** layers.
@@ -11,7 +9,7 @@ Metadata is a **core component** of FAIR (Findable, Accessible, Interoperable, R
 ## Projects in this folder
 
 
-| Project                               | Page                                              | Status                                                              |
+| Project                               | Page                                              | Notes                                                               |
 | ------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------- |
 | **FAIR Implementation Profile (FIP)** | [FIP — NMCB FER selections](fair-implementation-profile.md) | Wizard project + Sep 2024 overview (Survey vs Biobank)              |
 | **PAIS metadata schema coordination** | [PAIS metadata schema](pais-metadata-schema.md)   | Coordination meeting April 2026; alignment across PAIS initiatives  |
