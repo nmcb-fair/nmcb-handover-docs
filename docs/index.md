@@ -46,7 +46,7 @@ This documentation is written to make the role:
 | **Workflows** | CDL/RDL alerts, multicentre sample handling, devices, recurring routines |
 | **Systems** | Castor, devices, scripts, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub |
 | **Tasks** | Step-by-step procedures (data request, sample request, DMP, ChatGPT, device QC, etc.) |
-| **FAIR (archive)** | Unfinished FAIR/metadata/FDP projects — [overview](fair/index.md) |
+| **FAIR** | Metadata, catalogues, controlled vocabulary, OMOP — [overview](fair/index.md) (no active follow-up; documented for handover) |
 
 ## Page status
 

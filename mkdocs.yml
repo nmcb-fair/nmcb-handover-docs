@@ -51,8 +51,9 @@ nav:
       - LDOT: systems/ldot.md
       - NMCB Core distribution list: systems/distributed-list.md
       - GitHub: systems/github.md
-  - FAIR (archive):
+  - FAIR:
       - Overview: fair/index.md
+      - FAIR Implementation Profile: fair/fair-implementation-profile.md
       - PAIS metadata schema: fair/pais-metadata-schema.md
       - FAIR Data Point: fair/fair-data-point.md
       - Health-RI metadata: fair/health-ri-metadata.md

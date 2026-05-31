@@ -2,7 +2,7 @@
 
 **Status:** Not started
 
-*Semantic interoperability for NMCB / PCNN: **ontology-backed variable mappings** and **OMOP CDM** alignment. These streams support the **Interoperable** and **Reusable** FAIR principles alongside study-level metadata ([FAIR overview](index.md)).*
+*Semantic interoperability for NMCB / PCNN: **ontology-backed variable mappings** and **OMOP CDM** alignment. No active follow-up currently; documented for handover. Supports the **Interoperable** and **Reusable** FAIR principles alongside study-level metadata ([FAIR overview](index.md)).*
 
 ---
 

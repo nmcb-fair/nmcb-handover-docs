@@ -4,7 +4,7 @@
 
 *The **[Health-RI Core metadata schema](https://github.com/Health-RI/health-ri-metadata)** powers the **National Health Data Catalogue** and aligns with the **European Health Data Space (EHDS)** via **HealthDCAT-AP**.*
 
-NMCB has not completed onboarding to this schema; this page is archival context for future FAIR cataloguing work.
+NMCB has not completed onboarding to this schema; documented here for when catalogue work resumes (no active follow-up on the NMCB side).
 
 ---
 

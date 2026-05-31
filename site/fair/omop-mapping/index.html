@@ -963,7 +963,7 @@
   <span class="md-ellipsis">
     
   
-    FAIR (archive)
+    FAIR
   
 
     
@@ -979,7 +979,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    FAIR (archive)
+    FAIR
   
 
           </label>
@@ -1000,6 +1000,34 @@
     
   
     Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fair-implementation-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR Implementation Profile
   
 
     
@@ -1292,10 +1320,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archive-hamdi-model-no-longer-used" class="md-nav__link">
+  <a href="#hamdi-model-superseded-reference-only" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archive: Hamdi model (no longer used)
+        Hamdi model (superseded — reference only)
       
     </span>
   </a>
@@ -1707,10 +1735,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archive-hamdi-model-no-longer-used" class="md-nav__link">
+  <a href="#hamdi-model-superseded-reference-only" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archive: Hamdi model (no longer used)
+        Hamdi model (superseded — reference only)
       
     </span>
   </a>
@@ -1769,7 +1797,7 @@
 
 <h1 id="omop-cdm-mapping">OMOP CDM mapping<a class="headerlink" href="#omop-cdm-mapping" title="Permanent link">&para;</a></h1>
 <p><strong>Status:</strong> Not started</p>
-<p><em>Map NMCB variables to the </em><em><a href="https://www.ohdsi.org/data-standardization/the-common-data-model/">OMOP Common Data Model</a></em><em> for interoperable analytics with OHDSI tools. Active work is in </em><em><code>nmcb-codebook/omop/</code></em><em>; older conceptual models are archived only.</em></p>
+<p><em>Map NMCB variables to the </em><em><a href="https://www.ohdsi.org/data-standardization/the-common-data-model/">OMOP Common Data Model</a></em><em> for interoperable analytics with OHDSI tools. Implementation lives in </em><em><code>nmcb-codebook/omop/</code></em><em>; the older Hamdi conceptual model is </em><em>superseded</em><em> (kept for reference only).</em></p>
 <hr />
 <h2 id="canonical-implementation">Canonical implementation<a class="headerlink" href="#canonical-implementation" title="Permanent link">&para;</a></h2>
 <p><strong>Repository:</strong> <a href="https://github.com/nmcb-fair/nmcb-codebook">github.com/nmcb-fair/nmcb-codebook</a> — folder <code>omop/</code></p>
@@ -1849,7 +1877,7 @@
 <p>Current <code>person.yaml</code> entries tie <code>variable_id</code> (e.g. <code>sex</code>, <code>dob</code>) to <code>omop_column</code> — see <a href="https://github.com/nmcb-fair/nmcb-codebook/blob/master/omop/metadata/tables/person.yaml">person.yaml in codebook repo</a>.</p>
 <hr />
 <h2 id="training-materials-rowdy-ohdsi-omop">Training materials (Rowdy — OHDSI / OMOP)<a class="headerlink" href="#training-materials-rowdy-ohdsi-omop" title="Permanent link">&para;</a></h2>
-<p>Store on Research Drive under <strong><code>NMCB/10. OMOP Data Model/</code></strong> (copy into <code>docs/files/fair/omop/</code> for git archive if desired):</p>
+<p>Store on Research Drive under <strong><code>NMCB/10. OMOP Data Model/</code></strong> (copy into <code>docs/files/fair/omop/</code> in this repo if desired):</p>
 <table>
 <thead>
 <tr>
@@ -1869,7 +1897,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="archive-hamdi-model-no-longer-used">Archive: Hamdi model (no longer used)<a class="headerlink" href="#archive-hamdi-model-no-longer-used" title="Permanent link">&para;</a></h2>
+<h2 id="hamdi-model-superseded-reference-only">Hamdi model (superseded — reference only)<a class="headerlink" href="#hamdi-model-superseded-reference-only" title="Permanent link">&para;</a></h2>
 <p>Earlier conceptual OMOP-related modelling by previous data manager <strong>Hamdi</strong> — <strong>superseded</strong> by the current <code>nmcb-codebook/omop/</code> YAML + ETL approach.</p>
 <table>
 <thead>
@@ -1881,11 +1909,11 @@
 <tbody>
 <tr>
 <td><code>Hamdi Model.pdf</code></td>
-<td>Research Drive: <code>10. OMOP Data Model/Archive/</code> → archive copy: <code>docs/files/fair/omop/hamdi-model-archive.pdf</code> (add when available)</td>
+<td>Research Drive: <code>10. OMOP Data Model/Archive/</code> → hand-over copy: <code>docs/files/fair/omop/hamdi-model-archive.pdf</code> (add when available)</td>
 </tr>
 </tbody>
 </table>
-<p>Keep for historical reference only; do not use for new ETL.</p>
+<p>Do not use for new ETL.</p>
 <hr />
 <h2 id="relation-to-ontology-harmonization">Relation to ontology harmonization<a class="headerlink" href="#relation-to-ontology-harmonization" title="Permanent link">&para;</a></h2>
 <table>

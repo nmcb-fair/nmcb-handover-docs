@@ -136,4 +136,4 @@ The DOCX follows the standard Amsterdam UMC phases. For each sub-project, ensure
 - [Data request](data-request.md) — approved extracts after sub-project / cohort requests
 - [Sample request](sample-request.md) — biobank releases
 - [GitHub](../systems/github.md) — code and reproducibility alongside DMP scripts metadata
-- [FAIR projects (archive)](../fair/index.md) — Health-RI / EHDS metadata and FDP (unfinished)
+- [FAIR projects](../fair/index.md) — Health-RI / EHDS metadata and FDP

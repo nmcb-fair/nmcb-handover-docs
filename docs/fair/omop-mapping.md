@@ -2,7 +2,7 @@
 
 **Status:** Not started
 
-*Map NMCB variables to the **[OMOP Common Data Model](https://www.ohdsi.org/data-standardization/the-common-data-model/)** for interoperable analytics with OHDSI tools. Active work is in **`nmcb-codebook/omop/`**; older conceptual models are archived only.*
+*Map NMCB variables to the **[OMOP Common Data Model](https://www.ohdsi.org/data-standardization/the-common-data-model/)** for interoperable analytics with OHDSI tools. Implementation lives in **`nmcb-codebook/omop/`**; the older Hamdi conceptual model is **superseded** (kept for reference only).*
 
 ---
 
@@ -55,7 +55,7 @@ Current `person.yaml` entries tie `variable_id` (e.g. `sex`, `dob`) to `omop_col
 
 ## Training materials (Rowdy — OHDSI / OMOP)
 
-Store on Research Drive under **`NMCB/10. OMOP Data Model/`** (copy into `docs/files/fair/omop/` for git archive if desired):
+Store on Research Drive under **`NMCB/10. OMOP Data Model/`** (copy into `docs/files/fair/omop/` in this repo if desired):
 
 | File | Purpose |
 | ---- | ------- |
@@ -64,15 +64,15 @@ Store on Research Drive under **`NMCB/10. OMOP Data Model/`** (copy into `docs/f
 
 ---
 
-## Archive: Hamdi model (no longer used)
+## Hamdi model (superseded — reference only)
 
 Earlier conceptual OMOP-related modelling by previous data manager **Hamdi** — **superseded** by the current `nmcb-codebook/omop/` YAML + ETL approach.
 
 | File | Location |
 | ---- | -------- |
-| `Hamdi Model.pdf` | Research Drive: `10. OMOP Data Model/Archive/` → archive copy: `docs/files/fair/omop/hamdi-model-archive.pdf` (add when available) |
+| `Hamdi Model.pdf` | Research Drive: `10. OMOP Data Model/Archive/` → hand-over copy: `docs/files/fair/omop/hamdi-model-archive.pdf` (add when available) |
 
-Keep for historical reference only; do not use for new ETL.
+Do not use for new ETL.
 
 ---
 
