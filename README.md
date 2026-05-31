@@ -2,7 +2,7 @@
 
 This repository contains the GitHub Markdown source for the **NMCB data management and data infrastructure hand-over**.
 
-It is designed to be published with **MkDocs Material** as a documentation website.
+It is designed to be published with **MkDocs Material** as a documentation website (top-level **tabs** for Workflows / Systems / FAIR / Tasks, navy–teal palette, custom sidebar hierarchy).
 
 ## Run locally
 
