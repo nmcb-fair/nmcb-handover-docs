@@ -1,7 +1,7 @@
 # Where data lives
 
 
-Map of **where NMCB data and related operational resources are stored**. For how data **moves** from capture to Snowflake (clickable diagram), see [Data architecture — End-to-end data flow](systems/data-architecture.md#end-to-end-data-flow).
+Map of **where NMCB data and related operational resources are stored**. For how data **moves** from capture to Snowflake (clickable diagram), see the [home page — End-to-end data flow](index.md#end-to-end-data-flow).
 
 Paths below are relative to the NMCB **Research Drive project folder** unless another system is named. Site-specific trees use `Amsterdam/` and `Radboud/`; each site typically follows `organized` → `processed` → `analyzed` → `archive`. See [Research Drive](systems/research-drive.md) for the top-level layout and sensitivity rules.
 
@@ -139,7 +139,7 @@ GitHub nmcb-fair/*                → scripts, data-request, codebook
 ## Related
 
 - [Research Drive](systems/research-drive.md) — project folder layout (`Amsterdam/`, `Radboud/`, `request/`, …)
-- [Data architecture](systems/data-architecture.md) — end-to-end flow
+- [Data flow (home)](index.md#end-to-end-data-flow) — end-to-end diagram
 - [Workflows](workflows/index.md) — procedures that move data between folders
 - [Where to update this page](#data-by-type) — when paths change, update this table and the relevant workflow page in the same PR
 

@@ -3,7 +3,7 @@
 
 *Maintain the main NMCB DMP and help sub-projects complete aligned sub-project DMPs without duplicating the master document.*
 
-**Related:** [Research Drive](../systems/research-drive.md) (storage and data journey) · [Data architecture](../systems/data-architecture.md) · [Castor](../systems/castor.md) · [myDRE](../systems/mydre.md) · [Keep in mind (GDPR)](../index.md#keep-in-mind-gdpr-and-data-sharing)
+**Related:** [Research Drive](../systems/research-drive.md) (storage and data journey) · [Data flow diagram](../index.md#end-to-end-data-flow) · [Castor](../systems/castor.md) · [myDRE](../systems/mydre.md) · [Keep in mind (GDPR)](../index.md#keep-in-mind-gdpr-and-data-sharing)
 
 ---
 

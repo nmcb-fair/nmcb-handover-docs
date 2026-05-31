@@ -43,7 +43,7 @@ Detailed documentation is available in folder-specific README files.
 
 ## Data journey (document this over time)
 
-RDM asked the team to write out how data **travel** from capture to analysis — e.g. device → QC → Research Drive → Snowflake → requests / myDRE. The **clickable end-to-end diagram** (with links to every workflow) is on [Data architecture — End-to-end data flow](data-architecture.md#end-to-end-data-flow).
+RDM asked the team to write out how data **travel** from capture to analysis — e.g. device → QC → Research Drive → Snowflake → requests / myDRE. The **clickable end-to-end diagram** (with links to every workflow) is on the [home page — End-to-end data flow](../index.md#end-to-end-data-flow).
 
 **Versioning rule (RDM):**
 
@@ -174,7 +174,7 @@ This structure supports:
 
 ## Related
 
-- [Data architecture](data-architecture.md) — end-to-end pipeline overview
+- [Data flow (home)](../index.md#end-to-end-data-flow) — end-to-end pipeline diagram
 - [myDRE](mydre.md) — secure analysis and controlled issuing (folder access or copied subsets)
 - [Data request](../tasks/data-request.md) — building deliverables from Research Drive sources
 - [Devices](devices.md) — VU-AMS and other outputs under `organized/`

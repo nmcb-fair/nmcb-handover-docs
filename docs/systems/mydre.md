@@ -203,4 +203,4 @@ Summary from AUMC RDM intake (Oscar van der Meer); full process on [support.mydr
 
 - [Research Drive](research-drive.md) — primary study file storage
 - [Data request](../tasks/data-request.md) — building tabular deliverables
-- [Data architecture](data-architecture.md) — how systems fit together
+- [Data flow (home)](../index.md#end-to-end-data-flow) — how systems fit together

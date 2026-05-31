@@ -92,7 +92,7 @@ Both export through `linkml/scripts/export_excel.py` into the unified codebook w
 - [ ] Extend `omop/metadata/tables/*.yaml` for next domains (visits, conditions, labs)
 - [ ] Run / document ETL scripts under `omop/sql/omop_etl/` against Snowflake or staging DB
 - [ ] Copy Rowdy training decks and Hamdi PDF into `docs/files/fair/omop/` or link Research Drive path in [Where data lives](../where-data-lives.md)
-- [ ] Align with board task “mapping NMCB data toward OMOP” in [Data architecture](../systems/data-architecture.md)
+- [ ] Align with board task “mapping NMCB data toward OMOP” on the [home page overview](../index.md#overview)
 
 ---
 

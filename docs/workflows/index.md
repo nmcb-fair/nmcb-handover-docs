@@ -1,7 +1,7 @@
 # Workflows
 
 
-End-to-end procedures for lab alerts, biobank, and devices. Use this section together with [Systems](../systems/data-architecture.md) for tools and paths. Data and sample **requests** are documented under [Tasks](../tasks/data-request.md).
+End-to-end procedures for lab alerts, biobank, and devices. See the [data flow diagram](../index.md#end-to-end-data-flow) and [Where data lives](../where-data-lives.md) for tools and paths. Data and sample **requests** are under [Tasks](../tasks/data-request.md).
 
 | Workflow | What it covers |
 |----------|----------------|

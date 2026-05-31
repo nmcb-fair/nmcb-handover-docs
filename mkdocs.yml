@@ -30,7 +30,7 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
+  - Data flow (home): index.md
   - Where data lives: where-data-lives.md
   - Workflows:
       - Overview: workflows/index.md

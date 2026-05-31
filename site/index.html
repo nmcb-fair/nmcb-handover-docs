@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Data flow (home)
             
           </span>
         </div>
@@ -216,7 +216,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Data flow (home)
   
 
     
@@ -234,7 +234,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Data flow (home)
   
 
     
@@ -258,6 +258,56 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-end data flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="End-to-end data flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-reference-clickable-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step reference (clickable links)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture principle
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#keep-in-mind-gdpr-and-data-sharing" class="md-nav__link">
@@ -325,6 +375,17 @@
     <span class="md-ellipsis">
       
         How to use this documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fair-and-catalogue-metadata-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIR and catalogue metadata (future)
       
     </span>
   </a>
@@ -1561,6 +1622,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#end-to-end-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-end data flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="End-to-end data flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-reference-clickable-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step reference (clickable links)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#keep-in-mind-gdpr-and-data-sharing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1632,6 +1743,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fair-and-catalogue-metadata-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIR and catalogue metadata (future)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1651,6 +1773,192 @@
 
 <h1 id="nmcb-hand-over-documentation">NMCB hand-over documentation<a class="headerlink" href="#nmcb-hand-over-documentation" title="Permanent link">&para;</a></h1>
 <p>Welcome to the working hand-over for the <strong>Netherlands ME/CFS Cohort and Biobank (NMCB)</strong> data management and data infrastructure role.</p>
+<p>For folder paths see <a href="where-data-lives/">Where data lives</a>. For step-by-step procedures see <a href="workflows/">Workflows</a>.</p>
+<hr />
+<h2 id="end-to-end-data-flow">End-to-end data flow<a class="headerlink" href="#end-to-end-data-flow" title="Permanent link">&para;</a></h2>
+<p>The diagram below runs from <strong>capture at the visit</strong> through <strong>Research Drive</strong> stages to <strong>Snowflake</strong>, with delivery to requestors. <strong>Click a box</strong> in the diagram (desktop) or use the <a href="#step-reference-clickable-links">step reference table</a> — every step links to the relevant workflow or system page.</p>
+<p><strong>Versioning:</strong> keep raw data under <code>organized/</code>; each cleaning or merge produces a <strong>new</strong> <code>processed/</code> (or <code>analyzed/</code>) output — do not overwrite the only raw copy (<a href="systems/research-drive/#data-journey-document-this-over-time">Research Drive</a>).</p>
+<pre class="mermaid"><code>flowchart TB
+  subgraph CAP["① Capture"]
+    VISIT["Visit &amp; operational logs"]
+    CASTOR["Castor EDC"]
+    DEVICES["Devices"]
+    SETUP["Device setup for visit"]
+  end
+
+  subgraph LAB["Lab &amp; sample files"]
+    CDL["CDL / CRL exports"]
+    RDL["RDL &amp; RL files"]
+  end
+
+  subgraph ORG["② Research Drive — organized"]
+    RDORG["organized/ dated folders"]
+  end
+
+  subgraph WRK["③ QC &amp; workflows"]
+    QC["Cleaning / QC scripts"]
+    WCDL["CDL processing"]
+    WRDL["RDL processing"]
+  end
+
+  subgraph DER["④ Research Drive — processed &amp; analyzed"]
+    RDPROC["processed/"]
+    RDAN["analyzed/ alerts"]
+  end
+
+  subgraph STR["⑤ Structured analytics"]
+    POOL["data pool/ exports"]
+    SF["Snowflake"]
+  end
+
+  subgraph OUT["⑥ Delivery &amp; use"]
+    DREQ["Data request packages"]
+    MYDRE["myDRE workspaces"]
+  end
+
+  subgraph SMP["Samples (parallel)"]
+    OS["OpenSpecimen inventory"]
+  end
+
+  SETUP --&gt; DEVICES
+  VISIT --&gt; CASTOR
+  VISIT --&gt; DEVICES
+  VISIT --&gt; CDL
+  CASTOR --&gt; RDORG
+  DEVICES --&gt; RDORG
+  CDL --&gt; RDORG
+  RDL --&gt; RDORG
+  RDORG --&gt; QC
+  RDORG --&gt; WCDL
+  RDORG --&gt; WRDL
+  QC --&gt; RDPROC
+  WCDL --&gt; RDPROC
+  WCDL --&gt; RDAN
+  WRDL --&gt; RDPROC
+  WRDL --&gt; RDAN
+  RDPROC --&gt; POOL
+  RDPROC --&gt; SF
+  POOL --&gt; SF
+  SF --&gt; DREQ
+  SF --&gt; MYDRE
+  POOL --&gt; DREQ
+  RDPROC --&gt; OS
+
+  click VISIT "workflows/recurring-routines/" "Recurring study routines"
+  click CASTOR "systems/castor/" "Castor EDC"
+  click DEVICES "systems/devices/" "Devices"
+  click SETUP "workflows/device-setup-for-visit/" "Device setup for visit"
+  click CDL "workflows/cdl-alert-workflow/" "CDL alert workflow"
+  click RDL "workflows/rdl-alert-workflow/" "RDL alert workflow"
+  click RDORG "systems/research-drive/" "Research Drive — organized"
+  click QC "systems/github/" "GitHub scripts"
+  click WCDL "workflows/cdl-alert-workflow/" "CDL processing"
+  click WRDL "workflows/rdl-alert-workflow/" "RDL processing"
+  click RDPROC "where-data-lives/" "Where data lives — processed"
+  click RDAN "where-data-lives/" "Where data lives — analyzed"
+  click POOL "tasks/data-request/" "Data request — data pool"
+  click SF "systems/snowflake/" "Snowflake"
+  click DREQ "tasks/data-request/" "Data request task"
+  click MYDRE "systems/mydre/" "myDRE"
+  click OS "systems/openspecimen/" "OpenSpecimen"</code></pre>
+<h3 id="step-reference-clickable-links">Step reference (clickable links)<a class="headerlink" href="#step-reference-clickable-links" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What happens</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① Visit &amp; logs</strong></td>
+<td>Scheduling, visit log, subject ID log, mailbox routines</td>
+<td><a href="workflows/recurring-routines/">Recurring study routines</a> · <a href="where-data-lives/">Where data lives</a></td>
+</tr>
+<tr>
+<td><strong>Castor EDC</strong></td>
+<td>eCRF and surveys during / after visit</td>
+<td><a href="systems/castor/">Castor</a></td>
+</tr>
+<tr>
+<td><strong>Device setup</strong></td>
+<td>iPad / laptop ready before measurements</td>
+<td><a href="workflows/device-setup-for-visit/">Device setup for visit</a></td>
+</tr>
+<tr>
+<td><strong>Devices</strong></td>
+<td>VU-AMS, Omron, Nellcor, Tanita, ACS, …</td>
+<td><a href="systems/devices/">Devices</a> · <a href="workflows/device-data-workflow/">Device data workflow</a></td>
+</tr>
+<tr>
+<td><strong>CDL / CRL</strong></td>
+<td>Central lab raw files → per-participant outputs &amp; alerts</td>
+<td><a href="workflows/cdl-alert-workflow/">CDL alert workflow</a></td>
+</tr>
+<tr>
+<td><strong>RDL / RL</strong></td>
+<td>Radboud lab + blood-tube / box files</td>
+<td><a href="workflows/rdl-alert-workflow/">RDL alert workflow</a> · <a href="workflows/multicentre-sample-data-workflow/">Multi-centre sample data workflow</a></td>
+</tr>
+<tr>
+<td><strong>② <code>organized/</code></strong></td>
+<td>Raw drops on Research Drive (<code>organized/CDL/</code>, <code>organized/{device}/</code>, …)</td>
+<td><a href="systems/research-drive/">Research Drive</a> · <a href="where-data-lives/">Where data lives</a></td>
+</tr>
+<tr>
+<td><strong>③ QC &amp; scripts</strong></td>
+<td>Python/R cleaning, validation, device conversion</td>
+<td><a href="systems/github/">GitHub</a> (<code>nmcb-fair</code> repos)</td>
+</tr>
+<tr>
+<td><strong>④ <code>processed/</code> &amp; <code>analyzed/</code></strong></td>
+<td>Analysis-ready tables; CDL/RDL alert folders for clinicians</td>
+<td><a href="where-data-lives/">Where data lives</a></td>
+</tr>
+<tr>
+<td><strong>⑤ <code>data pool/</code></strong></td>
+<td>Latest Castor + device exports for package builds</td>
+<td><a href="tasks/data-request/">Data request</a></td>
+</tr>
+<tr>
+<td><strong>⑤ Snowflake</strong></td>
+<td>Structured cohort tables, eligibility, reporting</td>
+<td><a href="systems/snowflake/">Snowflake</a></td>
+</tr>
+<tr>
+<td><strong>⑥ Data request</strong></td>
+<td>Approved CSV packages for researchers</td>
+<td><a href="tasks/data-request/">Data request</a> · <a href="#keep-in-mind-gdpr-and-data-sharing">GDPR rules</a></td>
+</tr>
+<tr>
+<td><strong>⑥ myDRE</strong></td>
+<td>Controlled analysis environment for approved subsets</td>
+<td><a href="systems/mydre/">myDRE</a></td>
+</tr>
+<tr>
+<td><strong>OpenSpecimen</strong></td>
+<td>Physical sample metadata &amp; release (from biobank path)</td>
+<td><a href="systems/biobank/">Biobank</a> · <a href="systems/openspecimen/">OpenSpecimen</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>NMCB data currently spans:</p>
+<ul>
+<li>study capture in <a href="systems/castor/">Castor</a></li>
+<li>operational logs — <a href="workflows/recurring-routines/">Recurring study routines</a></li>
+<li>devices — <a href="systems/devices/">Devices</a>, <a href="workflows/device-data-workflow/">Device data workflow</a></li>
+<li>labs (CDL, RDL, RL) — <a href="workflows/">workflows</a></li>
+<li>files on <a href="systems/research-drive/">Research Drive</a>; sensitive data on YoDa when required</li>
+<li>analytics in <a href="systems/snowflake/">Snowflake</a></li>
+<li>sharing via <a href="tasks/data-request/">Data request</a> and <a href="systems/mydre/">myDRE</a></li>
+<li>samples in <a href="systems/openspecimen/">OpenSpecimen</a></li>
+</ul>
+<h2 id="architecture-principle">Architecture principle<a class="headerlink" href="#architecture-principle" title="Permanent link">&para;</a></h2>
+<p>Identifiers and provenance should survive every transformation step. Every workflow should make it possible to answer: where did this record originate; which process changed it; which ID links it to the participant; is the dataset raw, intermediate, or analysis-ready?</p>
+<hr />
 <h2 id="keep-in-mind-gdpr-and-data-sharing">Keep in mind (GDPR and data sharing)<a class="headerlink" href="#keep-in-mind-gdpr-and-data-sharing" title="Permanent link">&para;</a></h2>
 <p>These rules apply to <strong>every</strong> export, list, myDRE delivery, or biobank hand-off. Source: Amsterdam UMC RDM (Paulo Heemskerk, myDRE / data-request discussions, Aug 2025).</p>
 <h3 id="minimize-what-you-share">Minimize what you share<a class="headerlink" href="#minimize-what-you-share" title="Permanent link">&para;</a></h3>
@@ -1674,13 +1982,6 @@
 </ol>
 <p><strong>RDM contact:</strong> Paulo Heemskerk — <a href="mailto:p.f.heemskerk@amsterdamumc.nl">p.f.heemskerk@amsterdamumc.nl</a>. Operational tooling: <a href="tasks/data-request/">Data request</a>.</p>
 <hr />
-<p>This documentation is written to make the role:</p>
-<ul>
-<li>transferable</li>
-<li>reproducible</li>
-<li>easier to maintain</li>
-<li>less dependent on tacit knowledge</li>
-</ul>
 <h2 id="how-this-site-is-organised">How this site is organised<a class="headerlink" href="#how-this-site-is-organised" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1692,36 +1993,32 @@
 <tbody>
 <tr>
 <td><strong>Where data lives</strong></td>
-<td>Where raw, processed, and final data sit (Research Drive, Castor, OpenSpecimen, …) — start here</td>
+<td>Paths on Research Drive, Castor, OpenSpecimen, …</td>
 </tr>
 <tr>
 <td><strong>Workflows</strong></td>
-<td>CDL/RDL alerts, multicentre sample handling, devices, recurring routines</td>
+<td>CDL/RDL alerts, multicentre samples, devices, recurring routines</td>
 </tr>
 <tr>
 <td><strong>Systems</strong></td>
-<td>Castor, devices, scripts, Snowflake, Research Drive, biobank, myDRE, <a href="systems/distributed-list/">NMCB Core list</a>, GitHub</td>
+<td>Castor, devices, Snowflake, Research Drive, biobank, myDRE, <a href="systems/distributed-list/">NMCB Core list</a>, GitHub</td>
 </tr>
 <tr>
 <td><strong>Tasks</strong></td>
-<td>Step-by-step procedures (data request, sample request, DMP, ChatGPT, device QC, etc.)</td>
+<td>Data request, sample request, DMP, ChatGPT, device QC, …</td>
 </tr>
 <tr>
 <td><strong>FAIR</strong></td>
-<td>Metadata, catalogues, controlled vocabulary, OMOP — <a href="fair/">overview</a> (no active follow-up; documented for handover)</td>
+<td>Metadata, FIP, OMOP — <a href="fair/">overview</a> (handover context; no active follow-up)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-use-this-documentation">How to use this documentation<a class="headerlink" href="#how-to-use-this-documentation" title="Permanent link">&para;</a></h2>
-<p>Start with <a href="where-data-lives/">Where data lives</a> and the <a href="systems/data-architecture/#end-to-end-data-flow">end-to-end data flow</a> diagram, then open the <strong>workflow</strong> or <strong>system</strong> page for the task at hand. Use <strong>Tasks</strong> for runnable procedures (data packages, sample requests, tooling).</p>
-<p>Each task page should answer:</p>
-<ol>
-<li>Why does this task exist?</li>
-<li>When should it be done?</li>
-<li>Where is it done?</li>
-<li>What are the steps?</li>
-<li>What should be checked before the task is considered complete?</li>
-</ol>
+<p>Use the <strong>diagram above</strong>, then <a href="where-data-lives/">Where data lives</a> and the <strong>workflow</strong> or <strong>system</strong> page for the task at hand. <strong>Tasks</strong> hold runnable procedures (data packages, sample requests, tooling).</p>
+<p>Each task page should answer: why it exists; when to do it; where; steps; what to check before done.</p>
+<hr />
+<h2 id="fair-and-catalogue-metadata-future">FAIR and catalogue metadata (future)<a class="headerlink" href="#fair-and-catalogue-metadata-future" title="Permanent link">&para;</a></h2>
+<p>Study-level metadata, Health-RI, and FAIR Data Point pilots are <strong>not</strong> in day-to-day operations. See <a href="fair/">FAIR projects</a>. <strong>Controlled vocabulary:</strong> <a href="fair/ontology-harmonization/">Ontology harmonization</a>, <a href="fair/omop-mapping/">OMOP mapping</a> in <a href="https://github.com/nmcb-fair/nmcb-codebook">nmcb-codebook</a>.</p>
 
 
 

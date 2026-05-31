@@ -74,6 +74,6 @@ All binaries live under `docs/files/fair/` (not rendered as site pages; download
 ## Related operational docs
 
 - [Keep in mind (GDPR)](../index.md#keep-in-mind-gdpr-and-data-sharing)
-- [Data architecture](../systems/data-architecture.md)
+- [Data flow (home)](../index.md#end-to-end-data-flow)
 - [GitHub](../systems/github.md) — `nmcb-fair` org for code; FAIR tooling may live in separate repos (e.g. `AmsterdamUMC/FDP_AMS`)
 

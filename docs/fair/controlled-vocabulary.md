@@ -48,4 +48,4 @@ Live copies may also sit under Research Drive `data management/` or `10. OMOP Da
 
 - [PAIS metadata schema](pais-metadata-schema.md) — study-level vs variable-level metadata
 - [NMCB ChatGPT](../tasks/nmcb-chatgpt.md) — variable discovery on exported codebook CSVs
-- [Data architecture](../systems/data-architecture.md)
+- [Data flow (home)](../index.md#end-to-end-data-flow)
