@@ -9,6 +9,38 @@
          <lastmod>2026-05-31</lastmod>
     </url>
     <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/controlled-vocabulary/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/fair-data-point/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/health-ri-metadata/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/omop-mapping/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/ontology-harmonization/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/fair/pais-metadata-schema/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/files/data-management-plan/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
          <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/biobank/</loc>
          <lastmod>2026-05-31</lastmod>
     </url>
@@ -22,6 +54,10 @@
     </url>
     <url>
          <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/devices/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/systems/distributed-list/</loc>
          <lastmod>2026-05-31</lastmod>
     </url>
     <url>
@@ -58,6 +94,10 @@
     </url>
     <url>
          <loc>https://nmcb-fair.github.io/nmcb-handover-docs/tasks/acs-data-clean/</loc>
+         <lastmod>2026-05-31</lastmod>
+    </url>
+    <url>
+         <loc>https://nmcb-fair.github.io/nmcb-handover-docs/tasks/data-management-plan/</loc>
          <lastmod>2026-05-31</lastmod>
     </url>
     <url>

@@ -45,7 +45,8 @@ This documentation is written to make the role:
 | **Where everything lives** | Paths, owners, and key locations (start here) |
 | **Workflows** | CDL/RDL alerts, multicentre sample handling, devices, recurring routines |
 | **Systems** | Castor, devices, scripts, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub |
-| **Tasks** | Step-by-step procedures (data request, sample request, ChatGPT, device QC, etc.) |
+| **Tasks** | Step-by-step procedures (data request, sample request, DMP, ChatGPT, device QC, etc.) |
+| **FAIR (archive)** | Unfinished FAIR/metadata/FDP projects — [overview](fair/index.md) |
 
 ## Page status
 

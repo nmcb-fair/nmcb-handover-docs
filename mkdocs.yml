@@ -51,6 +51,14 @@ nav:
       - LDOT: systems/ldot.md
       - NMCB Core distribution list: systems/distributed-list.md
       - GitHub: systems/github.md
+  - FAIR (archive):
+      - Overview: fair/index.md
+      - PAIS metadata schema: fair/pais-metadata-schema.md
+      - FAIR Data Point: fair/fair-data-point.md
+      - Health-RI metadata: fair/health-ri-metadata.md
+      - Controlled vocabulary: fair/controlled-vocabulary.md
+      - Ontology harmonization: fair/ontology-harmonization.md
+      - OMOP CDM mapping: fair/omop-mapping.md
   - Tasks:
       - Data request: tasks/data-request.md
       - Sample request: tasks/sample-request.md
@@ -58,3 +66,4 @@ nav:
       - Improve VU-AMS: tasks/improve-vu-ams.md
       - ACS data clean: tasks/acs-data-clean.md
       - Patient resume: tasks/patient-resume.md
+      - Data management plan: tasks/data-management-plan.md

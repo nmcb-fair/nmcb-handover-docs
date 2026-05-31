@@ -149,7 +149,7 @@ Contains resources supporting:
 
 - participant and sample tracking
 - cohort monitoring
-- data management plans (DMPs)
+- **data management plans (DMPs)** — main PDF, sub-project templates, training materials ([DMP task](../tasks/data-management-plan.md))
 - guidance for affiliated projects
 
 See:

@@ -8,7 +8,7 @@ Custom GPT that helps researchers and data staff **find relevant variables** in 
 
 **Open the assistant:** [NMCB Request Assistants on ChatGPT](https://chatgpt.com/g/g-69c40fba772c8191b67289d3e5fdd85a-nmcb-request-assistants)
 
-**Canonical codebook repo:** [nmcb-fair/nmcb-codebook](https://github.com/nmcb-fair/nmcb-codebook)
+**Canonical codebook repo:** [nmcb-fair/nmcb-codebook](https://github.com/nmcb-fair/nmcb-codebook) — see also [FAIR ontology harmonization](../fair/ontology-harmonization.md) and [OMOP mapping](../fair/omop-mapping.md)
 
 ---
 

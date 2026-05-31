@@ -54,3 +54,9 @@ The task board shows active work on:
 - mapping NMCB data toward OMOP
 
 This suggests the infrastructure is still evolving and should be documented as a living system rather than a finished platform.
+
+## FAIR and catalogue metadata (future)
+
+Study-level metadata, Health-RI catalogue alignment, and FAIR Data Point pilots are **not** operational yet. See the archived [FAIR projects](../fair/index.md) folder (PAIS coordination, Amsterdam UMC FDP, [Health-RI core schema](https://github.com/Health-RI/health-ri-metadata)).
+
+**Controlled vocabulary (archived / in progress):** [Ontology harmonization](../fair/ontology-harmonization.md) (SNOMED CT, LOINC, NCIT; [IOS Press paper](https://ebooks.iospress.nl/doi/10.3233/SHTI260692)) and [OMOP CDM mapping](../fair/omop-mapping.md) in [nmcb-codebook](https://github.com/nmcb-fair/nmcb-codebook).

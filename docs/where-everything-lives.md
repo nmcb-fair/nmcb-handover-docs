@@ -26,6 +26,7 @@ Use this page as a map of systems, folders, owners, and permissions.
 | myDRE | Secure analysis environment | `TBD` | `TBD` | Data issuing for requestors |
 | LDOT | Participant registry / logistics | LDOT Manager + `data/LDOT/` exports | MEMIC support | Bulk postcode updates: [LDOT](systems/ldot.md) |
 | SOPs | Governance and procedures | `TBD` | `TBD` | Keep links stable |
+| Data Management Plan | Main + sub-project DMPs | Research Drive `data management/` + [repo copies](../files/data-management-plan/) | Shuxin / Meriem Manaï | [DMP task](tasks/data-management-plan.md) |
 | Data request forms | External access workflow | `TBD` | `TBD` | Add published version |
 | Sample request forms | Sample release workflow | `TBD` | `TBD` | Add published version |
 
