@@ -590,6 +590,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reference-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings-by-hand-versus-by-machine" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -815,9 +826,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1240,9 +1249,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1525,9 +1532,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1811,6 +1816,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reference-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings-by-hand-versus-by-machine" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1925,9 +1941,9 @@
 
 
 
-<h1 id="cdl-alert-workflow">CDL Alert Workflow<a class="headerlink" href="#cdl-alert-workflow" title="Permanent link">&para;</a></h1>
-<p>Central Diagnostic Laboratory (CDL) blood results and alerts for NMCB participants, from visit through clinical follow-up.</p>
+<h1 id="cdl-alert-workflow">CDL alert workflow<a class="headerlink" href="#cdl-alert-workflow" title="Permanent link">&para;</a></h1>
 <p><strong>Status:</strong> Complete</p>
+<p><em>Central Diagnostic Laboratory (CDL) blood results and alerts for NMCB participants—from visit blood draw through data-team processing to nurse–physician follow-up.</em></p>
 <h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Research nurses</strong> — blood draw during visit; later review of Alert / Abnormal folders with physicians</li>
@@ -1944,9 +1960,23 @@
 <li><strong>Lab alert file</strong> — measures and reference ranges; indicates whether a participant is normal (<code>Normal</code>), abnormal (<code>Afwijkend</code>), or alert (<code>ALERT</code>)</li>
 <li>Every <strong>Friday and Tuesday</strong>, files in <code>ALERT</code> and <code>Afwijkend</code> are reviewed by <strong>research nurses</strong> and <strong>physicians</strong>; participants are informed by phone or email depending on severity. After a participant is informed, move their CDL alert file to <code>Archived</code>.</li>
 </ol>
+<h2 id="reference-files">Reference files<a class="headerlink" href="#reference-files" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../files/cdl-alert-workflow/Mappings%20between%20by-hand%20and%20by-machine.xlsx">Mappings between by-hand and by-machine</a></td>
+<td>Full CRL comparison when hand vs machine BEPCODEs differ</td>
+</tr>
+</tbody>
+</table>
 <h2 id="mappings-by-hand-versus-by-machine">Mappings: by-hand versus by-machine<a class="headerlink" href="#mappings-by-hand-versus-by-machine" title="Permanent link">&para;</a></h2>
-<p>When the analyser is temporarily unreliable, the lab runs selected tests <strong>by hand</strong> (e.g., <strong>180070</strong>) instead of <strong>by machine</strong> (e.g.,) <strong>1003885</strong>). Processing scripts must map hand codes to machine codes so results stay comparable in the CDL pipeline.</p>
-<p>Full comparison (including examples and CRL comments): <a href="../../files/cdl-alert-workflow/Mappings%20between%20by-hand%20and%20by-machine.xlsx">Mappings between by-hand and by-machine</a>.</p>
+<p>When the analyser is temporarily unreliable, the lab runs selected tests <strong>by hand</strong> (e.g. <strong>180070</strong>) instead of <strong>by machine</strong> (e.g. <strong>1003885</strong>). Processing scripts must map hand codes to machine codes so results stay comparable in the CDL pipeline.</p>
 <h3 id="exact-matching-same-bepcode-and-name">Exact matching (same BEPCODE and name)<a class="headerlink" href="#exact-matching-same-bepcode-and-name" title="Permanent link">&para;</a></h3>
 <p>These analytes use the same code whether measured by hand or by machine:</p>
 <table>
@@ -2153,11 +2183,12 @@
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../rdl-alert-workflow/">RDL alert workflow</a> — Radboud lab pattern (includes CDL vs RDL mapping reference)</li>
 <li><a href="../device-data-workflow/">Device data workflow</a> — device QC cadence (CDL alert file cleaning appears on the data-team schedule)</li>
-<li><a href="../../systems/biobank/">Systems: Biobank</a> — sample and metadata context</li>
+<li><a href="../../systems/biobank/">Biobank</a> — sample and metadata context</li>
 </ul>
 
 
@@ -2251,7 +2282,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

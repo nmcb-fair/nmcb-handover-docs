@@ -787,9 +787,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1212,9 +1210,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1497,9 +1493,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1869,9 +1863,9 @@
 
 
 
-<h1 id="rdl-alert-workflow">RDL Alert Workflow<a class="headerlink" href="#rdl-alert-workflow" title="Permanent link">&para;</a></h1>
+<h1 id="rdl-alert-workflow">RDL alert workflow<a class="headerlink" href="#rdl-alert-workflow" title="Permanent link">&para;</a></h1>
 <p><strong>Status:</strong> Complete</p>
-<p><strong>Radboud Diagnostic Lab (RDL)</strong> blood results and alerts for NMCB participants at the Radboud site. The flow parallels the <a href="../cdl-alert-workflow/">CDL alert workflow</a>: raw export, linkage via a visit log, processing into structured data and alert outputs, then clinical follow-up on abnormal results.</p>
+<p><em>Radboud Diagnostic Lab (RDL) blood results and alerts for NMCB participants at the Radboud site. The flow parallels the <a href="../cdl-alert-workflow/">CDL alert workflow</a>: raw export, linkage via a visit log, processing into structured data and alert outputs, then clinical follow-up on abnormal results.</em></p>
 <h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Radboud UMC team</strong> — uploads raw RDL exports to Research Drive</li>
@@ -1885,9 +1879,7 @@
 <li>The <strong>data steward</strong> uploads the most recent <code>Radboud Visit Data Log</code>, then moves that file and the new RDL export into a dated subfolder (<code>organized/RDL/{YYYYMMDD}/</code>).</li>
 <li>The <strong>data scientist</strong> processes both inputs and produces two exports:</li>
 <li><strong>Processed RDL data file</strong> — structured lab results for downstream use (including Snowflake) and stored in <code>processed/RDL/{YYYYMMDD}/</code></li>
-<li><strong>RDL alert file</strong> — results with reference ranges for clinical review; used by physicians and nurses to inform participants of abnormal findings; stored in <code>analyzed/RDL/RDL_alert/</code>
-    <div class="highlight"><pre><span></span><code>normal (<span class="sb">`Normal`</span>), abnormal (<span class="sb">`Afwijkend`</span>), or alert (<span class="sb">`ALERT`</span>)
-</code></pre></div></li>
+<li><strong>RDL alert file</strong> — results with reference ranges for clinical review; used by physicians and nurses to inform participants of abnormal findings; stored in <code>analyzed/RDL/RDL_alert/</code>; categories: normal (<code>Normal</code>), abnormal (<code>Afwijkend</code>), or alert (<code>ALERT</code>)</li>
 </ol>
 <h2 id="reference-files">Reference files<a class="headerlink" href="#reference-files" title="Permanent link">&para;</a></h2>
 <table>
@@ -1912,6 +1904,7 @@
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../cdl-alert-workflow/">CDL alert workflow</a> — Amsterdam CRL / CDL reference pattern</li>
@@ -2009,7 +2002,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

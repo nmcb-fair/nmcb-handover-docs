@@ -2,6 +2,21 @@
    NMCB hand-over docs — theme overrides (MkDocs Material)
    -------------------------------------------------------------------------- */
 
+/* Brand colors (primary: custom in mkdocs.yml) */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1a365d;
+  --md-primary-fg-color--light: #2c5282;
+  --md-primary-fg-color--dark: #0f2744;
+  --md-accent-fg-color: #0d9488;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2b6cb0;
+  --md-primary-fg-color--light: #4299e1;
+  --md-accent-fg-color: #14b8a6;
+}
+
 /* ----- Top tabs (Workflows, Systems, FAIR, Tasks) ----- */
 .md-tabs {
   background-color: var(--md-primary-fg-color);
