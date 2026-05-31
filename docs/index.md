@@ -2,16 +2,11 @@
 
 **Status:** Ongoing
 
-*Operational hand-over for **Netherlands ME/CFS Cohort and Biobank (NMCB)** data management and data infrastructure—workflows, systems, runnable tasks, and FAIR context for future work.*
-
-This documentation is written to make the role **transferable**, **reproducible**, and **less dependent on tacit knowledge**.
-
----
+Welcome to the working hand-over for the **Netherlands ME/CFS Cohort and Biobank (NMCB)** data management and data infrastructure role.
 
 ## Keep in mind (GDPR and data sharing)
 
-!!! important "Applies to every export, list, myDRE delivery, or biobank hand-off"
-    Source: Amsterdam UMC RDM (Paulo Heemskerk, myDRE / data-request discussions, Aug 2025). Operational tooling: [Data request](tasks/data-request.md). **RDM contact:** [p.f.heemskerk@amsterdamumc.nl](mailto:p.f.heemskerk@amsterdamumc.nl).
+These rules apply to **every** export, list, myDRE delivery, or biobank hand-off. Source: Amsterdam UMC RDM (Paulo Heemskerk, myDRE / data-request discussions, Aug 2025).
 
 ### Minimize what you share
 
@@ -32,29 +27,36 @@ This documentation is written to make the role **transferable**, **reproducible*
 3. Could any column be replaced by a **less sensitive** alternative (age vs DOB)?
 4. Is delivery via an **approved channel** ([myDRE](systems/mydre.md), controlled folder, etc.)?
 
+**RDM contact:** Paulo Heemskerk — [p.f.heemskerk@amsterdamumc.nl](mailto:p.f.heemskerk@amsterdamumc.nl). Operational tooling: [Data request](tasks/data-request.md).
+
 ---
+
+This documentation is written to make the role:
+
+- transferable
+- reproducible
+- easier to maintain
+- less dependent on tacit knowledge
 
 ## How this site is organised
 
-Use the **tabs** at the top of each page to switch between major areas. Start with [Where everything lives](where-everything-lives.md), then open the workflow or system page for the task at hand.
-
 | Section | Purpose |
-| ------- | ------- |
+|---------|---------|
 | **Where everything lives** | Paths, owners, and key locations (start here) |
 | **Workflows** | CDL/RDL alerts, multicentre sample handling, devices, recurring routines |
 | **Systems** | Castor, devices, scripts, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub |
 | **Tasks** | Step-by-step procedures (data request, sample request, DMP, ChatGPT, device QC, etc.) |
-| **FAIR** | Metadata, FIP, catalogues, controlled vocabulary, OMOP — [overview](fair/index.md) (no active follow-up; documented for handover) |
+| **FAIR** | Metadata, catalogues, controlled vocabulary, OMOP — [overview](fair/index.md) (no active follow-up; documented for handover) |
 
 ## Page status
-
-Each page starts with a status line:
 
 - **Complete** — ready to use for hand-over; only routine maintenance expected.
 - **Ongoing** — useful now, but details still need confirmation, extension, or regular updates.
 - **Not started** — placeholder or draft page that still needs core content.
 
 ## How to use this documentation
+
+Start with [Where everything lives](where-everything-lives.md), then open the **workflow** or **system** page for the task at hand. Use **Tasks** for runnable procedures (data packages, sample requests, tooling).
 
 Each task page should answer:
 
