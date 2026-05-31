@@ -63,3 +63,13 @@ When connection problems occur, record:
 ## Architecture note
 
 Moving logic into Snowflake can be beneficial, but only if business rules remain readable and versioned. Avoid replacing one opaque manual process with an opaque database process.
+
+## Delivering data to approved requestors (myDRE)
+
+Structured extracts for external researchers should follow the **in-myDRE** pattern, not ad-hoc download to personal machines:
+
+- Requestors connect to **Snowflake from a myDRE VM** after required domains are allowlisted.
+- Query results are saved to the workspace data drive (**`Z:`**).
+- Provision **individual myDRE accounts** and workspace roles via myDRE support tickets (workspace accountable).
+
+Full procedure: [Issuing Snowflake data via myDRE](mydre.md#issuing-snowflake-data-via-mydre).

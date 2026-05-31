@@ -4,7 +4,7 @@
 
 Operational improvements for **VU-AMS** (ECG / autonomic monitoring) data: quality-check protocol, Research Drive folder layout, and investigation of abnormal export file sizes.
 
-**Related:** [Device setup for visit](../workflows/device-setup-for-visit.md) (install and example trace) · [Device data workflow](../workflows/device-data-workflow.md) (capture → QC cadence) · [Devices](../systems/devices.md) (risks and file patterns) · Research Drive path: `organized/VU_AMS/`
+**Related:** [Device setup for visit](../workflows/device-setup-for-visit.md) (install and example trace) · [Device data workflow](../workflows/device-data-workflow.md) (capture → QC cadence) · [Devices — VU-AMS](../systems/devices.md#vu-ams) (Research Drive WebDAV mount for processing) · Research Drive path: `organized/VU_AMS/`
 
 **VU-AMS contacts (QC support):** Martin [m.j.gevonden@vu.nl](mailto:m.j.gevonden@vu.nl) · Kor [cjj.stoof@vu.nl](mailto:cjj.stoof@vu.nl) — [VU-AMS Core](https://vu-ams.nl/vu-ams-core/)
 
@@ -94,6 +94,8 @@ Move each `.7fs` **out of** its subfolder into `organized/VU_AMS/`:
 
 **Context:** Normal exports are often on the order of **~200 MB** per file (see [Recurring routines](../workflows/recurring-routines.md)). The files below are **much smaller** (roughly 84–136 MB, one at **3 MB**) and need review.
 
+For **oversized** files (~600 MB, crash / not closed) and **wrong-date** exports (e.g. year 1919 on old firmware), see [Devices — VU-AMS abnormal sizes](../systems/devices.md#abnormal-file-sizes-and-dates-vu-ams-support) (Martin Gevonden, VU-AMS).
+
 ### Investigation questions
 
 For each file:
@@ -146,7 +148,7 @@ For each file:
 
 - Cross-check each ID against visit log / Castor (visit completed vs early stop).
 - Open suspect files in VU-AMS Core (priority: `1000886_VU_AMS` at 3 MB).
-- Escalate device issues per [Issue log and escalation](../governance/escalation.md).
+- Escalate device issues to the study device lead or central IT as appropriate (document contacts in [Where everything lives](../where-everything-lives.md)).
 
 ---
 

@@ -14,6 +14,7 @@ NMCB data currently spans several operational and analytical domains:
 - device outputs requiring cleaning or quality control
 - structured data and downstream transformation work in SQL or Snowflake-oriented workflows
 - biobank and multicentre data transfer processes
+- long-term **non-sensitive** files on [Research Drive](research-drive.md); **sensitive** files on **YoDa/iRODS** when required (see [Research Drive vs YoDa](research-drive.md#research-drive-vs-yoda-irods)); external analysis delivery via [myDRE](mydre.md)
 
 ## Conceptual flow
 
@@ -26,6 +27,8 @@ Participant contact / visit
     -> structured storage and extract preparation
     -> internal review or external data request delivery
 ```
+
+A fuller **device → Research Drive → Snowflake → request/myDRE** diagram and versioning rules are on [Research Drive — Data journey](research-drive.md#data-journey-document-this-over-time).
 
 ## Architecture principle
 

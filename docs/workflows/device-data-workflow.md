@@ -28,7 +28,7 @@ Document exact weekdays and owners in project SOPs as they stabilise.
 ```text
 Device use at visit or home
     -> raw export to agreed folder
-    -> QC / format checks (see Scripts and QC)
+    -> QC / format checks
     -> cleaning or mapping scripts
     -> structured or archive location (e.g. Snowflake-oriented handoff)
 ```

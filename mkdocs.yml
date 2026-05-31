@@ -28,9 +28,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started:
-      - Scope of this hand-over: getting-started.md
-      - Where everything lives: where-everything-lives.md
+  - Where everything lives: where-everything-lives.md
   - Workflows:
       - Overview: workflows/index.md
       - CDL alert workflow: workflows/cdl-alert-workflow.md
@@ -51,16 +49,12 @@ nav:
       - OpenSpecimen: systems/openspecimen.md
       - myDRE: systems/mydre.md
       - LDOT: systems/ldot.md
+      - NMCB Core distribution list: systems/distributed-list.md
       - GitHub: systems/github.md
-  - Governance:
-      - Data requests: governance/data-requests.md
-      - Issue log and escalation: governance/escalation.md
-      - SOPs and documentation: governance/sops.md
-      - Risks and improvement backlog: governance/backlog.md
-      - Task template: governance/task-template.md
   - Tasks:
       - Data request: tasks/data-request.md
       - Sample request: tasks/sample-request.md
+      - NMCB ChatGPT: tasks/nmcb-chatgpt.md
       - Improve VU-AMS: tasks/improve-vu-ams.md
       - ACS data clean: tasks/acs-data-clean.md
       - Patient resume: tasks/patient-resume.md

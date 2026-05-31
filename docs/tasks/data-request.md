@@ -4,7 +4,10 @@
 
 This page documents the **data-request** project at [github.com/nmcb-fair/data-request](https://github.com/nmcb-fair/data-request). The repository builds researcher-facing **data packages** (CSV exports with pseudonyms) from Castor, device, and related sources in `data pool/`.
 
-Governance (forms, approvals, delivery policy) is in [Data requests (governance)](../governance/data-requests.md). This page covers **how to run the extraction tooling** after a request is approved.
+This page covers **how to run the extraction tooling** after a data request is approved. Forms, review, and delivery (including [myDRE](../systems/mydre.md)) are handled outside this repo—coordinate with the study team and RDM as needed.
+
+!!! important "Before building a package"
+    Follow [Keep in mind (GDPR)](../index.md#keep-in-mind-gdpr-and-data-sharing): minimal variables, relevant participants only, age not DOB where possible, Castor ID not hospital patient ID, no “browse the whole cohort” exports.
 
 ## Purpose
 
@@ -191,12 +194,11 @@ Older projects may still use explicit participant-pool files and request workboo
 - [ ] Confirm who may edit `simple_request/` CSVs vs `scripts/config/`
 - [ ] Confirm process for refreshing `data pool/` before each run
 - [ ] Confirm delivery channel per request ([myDRE](../systems/mydre.md) vs file transfer)
-- [ ] Keep request log and approvals in governance docs, not only in git output folders
+- [ ] Keep request log and approvals in the project request folder / team records, not only in git output folders
 
 ## Related
 
-- [Data requests (governance)](../governance/data-requests.md) — forms, review, and policy
 - [Sample request](sample-request.md) — biobank sample releases (separate repo)
-- [myDRE](../systems/mydre.md) — secure analysis environment for some deliveries
+- [myDRE](../systems/mydre.md) — secure analysis environment for some deliveries (including [Snowflake issuing via myDRE](../systems/mydre.md#issuing-snowflake-data-via-mydre))
 - [Snowflake](../systems/snowflake.md) — structured data and extracts
 - [Scripts and QC](../systems/scripts-and-qc.md) — upstream cleaning before data pool

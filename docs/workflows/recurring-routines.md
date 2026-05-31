@@ -13,7 +13,7 @@ Operational tasks that keep NMCB running day to day: tracking visits and raw dat
 | [Get numbers](#get-numbers)                               | Weekly/bi-weekly or on request         | Board tables and funnel plots                  |
 
 
-Complete locations and owners in [Where everything lives](../where-everything-lives.md). Formal SOP links in [SOPs](../governance/sops.md).
+Complete locations and owners in [Where everything lives](../where-everything-lives.md). Formal SOPs live in the project Research Drive / team documentation (not duplicated here).
 
 ---
 
@@ -153,13 +153,13 @@ Document any script used in the sign-off note.
 
 ### Purpose
 
-Keep **participant identifiers** consistent and traceable across operational and analytical systems (Castor, LDOT, device exports, lab files, Snowflake, sample tracking). The log is especially important for participants who have **completed a visit**, where PII and study ID must map correctly (see [Subject ID Log SOP](../governance/sops.md)).
+Keep **participant identifiers** consistent and traceable across operational and analytical systems (Castor, LDOT, device exports, lab files, Snowflake, sample tracking). The log is especially important for participants who have **completed a visit**, where PII and study ID must map correctly (see the Subject ID Log SOP on Research Drive).
 
 ### Frequency
 
 - **Bi-weekly**  
 - **Whenever new participants are registered** or IDs are corrected  
-- After any reported duplicate-ID or merge issue ([escalation](../governance/escalation.md))
+- After any reported duplicate-ID or merge issue (document resolution in the team issue log)
 
 ### Inputs
 
