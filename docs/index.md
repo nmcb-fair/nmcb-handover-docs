@@ -8,16 +8,19 @@ For folder paths see [Where data lives](where-data-lives.md). For step-by-step p
 
 ## End-to-end data flow
 
-The diagram below runs from **capture at the visit** through **Research Drive** stages to **Snowflake**, with delivery to requestors. **Click a box** in the diagram (desktop) or use the [step reference table](#step-reference-clickable-links) — every step links to the relevant workflow or system page.
+The diagram starts with the **data management plan**, then runs from **capture** through **Research Drive** and **Snowflake** (Castor loads **directly** into Snowflake). **Patient resume** is built from processed and analyzed outputs; **Snowflake (OMOP)** feeds external collaboration. The **samples** branch ends with **sample request** after OpenSpecimen. **Click a box** in the diagram (desktop) or use the [step reference table](#step-reference-clickable-links).
 
 **Versioning:** keep raw data under `organized/`; each cleaning or merge produces a **new** `processed/` (or `analyzed/`) output — do not overwrite the only raw copy ([Research Drive](systems/research-drive.md#data-journey-document-this-over-time)).
 
 ```mermaid
 flowchart TB
+  DMP["⓪ Data management plan"]
+
   subgraph CAP["① Capture"]
     VISIT["Visit & operational logs"]
     CASTOR["Castor EDC"]
     DEVICES["Devices"]
+    ACS["ACS"]
     SETUP["Device setup for visit"]
   end
 
@@ -30,7 +33,7 @@ flowchart TB
     RDORG["organized/ dated folders"]
   end
 
-  subgraph WRK["③ QC & workflows"]
+  subgraph WRK["③ Quality Control"]
     QC["Cleaning / QC scripts"]
     WCDL["CDL processing"]
     WRDL["RDL processing"]
@@ -41,9 +44,15 @@ flowchart TB
     RDAN["analyzed/ alerts"]
   end
 
+  subgraph PRESUM["④b Patient resume"]
+    PRES["Create patient resume"]
+  end
+
   subgraph STR["⑤ Structured analytics"]
     POOL["data pool/ exports"]
     SF["Snowflake"]
+    SFOMOP["Snowflake OMOP"]
+    EXT["External parties for collaboration"]
   end
 
   subgraph OUT["⑥ Delivery & use"]
@@ -53,14 +62,19 @@ flowchart TB
 
   subgraph SMP["Samples (parallel)"]
     OS["OpenSpecimen inventory"]
+    SREQ["Sample request"]
   end
 
+  DMP --> VISIT
   SETUP --> DEVICES
+  SETUP --> ACS
   VISIT --> CASTOR
   VISIT --> DEVICES
+  VISIT --> ACS
   VISIT --> CDL
-  CASTOR --> RDORG
+  CASTOR --> SF
   DEVICES --> RDORG
+  ACS --> RDORG
   CDL --> RDORG
   RDL --> RDORG
   RDORG --> QC
@@ -71,17 +85,26 @@ flowchart TB
   WCDL --> RDAN
   WRDL --> RDPROC
   WRDL --> RDAN
+  RDPROC --> PRES
+  RDAN --> PRES
   RDPROC --> POOL
   RDPROC --> SF
   POOL --> SF
+  SF --> SFOMOP
+  SFOMOP --> EXT
   SF --> DREQ
   SF --> MYDRE
   POOL --> DREQ
+  EXT --> DREQ
+  EXT --> MYDRE
   RDPROC --> OS
+  OS --> SREQ
 
+  click DMP "tasks/data-management-plan/" "Data management plan"
   click VISIT "workflows/recurring-routines/" "Recurring study routines"
   click CASTOR "systems/castor/" "Castor EDC"
   click DEVICES "systems/devices/" "Devices"
+  click ACS "tasks/acs-data-clean/" "ACS data clean"
   click SETUP "workflows/device-setup-for-visit/" "Device setup for visit"
   click CDL "workflows/cdl-alert-workflow/" "CDL alert workflow"
   click RDL "workflows/rdl-alert-workflow/" "RDL alert workflow"
@@ -91,31 +114,41 @@ flowchart TB
   click WRDL "workflows/rdl-alert-workflow/" "RDL processing"
   click RDPROC "where-data-lives/" "Where data lives — processed"
   click RDAN "where-data-lives/" "Where data lives — analyzed"
+  click PRES "tasks/patient-resume/" "Patient resume"
   click POOL "tasks/data-request/" "Data request — data pool"
   click SF "systems/snowflake/" "Snowflake"
+  click SFOMOP "fair/omop-mapping/" "OMOP CDM mapping"
+  click EXT "tasks/data-request/" "External parties — data request"
   click DREQ "tasks/data-request/" "Data request task"
   click MYDRE "systems/mydre/" "myDRE"
   click OS "systems/openspecimen/" "OpenSpecimen"
+  click SREQ "tasks/sample-request/" "Sample request"
 ```
 
 ### Step reference (clickable links)
 
 | Step | What happens | Documentation |
 | ---- | ------------ | ------------- |
+| **⓪ Data management plan** | Study-wide storage, ethics, Castor, devices, catalogues (main + sub-project DMPs) | [Data management plan](tasks/data-management-plan.md) |
 | **① Visit & logs** | Scheduling, visit log, subject ID log, mailbox routines | [Recurring study routines](workflows/recurring-routines.md) · [Where data lives](where-data-lives.md) |
-| **Castor EDC** | eCRF and surveys during / after visit | [Castor](systems/castor.md) |
+| **Castor EDC** | eCRF and surveys — loads **directly to Snowflake** (no QC step) | [Castor](systems/castor.md) · [Snowflake](systems/snowflake.md) |
 | **Device setup** | iPad / laptop ready before measurements | [Device setup for visit](workflows/device-setup-for-visit.md) |
-| **Devices** | VU-AMS, Omron, Nellcor, Tanita, ACS, … | [Devices](systems/devices.md) · [Device data workflow](workflows/device-data-workflow.md) |
+| **Devices** | VU-AMS, Omron, Nellcor, Tanita, … | [Devices](systems/devices.md) · [Device data workflow](workflows/device-data-workflow.md) |
+| **ACS** | Amsterdam Cognitive Scan (parallel to other devices) | [ACS data clean](tasks/acs-data-clean.md) · [Devices — ACS](systems/devices.md#amsterdam-cognitive-scan) |
 | **CDL / CRL** | Central lab raw files → per-participant outputs & alerts | [CDL alert workflow](workflows/cdl-alert-workflow.md) |
 | **RDL / RL** | Radboud lab + blood-tube / box files | [RDL alert workflow](workflows/rdl-alert-workflow.md) · [Multi-centre sample data workflow](workflows/multicentre-sample-data-workflow.md) |
 | **② `organized/`** | Raw drops on Research Drive (`organized/CDL/`, `organized/{device}/`, …) | [Research Drive](systems/research-drive.md) · [Where data lives](where-data-lives.md) |
-| **③ QC & scripts** | Python/R cleaning, validation, device conversion | [GitHub](systems/github.md) (`nmcb-fair` repos) |
+| **③ Quality Control** | Python/R cleaning, validation; CDL/RDL processing workflows | [GitHub](systems/github.md) · [CDL](workflows/cdl-alert-workflow.md) · [RDL](workflows/rdl-alert-workflow.md) |
 | **④ `processed/` & `analyzed/`** | Analysis-ready tables; CDL/RDL alert folders for clinicians | [Where data lives](where-data-lives.md) |
-| **⑤ `data pool/`** | Latest Castor + device exports for package builds | [Data request](tasks/data-request.md) |
-| **⑤ Snowflake** | Structured cohort tables, eligibility, reporting | [Snowflake](systems/snowflake.md) |
+| **④b Patient resume** | Per-participant Excel summary from **processed** + **analyzed** inputs | [Patient resume](tasks/patient-resume.md) |
+| **⑤ `data pool/`** | Device/lab exports for package builds (Castor via Snowflake) | [Data request](tasks/data-request.md) |
+| **⑤ Snowflake** | Structured cohort tables (incl. Castor), eligibility, reporting | [Snowflake](systems/snowflake.md) |
+| **⑤ Snowflake (OMOP)** | OMOP CDM mappings and ETL on Snowflake data | [OMOP CDM mapping](fair/omop-mapping.md) |
+| **External parties for collaboration** | Approved data sharing with researchers / collaborators | [Data request](tasks/data-request.md) · [myDRE](systems/mydre.md) |
 | **⑥ Data request** | Approved CSV packages for researchers | [Data request](tasks/data-request.md) · [GDPR rules](#keep-in-mind-gdpr-and-data-sharing) |
 | **⑥ myDRE** | Controlled analysis environment for approved subsets | [myDRE](systems/mydre.md) |
-| **OpenSpecimen** | Physical sample metadata & release (from biobank path) | [Biobank](systems/biobank.md) · [OpenSpecimen](systems/openspecimen.md) |
+| **OpenSpecimen** | Physical sample metadata & inventory (from biobank path) | [Biobank](systems/biobank.md) · [OpenSpecimen](systems/openspecimen.md) |
+| **Sample request** | Select aliquots, pseudonymized release files for approved sample requests | [Sample request](tasks/sample-request.md) |
 
 ---
 
@@ -123,14 +156,17 @@ flowchart TB
 
 NMCB data currently spans:
 
-- study capture in [Castor](systems/castor.md)
+- study capture in [Castor](systems/castor.md) → [Snowflake](systems/snowflake.md) (direct)
 - operational logs — [Recurring study routines](workflows/recurring-routines.md)
-- devices — [Devices](systems/devices.md), [Device data workflow](workflows/device-data-workflow.md)
+- devices and [ACS](tasks/acs-data-clean.md) — [Devices](systems/devices.md), [Device data workflow](workflows/device-data-workflow.md)
+- [Patient resume](tasks/patient-resume.md) from processed + analyzed outputs
+- [OMOP](fair/omop-mapping.md) on Snowflake for external collaboration
 - labs (CDL, RDL, RL) — [workflows](workflows/index.md)
 - files on [Research Drive](systems/research-drive.md); sensitive data on YoDa when required
 - analytics in [Snowflake](systems/snowflake.md)
 - sharing via [Data request](tasks/data-request.md) and [myDRE](systems/mydre.md)
-- samples in [OpenSpecimen](systems/openspecimen.md)
+- samples in [OpenSpecimen](systems/openspecimen.md) → [Sample request](tasks/sample-request.md)
+- governance in [Data management plan](tasks/data-management-plan.md)
 
 ## Architecture principle
 
