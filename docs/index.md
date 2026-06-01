@@ -208,7 +208,7 @@ These rules apply to **every** export, list, myDRE delivery, or biobank hand-off
 | **Where data lives** | Paths on Research Drive, Castor, OpenSpecimen, … |
 | **Workflows** | CDL/RDL alerts, multicentre samples, devices, recurring routines |
 | **Systems** | Castor, devices, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub |
-| **Tasks** | Data request, sample request, DMP, ChatGPT, device QC, … |
+| **Tasks** | Data request, sample request, [Withdrawal SOP](tasks/sop-withdrawal.md), [Device data transfer SOP](tasks/sop-data-transfer.md), DMP, ChatGPT, … |
 | **FAIR** | Metadata, FIP, OMOP — [overview](fair/index.md) (handover context; no active follow-up) |
 
 ## How to use this documentation

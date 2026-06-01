@@ -102,6 +102,7 @@ The license is issued via **Tanita Service** (typically from `logistics@tanita.e
 
 ## Related
 
+- [Device data transfer SOP](../tasks/sop-data-transfer.md) — export Tanita, VU-AMS, Nellcor, Omron after visit
 - [Device data workflow](device-data-workflow.md) — export, QC cadence, and cleaning
 - [Devices](../systems/devices.md) — per-device handover notes and risks
 - [GitHub](../systems/github.md) — device conversion and QC scripts in `nmcb-fair` repos

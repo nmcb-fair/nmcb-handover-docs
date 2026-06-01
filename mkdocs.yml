@@ -64,6 +64,8 @@ nav:
   - Tasks:
       - Data request: tasks/data-request.md
       - Sample request: tasks/sample-request.md
+      - Withdrawal SOP: tasks/sop-withdrawal.md
+      - Device data transfer SOP: tasks/sop-data-transfer.md
       - NMCB ChatGPT: tasks/nmcb-chatgpt.md
       - Improve VU-AMS: tasks/improve-vu-ams.md
       - ACS data clean: tasks/acs-data-clean.md
