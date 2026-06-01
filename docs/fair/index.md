@@ -11,6 +11,7 @@ Metadata is a **core component** of FAIR (Findable, Accessible, Interoperable, R
 
 | Project                               | Page                                              | Notes                                                               |
 | ------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------- |
+| **FAIRification (overview)**          | [FAIRification](fairification.md)                 | Achievements, FAIR data flow v1, workplan bridge, slides & drawings |
 | **FAIR Implementation Profile (FIP)** | [FIP — NMCB FER selections](fair-implementation-profile.md) | Wizard project + Sep 2024 overview (Survey vs Biobank)              |
 | **PAIS metadata schema coordination** | [PAIS metadata schema](pais-metadata-schema.md)   | Coordination meeting April 2026; alignment across PAIS initiatives  |
 | **FAIR Data Point (Amsterdam UMC)**   | [FAIR Data Point](fair-data-point.md)             | Local / myDRE deployment explored; links to Amsterdam UMC FDP       |
@@ -49,6 +50,7 @@ All binaries live under `docs/files/fair/` (not rendered as site pages; download
 
 | Subfolder        | Files                                                                                                                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fairification/` | [FAIR data flow (PDF)](../files/fair/fairification/fair-data-flow-v1.pdf), [work summary (DOCX)](../files/fair/fairification/fair-work-summary-v1.docx), [DM workplan (DOCX)](../files/fair/fairification/nmcb-dm-workplan-feb-april-2026.docx), workshop slides — full list on [FAIRification](fairification.md#workflow-drawings-presentations) |
 | `fip/`           | [NMCB FIP overview (XLSX)](../files/fair/fip/nmcb-fip-overview.xlsx), [mini-questionnaire (XLSX)](../files/fair/fip/fip-mini-questionnaire-nmcb.xlsx), [intro notes (DOCX)](../files/fair/fip/fip-documentation.docx) |
 | `pais-metadata/` | [PDF](../files/fair/pais-metadata/metadata-schema-coordination-april-2026.pdf), [DOCX](../files/fair/pais-metadata/metadata-schema-coordination-april-2026.docx)                            |
 | `fdp/`           | [Replicating FDP in myDRE (PDF)](../files/fair/fdp/replicating-fdp-amsterdamumc-mydre-20241008.pdf)                                                                                         |

@@ -54,6 +54,7 @@ nav:
       - GitHub: systems/github.md
   - FAIR:
       - Overview: fair/index.md
+      - FAIRification: fair/fairification.md
       - FAIR Implementation Profile: fair/fair-implementation-profile.md
       - PAIS metadata schema: fair/pais-metadata-schema.md
       - FAIR Data Point: fair/fair-data-point.md

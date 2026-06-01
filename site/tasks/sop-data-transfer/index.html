@@ -964,6 +964,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../fair/fairification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIRification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../fair/fair-implementation-profile/" class="md-nav__link">
         
   
@@ -1521,10 +1549,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-multi-centre-only-lab-data-v1-52" class="md-nav__link">
+  <a href="#53-lab-data-nijmegen-only-v1-52" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3 Multi-centre only — Lab data (v1 §5.2)
+        5.3 Lab data — Nijmegen only (v1 §5.2)
       
     </span>
   </a>
@@ -1532,10 +1560,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#54-multi-centre-only-biobank-box-data-v1-53" class="md-nav__link">
+  <a href="#54-biobank-box-data-nijmegen-only-v1-53" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.4 Multi-centre only — Biobank box data (v1 §5.3)
+        5.4 Biobank box data — Nijmegen only (v1 §5.3)
       
     </span>
   </a>
@@ -1919,10 +1947,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-multi-centre-only-lab-data-v1-52" class="md-nav__link">
+  <a href="#53-lab-data-nijmegen-only-v1-52" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3 Multi-centre only — Lab data (v1 §5.2)
+        5.3 Lab data — Nijmegen only (v1 §5.2)
       
     </span>
   </a>
@@ -1930,10 +1958,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#54-multi-centre-only-biobank-box-data-v1-53" class="md-nav__link">
+  <a href="#54-biobank-box-data-nijmegen-only-v1-53" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.4 Multi-centre only — Biobank box data (v1 §5.3)
+        5.4 Biobank box data — Nijmegen only (v1 §5.3)
       
     </span>
   </a>
@@ -2014,14 +2042,18 @@
 <td><a href="../../files/sop-data-transfer/device-data-transfer-sop-v3-amc.docx">device-data-transfer-sop-v3-amc.docx</a></td>
 </tr>
 <tr>
-<td><strong>v1 — Multi-centre</strong></td>
-<td>Other centres → Amsterdam UMC (e.g. Nijmegen training)</td>
+<td><strong>v1 — Multi-centre (Nijmegen)</strong></td>
+<td><strong>Nijmegen centre only</strong> — template for other sites; device export steps are generic</td>
 <td>2 February 2026</td>
 <td><a href="../../files/sop-data-transfer/multicentre-device-data-transfer-sop-v1-nijmegen.docx">multicentre-device-data-transfer-sop-v1-nijmegen.docx</a></td>
 </tr>
 </tbody>
 </table>
 <p>Author (both): Shuxin Zhang. After export, data enters <a href="../../workflows/device-data-workflow/">Device data workflow</a> QC on Research Drive under <code>organized/{device}/</code>.</p>
+<div class="admonition important">
+<p class="admonition-title">SURF upload links are centre-specific</p>
+<p>The <strong>Research Drive upload URLs</strong> in v1 (§5.1–5.4) are issued for <strong>Nijmegen (Radboud)</strong> only. <strong>Do not</strong> reuse them for Leiden, Amsterdam multicentre visits, or any <strong>new centre</strong> — the data team will provide <strong>separate links</strong> per site. Update this page when a new centre goes live.</p>
+</div>
 <hr />
 <h2 id="executive-summary">Executive summary<a class="headerlink" href="#executive-summary" title="Permanent link">&para;</a></h2>
 <ol>
@@ -2117,7 +2149,7 @@
 <tr>
 <th>Field</th>
 <th>AMC v3</th>
-<th>Multi-centre v1</th>
+<th>Multi-centre (e.g. Nijmegen)</th>
 </tr>
 </thead>
 <tbody>
@@ -2137,7 +2169,7 @@
 <li>Download from mailbox — keep default report name <code>Report(date–date)</code>; if two uploads same day use <code>_1</code>, <code>_2</code> suffixes.</li>
 <li>Store locally until weekly upload.</li>
 </ol>
-<p><strong>Multi-centre v1:</strong> Start date = visit date of participants not yet uploaded; end date = export date.</p>
+<p><strong>Nijmegen / multi-centre v1:</strong> Start date = visit date of participants not yet uploaded; end date = export date.</p>
 <hr />
 <h2 id="5-final-data-transfer">5. Final data transfer<a class="headerlink" href="#5-final-data-transfer" title="Permanent link">&para;</a></h2>
 <h3 id="51-devices-tanita-omron-nellcor-both-versions">5.1 Devices — Tanita, Omron, Nellcor (both versions)<a class="headerlink" href="#51-devices-tanita-omron-nellcor-both-versions" title="Permanent link">&para;</a></h3>
@@ -2148,13 +2180,13 @@
 <li>Mark the <strong>current</strong> week’s folder <strong><code>newly uploaded</code></strong> when adding files.</li>
 <li>Upload all files collected that week into <strong>that Monday’s folder</strong> (example: upload on 22 Oct 2025 → folder <code>20251027</code> created Monday 20 Oct 2025, label <strong>Newly uploaded</strong>).</li>
 </ul>
-<p><strong>Multi-centre v1 — SURF upload links (by next Monday)</strong></p>
-<p>Upload to the device-specific link (confirm links still active with data team):</p>
+<p><strong>Multi-centre v1 — SURF upload links (Nijmegen centre only)</strong></p>
+<p>By <strong>next Monday</strong>, upload via the site-specific links below. These URLs are <strong>only valid for Nijmegen</strong>; other centres get their own links from the data team.</p>
 <table>
 <thead>
 <tr>
 <th>Device</th>
-<th>Upload link (v1 SOP)</th>
+<th>Upload link (<strong>Nijmegen only</strong>)</th>
 </tr>
 </thead>
 <tbody>
@@ -2176,17 +2208,35 @@
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>Centre</th>
+<th>Upload links documented here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nijmegen (Radboud)</strong></td>
+<td>Yes — table above</td>
+</tr>
+<tr>
+<td><strong>Other / future centres</strong></td>
+<td>Not yet — request links from data management before first upload</td>
+</tr>
+</tbody>
+</table>
 <h3 id="52-vu-ams-amsterdam-v3-only-legacy-path">5.2 VU-AMS — Amsterdam v3 only (legacy path)<a class="headerlink" href="#52-vu-ams-amsterdam-v3-only-legacy-path" title="Permanent link">&para;</a></h3>
 <p>v3 also describes moving the full <strong><code>{CastorID}_VU_AMS</code></strong> folder to:</p>
 <p><code>G:\divjk\mp_oz\NMCB\O. Data management\2. Collection\rawData\VU_AMS</code></p>
-<p><strong>Current practice:</strong> prefer <strong>Research Drive</strong> <code>organized/VU_AMS/</code> (and multi-centre SURF link above). <strong>G-drive is not reachable from myDRE</strong> — see <a href="../../systems/research-drive/#research-drive-vs-yoda-irods">Research Drive</a>. Align new uploads with the data team before relying on G-drive only.</p>
-<h3 id="53-multi-centre-only-lab-data-v1-52">5.3 Multi-centre only — Lab data (v1 §5.2)<a class="headerlink" href="#53-multi-centre-only-lab-data-v1-52" title="Permanent link">&para;</a></h3>
-<p>When Radboud (or local) lab data are collected:</p>
+<p><strong>Current practice:</strong> prefer <strong>Research Drive</strong> <code>organized/VU_AMS/</code> (Nijmegen: SURF link in table above if applicable). <strong>G-drive is not reachable from myDRE</strong> — see <a href="../../systems/research-drive/#research-drive-vs-yoda-irods">Research Drive</a>. Align new uploads with the data team before relying on G-drive only.</p>
+<h3 id="53-lab-data-nijmegen-only-v1-52">5.3 Lab data — Nijmegen only (v1 §5.2)<a class="headerlink" href="#53-lab-data-nijmegen-only-v1-52" title="Permanent link">&para;</a></h3>
+<p>When lab data are collected at <strong>Nijmegen / Radboud</strong>:</p>
 <table>
 <thead>
 <tr>
 <th>Data type</th>
-<th>Upload link (v1 SOP)</th>
+<th>Upload link (<strong>Nijmegen only</strong>)</th>
 </tr>
 </thead>
 <tbody>
@@ -2201,13 +2251,13 @@
 </tbody>
 </table>
 <p>See also <a href="../../workflows/rdl-alert-workflow/">RDL alert workflow</a> and <a href="../../workflows/multicentre-sample-data-workflow/">Multi-centre sample data workflow</a>.</p>
-<h3 id="54-multi-centre-only-biobank-box-data-v1-53">5.4 Multi-centre only — Biobank box data (v1 §5.3)<a class="headerlink" href="#54-multi-centre-only-biobank-box-data-v1-53" title="Permanent link">&para;</a></h3>
-<p>When a sample box is full and ready to send to Amsterdam UMC:</p>
+<h3 id="54-biobank-box-data-nijmegen-only-v1-53">5.4 Biobank box data — Nijmegen only (v1 §5.3)<a class="headerlink" href="#54-biobank-box-data-nijmegen-only-v1-53" title="Permanent link">&para;</a></h3>
+<p>When a sample box is full and ready to send to Amsterdam UMC (<strong>Nijmegen workflow</strong>):</p>
 <table>
 <thead>
 <tr>
 <th>Data type</th>
-<th>Upload link (v1 SOP)</th>
+<th>Upload link (<strong>Nijmegen only</strong>)</th>
 </tr>
 </thead>
 <tbody>
@@ -2249,7 +2299,7 @@
 <td>☐</td>
 </tr>
 <tr>
-<td>Files in correct <strong>Monday</strong> folder or SURF upload link</td>
+<td>Files in correct <strong>Monday</strong> folder (AMC) or <strong>centre-specific</strong> SURF link (not another site’s URL)</td>
 <td>☐</td>
 </tr>
 <tr>
@@ -2265,7 +2315,7 @@
 <tr>
 <th>Topic</th>
 <th>AMC v3</th>
-<th>Multi-centre v1</th>
+<th>Multi-centre v1 (Nijmegen)</th>
 </tr>
 </thead>
 <tbody>
@@ -2277,17 +2327,17 @@
 <tr>
 <td>VU-AMS final path</td>
 <td>G-drive path + (implicit RD)</td>
-<td>SURF Research Drive link</td>
+<td>Nijmegen SURF link only</td>
 </tr>
 <tr>
 <td>Lab / biobank upload</td>
 <td>Not in v3</td>
-<td>SURF links for blood + processing + box</td>
+<td>Nijmegen SURF links only</td>
 </tr>
 <tr>
 <td>Weekly folders</td>
 <td><code>organized/{Device}/{YYYYMMDD}</code> labels</td>
-<td>Upload links by device</td>
+<td>Per-centre SURF links (new centres ≠ same URLs)</td>
 </tr>
 </tbody>
 </table>
