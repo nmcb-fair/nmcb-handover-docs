@@ -31,6 +31,7 @@ Do not overwrite the only copy of raw data; add dated folders or move to `Archiv
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | **Castor EDC** (live eCRF, surveys, study logic) | **Castor** (cloud) — [Castor EDC](systems/castor.md)                                                 | Source of truth for participant forms; export for checks and packages   |
 | Castor exports used in coding / requests         | Research Drive and/or `data pool/` in [data-request](https://github.com/nmcb-fair/data-request) repo | Refreshed before package builds — [Data request](tasks/data-request.md) |
+| **Archived Castor studies** (locked exports)   | **G-drive** `NMCB/O. Data management/2. Collection/rawData/Castor/Study Lock`                      | See [Castor — Archived](systems/castor.md#archived); not on Research Drive |
 
 
 ### Central lab — CDL (Amsterdam / CRL)

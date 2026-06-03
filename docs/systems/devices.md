@@ -1,21 +1,10 @@
 # Devices
 
-
 *Role: device outputs and visit-related measurements.*
 
 For **setup before a visit**, see [Device setup for visit](../workflows/device-setup-for-visit.md). For the **flow** from capture to QC and scripts, see [Device data workflow](../workflows/device-data-workflow.md).
 
 The task board shows several device-related workflows. Device data capture needs explicit documentation because it often contains tacit operational knowledge.
-
-## Device topics visible in the board
-
-- portable Tanita data and mapping differences
-- VU-AMS abnormal report
-- Amsterdam Cognitive Scan
-- changing Nellcor date format from MM/DD/YY to DD/MM/YY
-- iPad setup for home visits
-- requisites for using Nellcor
-- Tanita for home visit
 
 ## General rule for device workflows
 
@@ -70,11 +59,11 @@ VU-AMS analysis code (e.g. Angela Koloi’s processing class) must read and writ
 
 **RDM approach (Paulo Heemskerk, Jan–Feb 2026):**
 
-1. **Mount Research Drive via WebDAV** on the machine where you run the class (myDRE VM or workstation), e.g. as drive **`R:`**.
+1. **Mount Research Drive via WebDAV** on the machine where you run the class (myDRE VM or workstation), e.g. as drive `**R:*`*.
 2. Run the processing class **as if working locally**, but with paths rooted on that mount (e.g. `R:\...` instead of `C:\...` or a myDRE-only folder).
 3. Use a WebDAV client supported by Amsterdam UMC / SURF:
-   - **[Cyberduck](https://cyberduck.io/)** — documented for Research Drive: [Access Research Drive via Cyberduck (SURF)](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/126222540/RD+Access+Research+Drive+via+Cyberduck)
-   - **[Mountain Duck](https://mountainduck.io/)** — alternative client (same WebDAV mount idea)
+  - **[Cyberduck](https://cyberduck.io/)** — documented for Research Drive: [Access Research Drive via Cyberduck (SURF)](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/126222540/RD+Access+Research+Drive+via+Cyberduck)
+  - **[Mountain Duck](https://mountainduck.io/)** — alternative client (same WebDAV mount idea)
 
 After mounting, point the VU-AMS pipeline at the NMCB folder on Research Drive so outputs land in the shared layout. **Processed files** should be placed in the agreed shared folders on a **weekly** cadence (coordination with Anne Rolf / DM team).
 
@@ -100,11 +89,13 @@ Typical `.7fs` exports are on the order of **~200 MB** per recording. Outliers n
 - These issues were **rare** on the firmware version in use at the time; VU-AMS reported they are **fixed in current firmware**.
 - Plan **firmware upgrades** on field devices with [Martin Gevonden](mailto:m.j.gevonden@vu.nl) / [VU-AMS Core](https://vu-ams.nl/vu-ams-core/) when anomalies appear or on a maintenance schedule.
 
-| Symptom | Likely cause | Action |
-| ------- | ------------ | ------ |
-| **Very large** (~600 MB+), “today” in file | Crash; file not closed normally | Flag for VU-AMS; verify visit; see QC protocol |
-| **Wrong year** in file metadata | Old firmware date bug | Compare to real visit date; upgrade firmware |
-| **Much smaller** than ~200 MB | Short visit or export problem | See [Improve VU-AMS Task 3](../tasks/improve-vu-ams.md#task-3-investigate-abnormal-vu-ams-file-sizes) |
+
+| Symptom                                    | Likely cause                    | Action                                                                                                |
+| ------------------------------------------ | ------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Very large** (~600 MB+), “today” in file | Crash; file not closed normally | Flag for VU-AMS; verify visit; see QC protocol                                                        |
+| **Wrong year** in file metadata            | Old firmware date bug           | Compare to real visit date; upgrade firmware                                                          |
+| **Much smaller** than ~200 MB              | Short visit or export problem   | See [Improve VU-AMS Task 3](../tasks/improve-vu-ams.md#task-3-investigate-abnormal-vu-ams-file-sizes) |
+
 
 ### Handover note
 
