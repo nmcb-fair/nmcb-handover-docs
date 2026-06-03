@@ -1652,6 +1652,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/update-nmcb-codebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Update NMCB codebook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/number-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NMCB numbers overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1790,6 +1846,7 @@
 <hr />
 <h2 id="castor-studies">Castor studies<a class="headerlink" href="#castor-studies" title="Permanent link">&para;</a></h2>
 <p>Studies are grouped by <strong>status</strong> in the Castor UI. Names below match production Castor exactly.</p>
+<p>Some databases stay in <strong>Live</strong> or <strong>Test</strong> but are <strong>read-only</strong> (forms locked): data entry is closed, but the study remains open for viewing participant data (e.g. clinical review).</p>
 <h3 id="live">Live<a class="headerlink" href="#live" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1801,19 +1858,19 @@
 <tbody>
 <tr>
 <td><strong>NMCB Bestanden</strong></td>
-<td>Participant and study <strong>file uploads</strong> (documents attached in Castor, not the main clinical eCRF).</td>
+<td>Participant <strong>file uploads</strong> — documents attached in Castor, separate from the main clinical eCRF.</td>
 </tr>
 <tr>
 <td><strong>NMCB Study</strong></td>
-<td><strong>Main WMO cohort eCRF</strong> — core study visits, clinical capture, and longitudinal participant data.</td>
+<td><strong>Main cohort eCRF</strong> — screening survey, DSQ-2, full survey, and visit data entry.</td>
 </tr>
 <tr>
 <td><strong>NMCB GP Survey</strong></td>
-<td><strong>General-practitioner survey</strong> sent to GPs about enrolled participants (separate from participant-facing forms).</td>
+<td><strong>GP survey</strong> for general practitioners to record information about enrolled participants (not participant-facing forms).</td>
 </tr>
 <tr>
 <td><strong>NMCB Measurements &amp; Questionnaires</strong></td>
-<td><strong>Onsite visit</strong> measurements and questionnaires (e.g. NASA Lean Test, handgrip, Beighton, protocol deviations, visit questionnaires) — “MeasQuest” in RDM documentation.</td>
+<td><strong>Onsite visit</strong> measurements and questionnaires (NASA Lean Test, handgrip, Beighton, protocol deviations, visit forms). Called “MeasQuest” in RDM documentation. <strong>Read-only</strong> — see note above.</td>
 </tr>
 </tbody>
 </table>
@@ -1840,7 +1897,7 @@
 </tr>
 <tr>
 <td><strong>NMCB Screening</strong></td>
-<td>Sandbox for <strong>screening</strong> questionnaires (ME/CFS, post-COVID, Lyme screeners — see <a href="../../tasks/data-request/#request-blocks-what-to-extract">Data request — Screening block</a>).</td>
+<td><strong>Early screening</strong> questionnaires. <strong>Read-only</strong> — see note above.</td>
 </tr>
 </tbody>
 </table>
@@ -1855,15 +1912,15 @@
 <tbody>
 <tr>
 <td><strong>Interested in participating in NMCB</strong></td>
-<td>Early <strong>expression-of-interest</strong> / intake before full screening enrolment.</td>
+<td><strong>Registration portal</strong> for initial interest before full screening enrolment.</td>
 </tr>
 <tr>
 <td><strong>TEST_NMCB Screening (LDOT)</strong></td>
-<td>Test screening forms used while linking <strong>LDOT</strong> and Castor workflows.</td>
+<td>Screening forms used while <strong>LDOT</strong> was integrated with Castor.</td>
 </tr>
 <tr>
 <td><strong>NMCB Measurements &amp; Questionnaires (LDOT)</strong></td>
-<td>Deprecated <strong>LDOT-linked</strong> variant of the MeasQuest study (superseded by live <code>NMCB Measurements &amp; Questionnaires</code>).</td>
+<td>Deprecated <strong>LDOT-linked</strong> variant of MeasQuest.</td>
 </tr>
 <tr>
 <td><strong>PRODUCTION_NMCB Screening PII</strong></td>
@@ -1871,7 +1928,7 @@
 </tr>
 <tr>
 <td><strong>NMCB Screening PII</strong></td>
-<td>Screening with <strong>PII</strong> (non-WMO); subject of 2024 RDM QC. Legacy screening records may still be referenced in <a href="../../tasks/sop-withdrawal/">Withdrawal SOP</a> (unarchive when needed).</td>
+<td><strong>Test/sandbox</strong> for <code>PRODUCTION_NMCB Screening PII</code> before go-live.</td>
 </tr>
 </tbody>
 </table>
@@ -1893,12 +1950,12 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><code>nonWMO-RDM-QC</code></strong></td>
+<td><strong>nonWMO-RDM-QC</strong></td>
 <td>Screening / <strong>Screening PII</strong> / <strong>GP Survey (Screening)</strong></td>
 <td><strong>July 2024.</strong> F02 plan completed 2 Jul 2024 (multivariate validations marked NA; calculation/validation CSV exports for Screening PII and GP Survey). F03 UAT 13 Jun–2 Jul 2024 (two testers besides eCRF builder). F08 non-WMO checklist — QC <strong>Sjoerd Manger</strong>, builder <strong>Shuxin Zhang</strong>.</td>
 </tr>
 <tr>
-<td><strong><code>WMO-RDM-QC</code></strong></td>
+<td><strong>WMO-RDM-QC</strong></td>
 <td><strong>NMCB Measurements &amp; Questionnaires</strong>, <strong>NMCB GP Survey</strong>, main <strong>NMCB</strong> eCRF / survey forms</td>
 <td><strong>August 2024.</strong> Per-study <strong>F08</strong> checklists (MeasQuest QC from 19 Aug; GP Survey QC from 15 Aug, resolved). <strong>F03</strong> WMO user acceptance tests (<code>F08_NMCB_WMO_UserTest</code> workbooks, including resolved/adjusted versions). Supporting docs: <strong>WMO Translation.xlsx</strong>, validation form, F02 WMO derivation plan. QC <strong>Alden van Putten</strong> on MeasQuest and GP Survey; builder <strong>Shuxin Zhang</strong>.</td>
 </tr>

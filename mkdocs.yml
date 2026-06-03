@@ -73,3 +73,5 @@ nav:
       - ACS data clean: tasks/acs-data-clean.md
       - Patient resume: tasks/patient-resume.md
       - Data management plan: tasks/data-management-plan.md
+      - Update NMCB codebook: tasks/update-nmcb-codebook.md
+      - NMCB numbers overview: tasks/number-overview.md

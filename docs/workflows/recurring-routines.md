@@ -195,6 +195,8 @@ Keep **participant identifiers** consistent and traceable across operational and
 
 ## Get numbers
 
+**Task page:** [NMCB numbers overview](../tasks/number-overview.md) — full run instructions, inputs, and outputs.
+
 ### Purpose
 
 Produce standard NMCB recruitment and visit-progress counts for board updates, operational reports, and ad hoc questions (registered, screener sent/completed, waiting for call/video/visit, visit done, losses).
