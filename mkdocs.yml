@@ -37,6 +37,7 @@ nav:
       - CDL alert workflow: workflows/cdl-alert-workflow.md
       - RDL alert workflow: workflows/rdl-alert-workflow.md
       - Multi-centre sample data workflow: workflows/multicentre-sample-data-workflow.md
+      - Biosample request workflow: workflows/sample-request-workflow.md
       - Device data workflow: workflows/device-data-workflow.md
       - Device setup for visit: workflows/device-setup-for-visit.md
       - Recurring study routines: workflows/recurring-routines.md

@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Operational, data management, and data engineering hand-over for NMCB">
+      
+      
+      
+        <link rel="canonical" href="https://nmcb-fair.github.io/nmcb-handover-docs/workflows/sample-request-workflow/">
+      
+      
+        <link rel="prev" href="../multicentre-sample-data-workflow/">
+      
+      
+        <link rel="next" href="../device-data-workflow/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Biosample request workflow - NMCB Hand-over Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#biosample-request-workflow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NMCB Hand-over Documentation" class="md-header__button md-logo" aria-label="NMCB Hand-over Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NMCB Hand-over Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Biosample request workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NMCB Hand-over Documentation" class="md-nav__button md-logo" aria-label="NMCB Hand-over Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NMCB Hand-over Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data flow (home)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../where-data-lives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Where data lives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cdl-alert-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDL alert workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdl-alert-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RDL alert workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multicentre-sample-data-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-centre sample data workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biosample request workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biosample request workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-request-intake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Request intake
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Request intake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-receiving-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Receiving request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-feasibility-and-requirement-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Feasibility and requirement analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preparation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-3-participant-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Participant selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-sample-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Sample selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-pseudonymization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Pseudonymization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-issuing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Issuing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Issuing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-6-submission-of-sample-issuing-to-biobank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Submission of sample issuing to biobank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-sample-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7 — Sample delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-data-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8 — Data delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Archiving
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Archiving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-9-post-registration-and-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 9 — Post-registration and archiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systems and tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../device-data-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device data workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../device-setup-for-visit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device setup for visit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recurring-routines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recurring study routines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/data-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/castor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Castor EDC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/snowflake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowflake and structured data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/research-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Drive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/biobank/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biobank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/openspecimen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSpecimen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/mydre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    myDRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/ldot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LDOT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/distributed-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NMCB Core distribution list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAIR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/fairification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIRification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/fair-implementation-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR Implementation Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/pais-metadata-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PAIS metadata schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/fair-data-point/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAIR Data Point
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/health-ri-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health-RI metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/controlled-vocabulary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlled vocabulary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/ontology-harmonization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology harmonization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fair/omop-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OMOP CDM mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/data-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/sample-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/sop-withdrawal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Withdrawal SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/sop-data-transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device data transfer SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/nmcb-chatgpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NMCB ChatGPT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/improve-vu-ams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Improve VU-AMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/acs-data-clean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACS data clean
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/patient-resume/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patient resume
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/data-management-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data management plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-request-intake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Request intake
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Request intake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-receiving-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Receiving request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-feasibility-and-requirement-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Feasibility and requirement analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preparation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-3-participant-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Participant selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-sample-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Sample selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-pseudonymization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Pseudonymization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-issuing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Issuing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Issuing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-6-submission-of-sample-issuing-to-biobank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Submission of sample issuing to biobank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-sample-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7 — Sample delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-data-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8 — Data delivery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Archiving
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Archiving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-9-post-registration-and-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 9 — Post-registration and archiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systems and tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="biosample-request-workflow">Biosample request workflow<a class="headerlink" href="#biosample-request-workflow" title="Permanent link">&para;</a></h1>
+<p>End-to-end procedure from <strong>research request intake</strong> through <strong>participant and sample selection</strong>, <strong>pseudonymization</strong>, <strong>biobank issuing</strong>, <strong>delivery</strong>, and <strong>archiving</strong>. Automation and R scripts live in the <a href="../../tasks/sample-request/">Sample request</a> task page (<code>github.com/nmcb-fair/sample-request</code>).</p>
+<p><strong>Source deck (Jan 2026):</strong> <a href="../../files/workflows/sample-request/biosample-request-workflow-detailed-20260112.pptx">biosample-request-workflow-detailed-20260112.pptx</a></p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><img src="../../files/workflows/sample-request/biosample-request-workflow-overview.png" alt="Biosample request workflow: Intake (receiving request, request analysis), Preparation (participant selection, sample selection, pseudonymization), Issuing (submission to biobank, sample delivery, data delivery), Archiving (post-registration and archiving)" /></p>
+
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Steps</th>
+<th>Main actors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intake</strong></td>
+<td>1–2</td>
+<td>PI, PM</td>
+</tr>
+<tr>
+<td><strong>Preparation</strong></td>
+<td>3–5</td>
+<td>PM, Data Manager (DM)</td>
+</tr>
+<tr>
+<td><strong>Issuing</strong></td>
+<td>6–8</td>
+<td>PM, DM, Biobank, research team</td>
+</tr>
+<tr>
+<td><strong>Archiving</strong></td>
+<td>9</td>
+<td>PM, DM</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility in this workflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Principal Investigator (PI)</strong></td>
+<td>Submits the research request (aim, population, data and/or biosamples); signs <strong>Uitgifteformulier</strong> when required</td>
+</tr>
+<tr>
+<td><strong>Project Manager (PM)</strong></td>
+<td>Logs the request, confirms receipt, finalizes inclusion criteria with PI, coordinates biobank submission and archiving metadata</td>
+</tr>
+<tr>
+<td><strong>Data Manager (DM)</strong></td>
+<td>Feasibility analysis, participant and sample selection, pseudonymization, data delivery, archival datasets</td>
+</tr>
+<tr>
+<td><strong>Biobank</strong></td>
+<td>Locates and containerizes samples after approved issuance request</td>
+</tr>
+<tr>
+<td><strong>Research team</strong></td>
+<td>Sample pickup or receipt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-request-intake">1. Request intake<a class="headerlink" href="#1-request-intake" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-receiving-request">Step 1 — Receiving request<a class="headerlink" href="#step-1-receiving-request" title="Permanent link">&para;</a></h3>
+<p><strong>Actors:</strong> PI, PM</p>
+<p>The PI submits a research request describing:</p>
+<ul>
+<li>Scientific aim</li>
+<li>Target population (e.g. ME/CFS, healthy controls, post-COVID)</li>
+<li>Required <strong>data</strong> and/or <strong>biosamples</strong></li>
+</ul>
+<p>The PM logs the request and confirms receipt.</p>
+<p><strong>Output:</strong> Registered research request.</p>
+<h3 id="step-2-feasibility-and-requirement-analysis">Step 2 — Feasibility and requirement analysis<a class="headerlink" href="#step-2-feasibility-and-requirement-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Actor:</strong> DM</p>
+<p>The DM analyses feasibility, including:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Participant characteristics</strong></td>
+<td>Age range, sex, participant category (ME/CFS, healthy control, post-COVID, etc.)</td>
+</tr>
+<tr>
+<td><strong>Matching requirements</strong></td>
+<td>Age matching, sex matching</td>
+</tr>
+<tr>
+<td><strong>Sample requirements</strong></td>
+<td>Sample type(s) (e.g. serum, PAXgene RNA, DNA), minimum volume, number of samples per participant</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>Whether all selected participants must have samples available</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output:</strong> Feasibility summary for PI and PM.</p>
+<p><em>Operational detail:</em> age, sex, and category criteria align with the <strong>Request analysis</strong> box in the overview figure.</p>
+<hr />
+<h2 id="2-preparation">2. Preparation<a class="headerlink" href="#2-preparation" title="Permanent link">&para;</a></h2>
+<h3 id="step-3-participant-selection">Step 3 — Participant selection<a class="headerlink" href="#step-3-participant-selection" title="Permanent link">&para;</a></h3>
+<p><strong>Actors:</strong> PM, DM</p>
+<p>Based on the feasibility analysis:</p>
+<ul>
+<li>Inclusion and exclusion criteria are finalized</li>
+<li>Decisions are recorded on age/sex matching and whether all participants must have available samples</li>
+<li>The DM identifies eligible participants from the database</li>
+</ul>
+<p><strong>Output:</strong> Final participant list.</p>
+<p><em>Matching:</em> age matching and sample availability (see overview figure).</p>
+<h3 id="step-4-sample-selection">Step 4 — Sample selection<a class="headerlink" href="#step-4-sample-selection" title="Permanent link">&para;</a></h3>
+<p><strong>Actor:</strong> DM</p>
+<p>For each selected participant, the DM:</p>
+<ol>
+<li>Identifies available samples in <strong><a href="../../systems/openspecimen/">OpenSpecimen</a></strong> (Amsterdam UMC biobank system)</li>
+<li>Applies rules such as minimum volume, specific visit/timepoint, or <strong>random selection</strong> when multiple aliquots exist</li>
+<li>Confirms selections meet the request</li>
+</ol>
+<p><strong>Output:</strong> Final list of selected samples linked to participants (internal IDs).</p>
+<p>Reproducible selection is supported by the <a href="../../tasks/sample-request/">sample-request</a> repo (<code>track_biobank.Rmd</code>, request templates).</p>
+<h3 id="step-5-pseudonymization">Step 5 — Pseudonymization<a class="headerlink" href="#step-5-pseudonymization" title="Permanent link">&para;</a></h3>
+<p><strong>Actor:</strong> DM</p>
+<ul>
+<li>A <strong>request-specific external ID (Pseudo ID)</strong> is generated</li>
+<li>Each participant receives <strong>one unique Pseudo ID per request</strong></li>
+<li>A linkage file maps Participant ID → Pseudo ID (restricted access)</li>
+</ul>
+<p><strong>Principle:</strong> Pseudo IDs are unique per request and must not link participants across requests.</p>
+<p><strong>Output:</strong> Pseudonymization linkage file (restricted access).</p>
+<hr />
+<h2 id="3-issuing">3. Issuing<a class="headerlink" href="#3-issuing" title="Permanent link">&para;</a></h2>
+<h3 id="step-6-submission-of-sample-issuing-to-biobank">Step 6 — Submission of sample issuing to biobank<a class="headerlink" href="#step-6-submission-of-sample-issuing-to-biobank" title="Permanent link">&para;</a></h3>
+<p><strong>Actors:</strong> PI, PM, DM, Biobank</p>
+<p>The PM and DM prepare and submit:</p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Samplegegevens</strong></td>
+<td>Pseudo ID, Sample ID, sample type</td>
+</tr>
+<tr>
+<td><strong>Uitgifteformulier</strong></td>
+<td>Signed by PI when required</td>
+</tr>
+</tbody>
+</table>
+<p>Upon receipt, the biobank locates and containerizes samples.</p>
+<p><strong>Output:</strong> Approved sample issuance request at the biobank.</p>
+<h3 id="step-7-sample-delivery">Step 7 — Sample delivery<a class="headerlink" href="#step-7-sample-delivery" title="Permanent link">&para;</a></h3>
+<p><strong>Actors:</strong> Biobank, research team</p>
+<p>Samples are <strong>picked up</strong> by the research team or <strong>delivered</strong> by the biobank. Delivery details should be recorded.</p>
+<p><strong>Output:</strong> Physical transfer of biosamples.</p>
+<h3 id="step-8-data-delivery">Step 8 — Data delivery<a class="headerlink" href="#step-8-data-delivery" title="Permanent link">&para;</a></h3>
+<p><strong>Actor:</strong> DM</p>
+<p>The DM delivers:</p>
+<ul>
+<li><strong>Sample dataset</strong> linking issued samples to Pseudo IDs</li>
+<li><strong>Additional research dataset</strong> as requested (e.g. clinical, questionnaire data)</li>
+<li>Optional: data dictionary (new version planned mid-January 2026 in source deck), ReadMe</li>
+</ul>
+<p><strong>Output:</strong> Final research datasets delivered to the research group.</p>
+<hr />
+<h2 id="4-archiving">4. Archiving<a class="headerlink" href="#4-archiving" title="Permanent link">&para;</a></h2>
+<h3 id="step-9-post-registration-and-archiving">Step 9 — Post-registration and archiving<a class="headerlink" href="#step-9-post-registration-and-archiving" title="Permanent link">&para;</a></h3>
+<p><strong>Actors:</strong> PM, DM</p>
+<p>Record metadata, including:</p>
+<ul>
+<li>Number and type of samples issued</li>
+<li>Purpose of the request</li>
+<li>Requesting project / PI</li>
+<li>Date of sample pickup or delivery</li>
+<li>Person who collected the samples</li>
+</ul>
+<p>Archive:</p>
+<ul>
+<li>Request documentation</li>
+<li>Delivered datasets</li>
+<li><strong>Samplegegevens</strong> file</li>
+<li>Pseudonymization linkage file (<strong>stored separately</strong> with restricted access)</li>
+</ul>
+<p><strong>Output:</strong> Completed, auditable request record.</p>
+<hr />
+<h2 id="systems-and-tools">Systems and tools<a class="headerlink" href="#systems-and-tools" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>System / asset</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../systems/openspecimen/">OpenSpecimen</a></td>
+<td>Sample inventory and exports for selection</td>
+</tr>
+<tr>
+<td><a href="../../systems/biobank/">Biobank</a></td>
+<td>Issuing, storage, Samplegegevens / Uitgifteformulier</td>
+</tr>
+<tr>
+<td><a href="../../tasks/sample-request/">Sample request (GitHub)</a></td>
+<td><code>track_biobank.Rmd</code>, templates, pseudonymized exports</td>
+</tr>
+<tr>
+<td><a href="../../systems/research-drive/">Research Drive</a></td>
+<td>Request files and archives (per team convention)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../tasks/sample-request/">Sample request</a> — R pipeline, inputs, and <code>run_sample_request</code> usage</li>
+<li><a href="../../tasks/data-request/">Data request</a> — variable-level <strong>data</strong> requests (separate from biosamples)</li>
+<li><a href="../multicentre-sample-data-workflow/">Multi-centre sample data workflow</a> — inbound samples before they appear in OpenSpecimen</li>
+<li><a href="../">Workflows overview</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-config.js"></script>
+      
+    
+  </body>
+</html>

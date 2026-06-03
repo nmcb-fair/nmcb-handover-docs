@@ -8,6 +8,7 @@ End-to-end procedures for lab alerts, biobank, and devices. See the [data flow d
 | [CDL alert workflow](cdl-alert-workflow.md) | CRL / CDL lab files from visit to nurse–physician follow-up |
 | [RDL alert workflow](rdl-alert-workflow.md) | Radboud diagnostic lab (RDL)—raw export, visit log linkage, processing, and alert follow-up |
 | [Multi-centre sample data workflow](multicentre-sample-data-workflow.md) | Radboud blood-tube file, RL processing, boxing, biobank submission |
+| [Biosample request workflow](sample-request-workflow.md) | Request intake through biobank issuing, delivery, and archiving |
 | [Device data workflow](device-data-workflow.md) | Device outputs, storage, QC cadence, links to cleaning scripts |
 | [Device setup for visit](device-setup-for-visit.md) | iPad and laptop setup for VU-AMS, Omron, Castor, Nellcor, and Tanita before a visit |
 

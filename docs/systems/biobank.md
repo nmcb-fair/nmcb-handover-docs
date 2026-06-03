@@ -78,7 +78,7 @@ End-to-end path from collection through storage and requests (internal and exter
 
 **Radboud / multi-centre detail:** RL file processing, [box file naming](../workflows/multicentre-sample-data-workflow.md#how-to-rename-box-data-files), expansion into a **Biobank Submission File**, validation, and FileSender delivery — see [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md).
 
-**Sample requests:** selection and pseudonymized exports — see [Sample request](../tasks/sample-request.md).
+**Sample requests:** end-to-end procedure — [Biosample request workflow](../workflows/sample-request-workflow.md); automation — [Sample request](../tasks/sample-request.md).
 
 ## Blood tube labels (NMCB)
 
@@ -118,6 +118,7 @@ Index of blood tubes used at visit: cap colour and sample type. Full reference: 
 - [OpenSpecimen](openspecimen.md) — sample tracking system
 - [CDL alert workflow](../workflows/cdl-alert-workflow.md) — CRL / CDL lab results (blood label xlsx stored with CDL files)
 - [Multi-centre sample data workflow](../workflows/multicentre-sample-data-workflow.md) — RL file, boxing, submission
-- [Sample request](../tasks/sample-request.md) — requesting samples from the biobank
+- [Biosample request workflow](../workflows/sample-request-workflow.md) — requesting samples from the biobank
+- [Sample request](../tasks/sample-request.md) — R automation for selection and exports
 - [Research Drive](research-drive.md) — shared storage layout
 

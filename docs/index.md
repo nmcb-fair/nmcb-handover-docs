@@ -122,7 +122,7 @@ flowchart TB
   click DREQ "tasks/data-request/" "Data request task"
   click MYDRE "systems/mydre/" "myDRE"
   click OS "systems/openspecimen/" "OpenSpecimen"
-  click SREQ "tasks/sample-request/" "Sample request"
+  click SREQ "workflows/sample-request-workflow/" "Biosample request workflow"
 ```
 
 ### Step reference (clickable links)
@@ -148,7 +148,7 @@ flowchart TB
 | **⑥ Data request** | Approved CSV packages for researchers | [Data request](tasks/data-request.md) · [GDPR rules](#keep-in-mind-gdpr-and-data-sharing) |
 | **⑥ myDRE** | Controlled analysis environment for approved subsets | [myDRE](systems/mydre.md) |
 | **OpenSpecimen** | Physical sample metadata & inventory (from biobank path) | [Biobank](systems/biobank.md) · [OpenSpecimen](systems/openspecimen.md) |
-| **Sample request** | Select aliquots, pseudonymized release files for approved sample requests | [Sample request](tasks/sample-request.md) |
+| **Sample request** | Select aliquots, pseudonymized release files for approved sample requests | [Biosample request workflow](workflows/sample-request-workflow.md) · [automation](tasks/sample-request.md) |
 
 ---
 
@@ -165,7 +165,7 @@ NMCB data currently spans:
 - files on [Research Drive](systems/research-drive.md); sensitive data on YoDa when required
 - analytics in [Snowflake](systems/snowflake.md)
 - sharing via [Data request](tasks/data-request.md) and [myDRE](systems/mydre.md)
-- samples in [OpenSpecimen](systems/openspecimen.md) → [Sample request](tasks/sample-request.md)
+- samples in [OpenSpecimen](systems/openspecimen.md) → [Biosample request workflow](workflows/sample-request-workflow.md) · [Sample request scripts](tasks/sample-request.md)
 - governance in [Data management plan](tasks/data-management-plan.md)
 
 ## Architecture principle

@@ -3,6 +3,8 @@
 
 This page documents the **Sample Request** project under `github.com/nmcb-fair/sample-request`. The project turns CRL Admin, OpenSpecimen, and screening exports into reproducible **participant-level** and **specimen-level** outputs for sample release requests.
 
+**Process (roles, nine steps, biobank hand-off):** [Biosample request workflow](../workflows/sample-request-workflow.md)
+
 The workflow has two layers:
 
 1. **Base data preparation** in `track_biobank.Rmd`
