@@ -1811,7 +1811,7 @@
 <tbody>
 <tr>
 <td><code>GOATCOUNTER_API_HOST</code></td>
-<td><code>https://nmcb-handover.goatcounter.com</code></td>
+<td>Your GoatCounter site URL only, e.g. <code>https://nmcb-handover.goatcounter.com</code> — <strong>not</strong> <code>github.io</code>, <strong>not</strong> <code>.../count</code></td>
 </tr>
 <tr>
 <td><code>GOATCOUNTER_API_TOKEN</code></td>
@@ -1823,6 +1823,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">If /site-usage/ shows 404</p>
+<p>The page is only on GitHub Pages after a <strong>successful</strong> <strong>deploy-docs</strong> run. If the workflow failed on <strong>Fetch pageview statistics</strong>, fix the secrets above and re-run <strong>Actions → deploy-docs → Run workflow</strong>. A failed fetch no longer blocks deploy, but you must redeploy after the fix is on <code>main</code>.</p>
+</div>
 <ol>
 <li>Push to <code>main</code> / <code>master</code> (or run <strong>deploy-docs</strong> manually). The workflow runs <code>scripts/fetch_pageviews.py</code> before <code>mkdocs build</code> and updates <code>docs/javascripts/pageviews-data.json</code>.</li>
 </ol>

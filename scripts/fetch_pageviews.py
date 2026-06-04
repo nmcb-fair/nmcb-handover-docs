@@ -22,6 +22,15 @@ CONFIG_FILE = JS_DIR / "analytics-config.json"
 
 SITE_PREFIX = os.environ.get("SITE_PATH_PREFIX", "/nmcb-handover-docs").rstrip("/")
 LOOKBACK_DAYS = int(os.environ.get("PAGEVIEW_LOOKBACK_DAYS", "365"))
+MAX_LOOKBACK_DAYS = 366  # GoatCounter API limit
+
+
+def normalize_host(host: str) -> str:
+    host = host.strip().rstrip("/")
+    for suffix in ("/count", "/api", "/api/v0"):
+        if host.endswith(suffix):
+            host = host[: -len(suffix)]
+    return host.rstrip("/")
 
 SECTION_LABELS = {
     "": "Home",
@@ -53,31 +62,53 @@ def friendly_page(path: str) -> str:
     return "/" + p if p else "/"
 
 
-def fetch_hits(host: str, token: str, start: str, end: str) -> list[dict]:
-    url = f"{host.rstrip('/')}/api/v0/stats/hits"
+def _api_get(host: str, token: str, path: str, params: dict) -> dict:
+    url = f"{host.rstrip('/')}{path}"
     resp = requests.get(
         url,
-        params={"start": start, "end": end},
+        params=params,
         headers={"Authorization": f"Bearer {token}"},
         timeout=90,
     )
-    resp.raise_for_status()
-    payload = resp.json()
+    if not resp.ok:
+        detail = resp.text[:500]
+        raise requests.HTTPError(
+            f"{resp.status_code} {resp.reason} for {path}: {detail}",
+            response=resp,
+        )
+    return resp.json()
+
+
+def fetch_hits(host: str, token: str, start: str, end: str) -> list[dict]:
+    payload = _api_get(
+        host,
+        token,
+        "/api/v0/stats/hits",
+        {"start": start, "end": end},
+    )
     return payload.get("hits") or []
 
 
 def fetch_total_visitors(host: str, token: str, start: str, end: str) -> int | None:
-    url = f"{host.rstrip('/')}/api/v0/stats/total"
-    resp = requests.get(
-        url,
-        params={"start": start, "end": end},
-        headers={"Authorization": f"Bearer {token}"},
-        timeout=90,
+    payload = _api_get(
+        host,
+        token,
+        "/api/v0/stats/total",
+        {"start": start, "end": end},
     )
-    resp.raise_for_status()
-    payload = resp.json()
     stats = payload.get("stats") or []
     return sum(int(row.get("count") or 0) for row in stats) if stats else None
+
+
+def fetch_stats(host: str, token: str, lookback_days: int) -> tuple[list[dict], int | None, str, str]:
+    """Return hits, total visitors, start, end (API-safe date range)."""
+    end = date.today() - timedelta(days=1)  # API rejects some same-day ranges
+    days = min(lookback_days, MAX_LOOKBACK_DAYS)
+    start = end - timedelta(days=days)
+    start_s, end_s = start.isoformat(), end.isoformat()
+    hits = fetch_hits(host, token, start_s, end_s)
+    total = fetch_total_visitors(host, token, start_s, end_s)
+    return hits, total, start_s, end_s
 
 
 def build_output(hits: list[dict], updated: str, total_visitors: int | None) -> dict:
@@ -157,11 +188,13 @@ def placeholder(reason: str) -> dict:
 def main() -> int:
     JS_DIR.mkdir(parents=True, exist_ok=True)
 
-    host = os.environ.get("GOATCOUNTER_API_HOST", "").strip()
+    host = normalize_host(os.environ.get("GOATCOUNTER_API_HOST", ""))
     token = os.environ.get("GOATCOUNTER_API_TOKEN", "").strip()
     count_url = os.environ.get("GOATCOUNTER_COUNT_URL", "").strip()
-    if not count_url and host:
-        count_url = f"{host.rstrip('/')}/count"
+    if count_url:
+        count_url = normalize_host(count_url) + "/count"
+    elif host:
+        count_url = f"{host}/count"
 
     write_analytics_config(count_url if host and token else None)
 
@@ -174,24 +207,30 @@ def main() -> int:
         print("Wrote placeholder pageviews-data.json (GoatCounter secrets not set).")
         return 0
 
-    end = date.today()
-    start = end - timedelta(days=LOOKBACK_DAYS)
-    updated = end.isoformat()
+    updated = date.today().isoformat()
 
     try:
-        start_s, end_s = start.isoformat(), end.isoformat()
-        hits = fetch_hits(host, token, start_s, end_s)
-        total_visitors = fetch_total_visitors(host, token, start_s, end_s)
+        try:
+            hits, total_visitors, _, _ = fetch_stats(host, token, LOOKBACK_DAYS)
+        except requests.RequestException:
+            print("Retrying GoatCounter API with 90-day window...", file=sys.stderr)
+            hits, total_visitors, _, _ = fetch_stats(host, token, 90)
+
         data = build_output(hits, updated, total_visitors)
         DATA_FILE.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
         print(f"Wrote {DATA_FILE} — {data['totalVisitors']} visitors across {len(data['pages'])} paths.")
     except requests.RequestException as exc:
-        print(f"GoatCounter API error: {exc}", file=sys.stderr)
+        print(f"GoatCounter API error (deploy continues): {exc}", file=sys.stderr)
+        hint = (
+            "Check GOATCOUNTER_API_HOST is your site URL, e.g. https://yourcode.goatcounter.com "
+            "(not github.io, not /count)."
+        )
         DATA_FILE.write_text(
-            json.dumps(placeholder(f"API fetch failed: {exc}"), indent=2) + "\n",
+            json.dumps(placeholder(f"API fetch failed: {exc}. {hint}"), indent=2) + "\n",
             encoding="utf-8",
         )
-        return 1
+        # Do not fail the docs deploy — site-usage page must still be published.
+        return 0
 
     return 0
 

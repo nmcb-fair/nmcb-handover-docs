@@ -42,9 +42,12 @@ To enable tracking and charts on GitHub Pages:
 
 | Secret | Example |
 | ------ | ------- |
-| `GOATCOUNTER_API_HOST` | `https://nmcb-handover.goatcounter.com` |
+| `GOATCOUNTER_API_HOST` | Your GoatCounter site URL only, e.g. `https://nmcb-handover.goatcounter.com` — **not** `github.io`, **not** `.../count` |
 | `GOATCOUNTER_API_TOKEN` | token from step 3 |
 | `GOATCOUNTER_COUNT_URL` | `https://nmcb-handover.goatcounter.com/count` (optional; defaults to `{API_HOST}/count`) |
+
+!!! warning "If /site-usage/ shows 404"
+    The page is only on GitHub Pages after a **successful** **deploy-docs** run. If the workflow failed on **Fetch pageview statistics**, fix the secrets above and re-run **Actions → deploy-docs → Run workflow**. A failed fetch no longer blocks deploy, but you must redeploy after the fix is on `main`.
 
 5. Push to `main` / `master` (or run **deploy-docs** manually). The workflow runs `scripts/fetch_pageviews.py` before `mkdocs build` and updates `docs/javascripts/pageviews-data.json`.
 

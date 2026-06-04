@@ -34,9 +34,9 @@
       data.periodDays +
       "</strong> days (GoatCounter). Last updated: <strong>" +
       data.updated +
-      "</strong>. Total across listed pages: <strong>" +
+      "</strong>. Site total (unique visitors): <strong>" +
       data.totalVisitors.toLocaleString() +
-      "</strong>.</p>";
+      "</strong>. Section bars sum per-page counts (one visitor on several pages may appear in multiple bars).</p>";
   }
 
   function barChart(canvasId, labels, values, label) {
