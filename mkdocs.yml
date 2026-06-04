@@ -5,6 +5,7 @@ repo_name: nmcb-handover
 
 theme:
   name: material
+  custom_dir: docs/overrides
   features:
     - navigation.sections
     - navigation.expand
@@ -15,6 +16,9 @@ theme:
 
 extra_javascript:
   - javascripts/mermaid-config.js
+  - javascripts/goatcounter.js
+  - javascripts/pageview-badge.js
+  - javascripts/pageviews-chart.js
 
 markdown_extensions:
   - admonition
@@ -32,6 +36,7 @@ markdown_extensions:
 nav:
   - Data flow (home): index.md
   - Where data lives: where-data-lives.md
+  - Site usage: site-usage.md
   - Workflows:
       - Overview: workflows/index.md
       - CDL alert workflow: workflows/cdl-alert-workflow.md

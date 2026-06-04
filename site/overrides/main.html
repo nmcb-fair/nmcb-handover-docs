@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block footer %}
+  <div class="md-footer-analytics md-typeset" style="text-align:center;padding:0.4rem 0 0.2rem;">
+    <a href="{{ config.site_url }}site-usage/">Site usage</a><span id="nmcb-pageview-total" aria-live="polite"></span>
+  </div>
+  {{ super() }}
+{% endblock %}

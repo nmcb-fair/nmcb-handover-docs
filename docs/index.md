@@ -6,6 +6,45 @@ For folder paths see [Where data lives](where-data-lives.md). For step-by-step p
 
 ---
 
+## Handover topics
+
+Quick index of main documentation areas. **Documentation** links go to pages on this site.
+
+
+| Topic                                 | Explanation                                  | Documentation                                                                              | Relevant to                    |
+| ------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------ |
+| **Entire Data Flow**                  | End-to-end pipeline from capture to delivery | [Data flow diagram](#end-to-end-data-flow)                                                 | Peter, Sanne, Jos              |
+| ↳                                     | FAIR target architecture diagram             | [FAIRification — FAIR data flow](fair/fairification.md#fair-data-flow-target-architecture) |                                |
+| **Lab Data Flow**                     | CDL blood results and clinical alerts        | [CDL alert workflow](workflows/cdl-alert-workflow.md)                                      | Peter, Angela, Jan, Marit      |
+| ↳                                     | RDL lab workflow (Radboud; in progress)      | [RDL alert workflow](workflows/rdl-alert-workflow.md)                                      |                                |
+| **Device Data Flow**                  | Device data from visit through QC            | [Device data workflow](workflows/device-data-workflow.md)                                  | Peter, Angela, Maud            |
+| ↳                                     | Research Drive storage for device files      | [Research Drive](systems/research-drive.md)                                                |                                |
+| **Device First-time Setup**           | Configure devices before a study visit       | [Device setup for visit](workflows/device-setup-for-visit.md)                              | Peter, Sanne                   |
+| **Regular Data Routine**              | Scheduled exports, logs, and mailbox tasks   | [Recurring study routines](workflows/recurring-routines.md)                                | Peter, Maud                    |
+| **Generic Sample Request Workflow**   | End-to-end biosample release process         | [Biosample request workflow](workflows/sample-request-workflow.md)                         | Peter, Laurian, Sanne          |
+| **Sample Request**                    | Run the sample-request GitHub pipeline       | [Sample request task](tasks/sample-request.md)                                             | Peter                          |
+| **Multi-center Blood Tube and Boxes** | Blood tubes, boxes, and biobank submission   | [Multi-centre sample data workflow](workflows/multicentre-sample-data-workflow.md)         | Peter, Sanne                   |
+| **Data Request**                      | Build approved researcher data packages      | [Data request task](tasks/data-request.md)                                                 | Peter                          |
+| **ACS Data Cleaning**                 | Clean raw ACS CSV exports                    | [ACS data clean](tasks/acs-data-clean.md)                                                  | Peter                          |
+| **Update SOPs**                       | Participant withdrawal procedure             | [Withdrawal SOP](tasks/sop-withdrawal.md)                                                  | Peter, Sanne, Marit, Niek, Jan |
+| ↳                                     | Device data transfer SOP                     | [Device data transfer SOP](tasks/sop-data-transfer.md)                                     |                                |
+| ↳                                     | VU-AMS device setup improvements             | [Improve VU-AMS](tasks/improve-vu-ams.md)                                                  |                                |
+| **History of biobank data setup**     | OpenSpecimen sample inventory                | [OpenSpecimen](systems/openspecimen.md)                                                    | Peter, Sanne                   |
+| ↳                                     | Biobank metadata and submission mappings     | [Biobank](systems/biobank.md)                                                              |                                |
+| **Patient-resume**                    | Excel summary per participant                | [Patient resume](tasks/patient-resume.md)                                                  | Jan, Peter                     |
+| **Data Management Plan**              | NMCB DMP template and guidance               | [Data management plan](tasks/data-management-plan.md)                                      | Peter, Jos                     |
+| **History of myDRE**                  | Secure research workspaces                   | [myDRE](systems/mydre.md)                                                                  | Peter, Angela                  |
+| **Get participant overview**          | Recruitment funnel counts and plots          | [NMCB numbers overview](tasks/number-overview.md)                                          | Peter, Sanne                   |
+| **Get sample overview**               | Sample counts for release prep               | [Sample request task](tasks/sample-request.md)                                             | Peter, Sanne                   |
+| **Update NMCB Codebook**              | Align variables with study changes           | [Update NMCB codebook](tasks/update-nmcb-codebook.md)                                      | Peter                          |
+| **FAIR work**                         | OMOP CDM variable mappings                   | [OMOP mapping](fair/omop-mapping.md)                                                       |                                |
+| ↳                                     | PAIS / Health-RI metadata schema             | [PAIS metadata schema](fair/pais-metadata-schema.md)                                       |                                |
+| ↳                                     | FAIR Implementation Profile selections       | [FAIR Implementation Profile](fair/fair-implementation-profile.md)                         |                                |
+| ↳                                     | Ontology harmonization workflow              | [Ontology harmonization](fair/ontology-harmonization.md)                                   |                                |
+
+
+---
+
 ## End-to-end data flow
 
 The diagram starts with the **data management plan**, then runs from **capture** through **Research Drive** and **Snowflake** (Castor loads **directly** into Snowflake). **Patient resume** is built from processed and analyzed outputs; **Snowflake (OMOP)** feeds external collaboration. The **samples** branch ends with **sample request** after OpenSpecimen. **Click a box** in the diagram (desktop) or use the [step reference table](#step-reference-clickable-links).
@@ -125,30 +164,34 @@ flowchart TB
   click SREQ "workflows/sample-request-workflow/" "Biosample request workflow"
 ```
 
+
+
 ### Step reference (clickable links)
 
-| Step | What happens | Documentation |
-| ---- | ------------ | ------------- |
-| **⓪ Data management plan** | Study-wide storage, ethics, Castor, devices, catalogues (main + sub-project DMPs) | [Data management plan](tasks/data-management-plan.md) |
-| **① Visit & logs** | Scheduling, visit log, subject ID log, mailbox routines | [Recurring study routines](workflows/recurring-routines.md) · [Where data lives](where-data-lives.md) |
-| **Castor EDC** | eCRF and surveys — loads **directly to Snowflake** (no QC step) | [Castor](systems/castor.md) · [Snowflake](systems/snowflake.md) |
-| **Device setup** | iPad / laptop ready before measurements | [Device setup for visit](workflows/device-setup-for-visit.md) |
-| **Devices** | VU-AMS, Omron, Nellcor, Tanita, … | [Devices](systems/devices.md) · [Device data workflow](workflows/device-data-workflow.md) |
-| **ACS** | Amsterdam Cognitive Scan (parallel to other devices) | [ACS data clean](tasks/acs-data-clean.md) · [Devices — ACS](systems/devices.md#amsterdam-cognitive-scan) |
-| **CDL / CRL** | Central lab raw files → per-participant outputs & alerts | [CDL alert workflow](workflows/cdl-alert-workflow.md) |
-| **RDL / RL** | Radboud lab + blood-tube / box files | [RDL alert workflow](workflows/rdl-alert-workflow.md) · [Multi-centre sample data workflow](workflows/multicentre-sample-data-workflow.md) |
-| **② `organized/`** | Raw drops on Research Drive (`organized/CDL/`, `organized/{device}/`, …) | [Research Drive](systems/research-drive.md) · [Where data lives](where-data-lives.md) |
-| **③ Quality Control** | Python/R cleaning, validation; CDL/RDL processing workflows | [GitHub](systems/github.md) · [CDL](workflows/cdl-alert-workflow.md) · [RDL](workflows/rdl-alert-workflow.md) |
-| **④ `processed/` & `analyzed/`** | Analysis-ready tables; CDL/RDL alert folders for clinicians | [Where data lives](where-data-lives.md) |
-| **④b Patient resume** | Per-participant Excel summary from **processed** + **analyzed** inputs | [Patient resume](tasks/patient-resume.md) |
-| **⑤ `data pool/`** | Device/lab exports for package builds (Castor via Snowflake) | [Data request](tasks/data-request.md) |
-| **⑤ Snowflake** | Structured cohort tables (incl. Castor), eligibility, reporting | [Snowflake](systems/snowflake.md) |
-| **⑤ Snowflake (OMOP)** | OMOP CDM mappings and ETL on Snowflake data | [OMOP CDM mapping](fair/omop-mapping.md) |
-| **External parties for collaboration** | Approved data sharing with researchers / collaborators | [Data request](tasks/data-request.md) · [myDRE](systems/mydre.md) |
-| **⑥ Data request** | Approved CSV packages for researchers | [Data request](tasks/data-request.md) · [GDPR rules](#keep-in-mind-gdpr-and-data-sharing) |
-| **⑥ myDRE** | Controlled analysis environment for approved subsets | [myDRE](systems/mydre.md) |
-| **OpenSpecimen** | Physical sample metadata & inventory (from biobank path) | [Biobank](systems/biobank.md) · [OpenSpecimen](systems/openspecimen.md) |
-| **Sample request** | Select aliquots, pseudonymized release files for approved sample requests | [Biosample request workflow](workflows/sample-request-workflow.md) · [automation](tasks/sample-request.md) |
+
+| Step                                   | What happens                                                                      | Documentation                                                                                                                              |
+| -------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **⓪ Data management plan**             | Study-wide storage, ethics, Castor, devices, catalogues (main + sub-project DMPs) | [Data management plan](tasks/data-management-plan.md)                                                                                      |
+| **① Visit & logs**                     | Scheduling, visit log, subject ID log, mailbox routines                           | [Recurring study routines](workflows/recurring-routines.md) · [Where data lives](where-data-lives.md)                                      |
+| **Castor EDC**                         | eCRF and surveys — loads **directly to Snowflake** (no QC step)                   | [Castor](systems/castor.md) · [Snowflake](systems/snowflake.md)                                                                            |
+| **Device setup**                       | iPad / laptop ready before measurements                                           | [Device setup for visit](workflows/device-setup-for-visit.md)                                                                              |
+| **Devices**                            | VU-AMS, Omron, Nellcor, Tanita, …                                                 | [Devices](systems/devices.md) · [Device data workflow](workflows/device-data-workflow.md)                                                  |
+| **ACS**                                | Amsterdam Cognitive Scan (parallel to other devices)                              | [ACS data clean](tasks/acs-data-clean.md) · [Devices — ACS](systems/devices.md#amsterdam-cognitive-scan)                                   |
+| **CDL / CRL**                          | Central lab raw files → per-participant outputs & alerts                          | [CDL alert workflow](workflows/cdl-alert-workflow.md)                                                                                      |
+| **RDL / RL**                           | Radboud lab + blood-tube / box files                                              | [RDL alert workflow](workflows/rdl-alert-workflow.md) · [Multi-centre sample data workflow](workflows/multicentre-sample-data-workflow.md) |
+| **② `organized/`**                     | Raw drops on Research Drive (`organized/CDL/`, `organized/{device}/`, …)          | [Research Drive](systems/research-drive.md) · [Where data lives](where-data-lives.md)                                                      |
+| **③ Quality Control**                  | Python/R cleaning, validation; CDL/RDL processing workflows                       | [GitHub](systems/github.md) · [CDL](workflows/cdl-alert-workflow.md) · [RDL](workflows/rdl-alert-workflow.md)                              |
+| **④ `processed/` & `analyzed/`**       | Analysis-ready tables; CDL/RDL alert folders for clinicians                       | [Where data lives](where-data-lives.md)                                                                                                    |
+| **④b Patient resume**                  | Per-participant Excel summary from **processed** + **analyzed** inputs            | [Patient resume](tasks/patient-resume.md)                                                                                                  |
+| **⑤ `data pool/`**                     | Device/lab exports for package builds (Castor via Snowflake)                      | [Data request](tasks/data-request.md)                                                                                                      |
+| **⑤ Snowflake**                        | Structured cohort tables (incl. Castor), eligibility, reporting                   | [Snowflake](systems/snowflake.md)                                                                                                          |
+| **⑤ Snowflake (OMOP)**                 | OMOP CDM mappings and ETL on Snowflake data                                       | [OMOP CDM mapping](fair/omop-mapping.md)                                                                                                   |
+| **External parties for collaboration** | Approved data sharing with researchers / collaborators                            | [Data request](tasks/data-request.md) · [myDRE](systems/mydre.md)                                                                          |
+| **⑥ Data request**                     | Approved CSV packages for researchers                                             | [Data request](tasks/data-request.md) · [GDPR rules](#keep-in-mind-gdpr-and-data-sharing)                                                  |
+| **⑥ myDRE**                            | Controlled analysis environment for approved subsets                              | [myDRE](systems/mydre.md)                                                                                                                  |
+| **OpenSpecimen**                       | Physical sample metadata & inventory (from biobank path)                          | [Biobank](systems/biobank.md) · [OpenSpecimen](systems/openspecimen.md)                                                                    |
+| **Sample request**                     | Select aliquots, pseudonymized release files for approved sample requests         | [Biosample request workflow](workflows/sample-request-workflow.md) · [automation](tasks/sample-request.md)                                 |
+
 
 ---
 
@@ -203,13 +246,15 @@ These rules apply to **every** export, list, myDRE delivery, or biobank hand-off
 
 ## How this site is organised
 
-| Section | Purpose |
-| ------- | ------- |
-| **Where data lives** | Paths on Research Drive, Castor, OpenSpecimen, … |
-| **Workflows** | CDL/RDL alerts, multicentre samples, devices, recurring routines |
-| **Systems** | Castor, devices, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub |
-| **Tasks** | Data request, sample request, [Withdrawal SOP](tasks/sop-withdrawal.md), [Device data transfer SOP](tasks/sop-data-transfer.md), DMP, ChatGPT, … |
-| **FAIR** | Metadata, FIP, OMOP — [overview](fair/index.md) (handover context; no active follow-up) |
+
+| Section              | Purpose                                                                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Where data lives** | Paths on Research Drive, Castor, OpenSpecimen, …                                                                                                 |
+| **Workflows**        | CDL/RDL alerts, multicentre samples, devices, recurring routines                                                                                 |
+| **Systems**          | Castor, devices, Snowflake, Research Drive, biobank, myDRE, [NMCB Core list](systems/distributed-list.md), GitHub                                |
+| **Tasks**            | Data request, sample request, [Withdrawal SOP](tasks/sop-withdrawal.md), [Device data transfer SOP](tasks/sop-data-transfer.md), DMP, ChatGPT, … |
+| **FAIR**             | Metadata, FIP, OMOP — [overview](fair/index.md) (handover context; no active follow-up)                                                          |
+
 
 ## How to use this documentation
 

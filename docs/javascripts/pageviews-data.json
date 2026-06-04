@@ -1,0 +1,9 @@
+{
+  "configured": false,
+  "updated": null,
+  "message": "Set GOATCOUNTER_API_HOST and GOATCOUNTER_API_TOKEN in GitHub Actions secrets.",
+  "periodDays": 365,
+  "totalVisitors": 0,
+  "sections": [],
+  "pages": []
+}
