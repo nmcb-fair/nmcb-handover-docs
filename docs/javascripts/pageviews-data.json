@@ -1,7 +1,7 @@
 {
   "configured": false,
   "updated": null,
-  "message": "Set GOATCOUNTER_API_HOST and GOATCOUNTER_API_TOKEN in GitHub Actions secrets.",
+  "message": "API fetch failed: 401 Unauthorized for /api/v0/stats/hits: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<title>GoatCounter \u2013 Error!</title>\n\t<link rel=\"icon\" type=\"image/png\" href=\"data:base64,\">\n\t<style>\nhtml {\n  font: 16px/150% sans-serif;\n          text-size-adjust: none;\n  -webkit-text-size-adjust: none;\n}\n@media (max-width: 54em) {\n  html { font-size: 14px; line-height: 160%; }\n}\n@media (max-width: 26em) {\n  html { . Check GOATCOUNTER_API_HOST is your site URL, e.g. https://yourcode.goatcounter.com (not github.io, not /count).",
   "periodDays": 365,
   "totalVisitors": 0,
   "sections": [],

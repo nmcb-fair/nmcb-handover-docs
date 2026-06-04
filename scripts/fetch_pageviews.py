@@ -27,10 +27,24 @@ MAX_LOOKBACK_DAYS = 366  # GoatCounter API limit
 
 def normalize_host(host: str) -> str:
     host = host.strip().rstrip("/")
+    if not host:
+        return ""
+    if not host.startswith(("http://", "https://")):
+        host = "https://" + host
     for suffix in ("/count", "/api", "/api/v0"):
         if host.endswith(suffix):
             host = host[: -len(suffix)]
     return host.rstrip("/")
+
+
+def normalize_count_url(count_url: str, host: str) -> str:
+    url = count_url.strip() if count_url else ""
+    if not url:
+        return f"{host}/count" if host else ""
+    if not url.startswith(("http://", "https://")):
+        url = "https://" + url.lstrip("/")
+    base = normalize_host(url)
+    return f"{base}/count"
 
 SECTION_LABELS = {
     "": "Home",
@@ -67,16 +81,43 @@ def _api_get(host: str, token: str, path: str, params: dict) -> dict:
     resp = requests.get(
         url,
         params=params,
-        headers={"Authorization": f"Bearer {token}"},
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
         timeout=90,
     )
     if not resp.ok:
-        detail = resp.text[:500]
+        detail = resp.text[:300]
         raise requests.HTTPError(
             f"{resp.status_code} {resp.reason} for {path}: {detail}",
             response=resp,
         )
     return resp.json()
+
+
+def api_error_hint(exc: requests.RequestException, host: str) -> str:
+    """Short, actionable message for deploy logs and pageviews-data.json."""
+    text = str(exc)
+    if "403" in text:
+        return (
+            "GoatCounter returned 403 Forbidden: the API token cannot read statistics. "
+            "In GoatCounter open your username (top menu) → API → create a NEW token and enable "
+            "**Read statistics** (not only Record pageviews). Assign the token to site "
+            f"{host}. Update GitHub secret GOATCOUNTER_API_TOKEN and run deploy-docs again. "
+            "See https://www.goatcounter.com/help/api"
+        )
+    if "401" in text:
+        return (
+            "GoatCounter returned 401 Unauthorized: wrong or expired GOATCOUNTER_API_TOKEN. "
+            "Create a new token and update the GitHub secret."
+        )
+    if "No scheme supplied" in text:
+        return (
+            "GOATCOUNTER_API_HOST must start with https:// "
+            f"(e.g. https://yourcode.goatcounter.com). Got: {host!r}"
+        )
+    return f"API fetch failed: {exc}"
 
 
 def fetch_hits(host: str, token: str, start: str, end: str) -> list[dict]:
@@ -190,11 +231,9 @@ def main() -> int:
 
     host = normalize_host(os.environ.get("GOATCOUNTER_API_HOST", ""))
     token = os.environ.get("GOATCOUNTER_API_TOKEN", "").strip()
-    count_url = os.environ.get("GOATCOUNTER_COUNT_URL", "").strip()
-    if count_url:
-        count_url = normalize_host(count_url) + "/count"
-    elif host:
-        count_url = f"{host}/count"
+    count_url = normalize_count_url(
+        os.environ.get("GOATCOUNTER_COUNT_URL", "").strip(), host
+    )
 
     write_analytics_config(count_url if host and token else None)
 
@@ -221,12 +260,8 @@ def main() -> int:
         print(f"Wrote {DATA_FILE} — {data['totalVisitors']} visitors across {len(data['pages'])} paths.")
     except requests.RequestException as exc:
         print(f"GoatCounter API error (deploy continues): {exc}", file=sys.stderr)
-        hint = (
-            "Check GOATCOUNTER_API_HOST is your site URL, e.g. https://yourcode.goatcounter.com "
-            "(not github.io, not /count)."
-        )
         DATA_FILE.write_text(
-            json.dumps(placeholder(f"API fetch failed: {exc}. {hint}"), indent=2) + "\n",
+            json.dumps(placeholder(api_error_hint(exc, host)), indent=2) + "\n",
             encoding="utf-8",
         )
         # Do not fail the docs deploy — site-usage page must still be published.

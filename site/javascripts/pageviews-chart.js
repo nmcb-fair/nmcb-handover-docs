@@ -24,9 +24,14 @@
     if (!meta) return;
     if (!data.configured) {
       meta.innerHTML =
-        "<p><strong>Statistics are not available yet.</strong> " +
+        '<div class="admonition warning">' +
+        "<p class='admonition-title'>Statistics not loaded</p>" +
+        "<p>" +
         (data.message || "Configure GoatCounter and GitHub secrets, then redeploy.") +
-        "</p>";
+        ' Check <a href="' +
+        window.nmcbAssetUrl("javascripts/pageviews-data.json") +
+        '">pageviews-data.json</a>.</p>' +
+        "</div>";
       return;
     }
     meta.innerHTML =
@@ -93,7 +98,7 @@
     });
   }
 
-  fetch(new URL("pageviews-data.json", document.baseURI))
+  fetch(window.nmcbAssetUrl("javascripts/pageviews-data.json"))
     .then(function (r) {
       return r.json();
     })

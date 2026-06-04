@@ -15,6 +15,7 @@ theme:
     - content.code.copy
 
 extra_javascript:
+  - javascripts/site-assets.js
   - javascripts/mermaid-config.js
   - javascripts/goatcounter.js
   - javascripts/pageview-badge.js

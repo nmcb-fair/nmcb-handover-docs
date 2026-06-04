@@ -3,7 +3,7 @@
   var target = document.getElementById("nmcb-pageview-total");
   if (!target) return;
 
-  fetch(new URL("pageviews-data.json", document.baseURI))
+  fetch(window.nmcbAssetUrl("javascripts/pageviews-data.json"))
     .then(function (r) {
       return r.json();
     })
