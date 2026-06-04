@@ -125,7 +125,7 @@ def fetch_hits(host: str, token: str, start: str, end: str) -> list[dict]:
         host,
         token,
         "/api/v0/stats/hits",
-        {"start": start, "end": end},
+        {"start": start, "end": end, "limit": 500},
     )
     return payload.get("hits") or []
 
@@ -142,14 +142,24 @@ def fetch_total_visitors(host: str, token: str, start: str, end: str) -> int | N
 
 
 def fetch_stats(host: str, token: str, lookback_days: int) -> tuple[list[dict], int | None, str, str]:
-    """Return hits, total visitors, start, end (API-safe date range)."""
-    end = date.today() - timedelta(days=1)  # API rejects some same-day ranges
+    """Return hits, total visitors, start, end (inclusive date range)."""
     days = min(lookback_days, MAX_LOOKBACK_DAYS)
+    end = date.today()
     start = end - timedelta(days=days)
     start_s, end_s = start.isoformat(), end.isoformat()
-    hits = fetch_hits(host, token, start_s, end_s)
-    total = fetch_total_visitors(host, token, start_s, end_s)
-    return hits, total, start_s, end_s
+    try:
+        hits = fetch_hits(host, token, start_s, end_s)
+        total = fetch_total_visitors(host, token, start_s, end_s)
+        return hits, total, start_s, end_s
+    except requests.HTTPError as exc:
+        if exc.response is not None and exc.response.status_code == 400:
+            end = date.today() - timedelta(days=1)
+            start = end - timedelta(days=days)
+            start_s, end_s = start.isoformat(), end.isoformat()
+            hits = fetch_hits(host, token, start_s, end_s)
+            total = fetch_total_visitors(host, token, start_s, end_s)
+            return hits, total, start_s, end_s
+        raise
 
 
 def build_output(hits: list[dict], updated: str, total_visitors: int | None) -> dict:
@@ -196,6 +206,11 @@ def build_output(hits: list[dict], updated: str, total_visitors: int | None) -> 
         "totalVisitors": total_visitors if total_visitors is not None else path_sum,
         "sections": sections,
         "pages": pages[:80],
+        "note": (
+            "Counts refresh on each deploy, not live. "
+            "If empty, open your GoatCounter dashboard — if that is also empty, "
+            "tracking is not recording (check allowed domain nmcb-fair.github.io)."
+        ),
     }
 
 

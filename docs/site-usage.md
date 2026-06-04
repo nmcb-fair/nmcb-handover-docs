@@ -3,6 +3,9 @@
 
 Visitor statistics for this hand-over site. Counts are collected with [GoatCounter](https://www.goatcounter.com/) (privacy-friendly, no cookies) and refreshed on each deploy.
 
+!!! important "Numbers do not update live"
+    Browsing the docs **does not** update this page immediately. Visits are stored in GoatCounter; charts update only when **deploy-docs** runs (push to `main` or **Actions → Run workflow**). Check your [GoatCounter dashboard](https://www.goatcounter.com/) first — if it shows visits but this page is empty, run **deploy-docs** again.
+
 !!! info "Status"
     Charts load from [pageviews-data.json](../javascripts/pageviews-data.json) after each deploy. If you see empty charts, open that JSON: `"configured": true` means data loaded; `"configured": false` shows the error in `"message"`.
 

@@ -8,12 +8,19 @@
 
   function loadCounter(countUrl) {
     countUrl = withHttps(countUrl);
-    if (!countUrl || window.goatcounter) return;
-    window.goatcounter = { no_onload: true };
+    if (!countUrl) return;
     var s = document.createElement("script");
     s.async = true;
     s.dataset.goatcounter = countUrl;
     s.src = "https://gc.zgoat.net/count.js";
+    s.onload = function () {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({
+          path: location.pathname + location.search,
+          title: document.title,
+        });
+      }
+    };
     (document.head || document.body).appendChild(s);
   }
 

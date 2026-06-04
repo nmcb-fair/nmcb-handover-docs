@@ -6,45 +6,6 @@ For folder paths see [Where data lives](where-data-lives.md). For step-by-step p
 
 ---
 
-## Handover topics
-
-Quick index of main documentation areas. **Documentation** links go to pages on this site.
-
-
-| Topic                                 | Explanation                                  | Documentation                                                                              | Relevant to                    |
-| ------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------ |
-| **Entire Data Flow**                  | End-to-end pipeline from capture to delivery | [Data flow diagram](#end-to-end-data-flow)                                                 | Peter, Sanne, Jos              |
-| ↳                                     | FAIR target architecture diagram             | [FAIRification — FAIR data flow](fair/fairification.md#fair-data-flow-target-architecture) |                                |
-| **Lab Data Flow**                     | CDL blood results and clinical alerts        | [CDL alert workflow](workflows/cdl-alert-workflow.md)                                      | Peter, Angela, Jan, Marit      |
-| ↳                                     | RDL lab workflow (Radboud; in progress)      | [RDL alert workflow](workflows/rdl-alert-workflow.md)                                      |                                |
-| **Device Data Flow**                  | Device data from visit through QC            | [Device data workflow](workflows/device-data-workflow.md)                                  | Peter, Angela, Maud            |
-| ↳                                     | Research Drive storage for device files      | [Research Drive](systems/research-drive.md)                                                |                                |
-| **Device First-time Setup**           | Configure devices before a study visit       | [Device setup for visit](workflows/device-setup-for-visit.md)                              | Peter, Sanne                   |
-| **Regular Data Routine**              | Scheduled exports, logs, and mailbox tasks   | [Recurring study routines](workflows/recurring-routines.md)                                | Peter, Maud                    |
-| **Generic Sample Request Workflow**   | End-to-end biosample release process         | [Biosample request workflow](workflows/sample-request-workflow.md)                         | Peter, Laurian, Sanne          |
-| **Sample Request**                    | Run the sample-request GitHub pipeline       | [Sample request task](tasks/sample-request.md)                                             | Peter                          |
-| **Multi-center Blood Tube and Boxes** | Blood tubes, boxes, and biobank submission   | [Multi-centre sample data workflow](workflows/multicentre-sample-data-workflow.md)         | Peter, Sanne                   |
-| **Data Request**                      | Build approved researcher data packages      | [Data request task](tasks/data-request.md)                                                 | Peter                          |
-| **ACS Data Cleaning**                 | Clean raw ACS CSV exports                    | [ACS data clean](tasks/acs-data-clean.md)                                                  | Peter                          |
-| **Update SOPs**                       | Participant withdrawal procedure             | [Withdrawal SOP](tasks/sop-withdrawal.md)                                                  | Peter, Sanne, Marit, Niek, Jan |
-| ↳                                     | Device data transfer SOP                     | [Device data transfer SOP](tasks/sop-data-transfer.md)                                     |                                |
-| ↳                                     | VU-AMS device setup improvements             | [Improve VU-AMS](tasks/improve-vu-ams.md)                                                  |                                |
-| **History of biobank data setup**     | OpenSpecimen sample inventory                | [OpenSpecimen](systems/openspecimen.md)                                                    | Peter, Sanne                   |
-| ↳                                     | Biobank metadata and submission mappings     | [Biobank](systems/biobank.md)                                                              |                                |
-| **Patient-resume**                    | Excel summary per participant                | [Patient resume](tasks/patient-resume.md)                                                  | Jan, Peter                     |
-| **Data Management Plan**              | NMCB DMP template and guidance               | [Data management plan](tasks/data-management-plan.md)                                      | Peter, Jos                     |
-| **History of myDRE**                  | Secure research workspaces                   | [myDRE](systems/mydre.md)                                                                  | Peter, Angela                  |
-| **Get participant overview**          | Recruitment funnel counts and plots          | [NMCB numbers overview](tasks/number-overview.md)                                          | Peter, Sanne                   |
-| **Get sample overview**               | Sample counts for release prep               | [Sample request task](tasks/sample-request.md)                                             | Peter, Sanne                   |
-| **Update NMCB Codebook**              | Align variables with study changes           | [Update NMCB codebook](tasks/update-nmcb-codebook.md)                                      | Peter                          |
-| **FAIR work**                         | OMOP CDM variable mappings                   | [OMOP mapping](fair/omop-mapping.md)                                                       |                                |
-| ↳                                     | PAIS / Health-RI metadata schema             | [PAIS metadata schema](fair/pais-metadata-schema.md)                                       |                                |
-| ↳                                     | FAIR Implementation Profile selections       | [FAIR Implementation Profile](fair/fair-implementation-profile.md)                         |                                |
-| ↳                                     | Ontology harmonization workflow              | [Ontology harmonization](fair/ontology-harmonization.md)                                   |                                |
-
-
----
-
 ## End-to-end data flow
 
 The diagram starts with the **data management plan**, then runs from **capture** through **Research Drive** and **Snowflake** (Castor loads **directly** into Snowflake). **Patient resume** is built from processed and analyzed outputs; **Snowflake (OMOP)** feeds external collaboration. The **samples** branch ends with **sample request** after OpenSpecimen. **Click a box** in the diagram (desktop) or use the [step reference table](#step-reference-clickable-links).
