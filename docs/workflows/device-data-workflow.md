@@ -40,10 +40,45 @@ Device use at visit or home
 - Nellcor date format (MM/DD/YY vs DD/MM/YY)  
 - iPad setup for home visits
 
+## Correction of data
+
+When a mistake shows up in [Snowflake](../systems/snowflake.md) (SF), it usually means something went wrong earlier in the **organized → processed → Snowflake** chain. Trace the error back to the source files on [Research Drive](../systems/research-drive.md) before changing anything downstream.
+
+### Example: wrong participant ID in a Nellcor (oximetry) file
+
+Participant **1001234** had an oximetry file incorrectly named `1004321_Nellcor.xlsx`. The wrong ID propagated through the whole pipeline:
+
+| Stage | File or table | ID used |
+| ----- | ------------- | ------- |
+| Raw | `1004321_Nellcor.xlsx` | `1004321` (filename and field values) |
+| Processed | `1004321_Nellcor.csv` | `1004321` |
+| Snowflake | Oximetry table | `1004321` as `PARTICIPANT_ID` |
+
+### Step 1 — Back up and correct the raw file
+
+Work in the dated `organized/{Device}/{YYYYMMDD}/` folder where the file lives (e.g. `organized/Nellcor/20260101/`).
+
+1. Create an **`archive`** subfolder in that dated folder.
+2. Copy the incorrect raw file into `archive/` and rename it so it cannot be reprocessed by mistake — e.g. `1004321_Nellcor_wrong.xlsx`. Use a `_wrong` (or similar) suffix because a real participant **1004321** may appear later; keeping the bare ID in the archive name would cause confusion.
+3. Edit the copy **outside** `archive/` (the file that stays in the dated folder) and correct the participant ID and any related fields.
+
+!!! warning "How to edit raw files"
+    Correct IDs in a **text editor** (e.g. Notepad) or with a **script** — not by editing directly on Research Drive or in Excel. Direct edits on the share or in Excel are not recommended (formatting, encoding, and sync issues).
+
+### Step 2 — Reprocess and reload
+
+1. Run the usual cleaning pipeline on the corrected raw file (e.g. `1001234_Nellcor.xlsx` after rename/correction).
+2. Place the corrected raw file in the **most recent processing folder** — under the current agreement, device raw files are processed every **Monday**, and folders are named for that Monday’s date. For example, if today is **5 June 2026**, use folder **`20260608`** (the upcoming Monday).
+3. **Remove the wrong rows from Snowflake** after the corrected processed file is in place. Contact **Aad** and **Gabriel** for advice on the safest delete or reload approach for the affected table(s).
+
+Document what was wrong, which files were archived, and who approved the Snowflake change in the team log or ticket for that correction.
+
 ## Related
 
 - [Device setup for visit](device-setup-for-visit.md) — install and configure devices on iPad/laptop before capture  
 - [Improve VU-AMS](../tasks/improve-vu-ams.md) — QC protocol, folder structure, abnormal file sizes  
 - [Devices](../systems/devices.md) — Omron, Nellcor, Tanita, VU-AMS, ACS, iPads  
+- [Research Drive](../systems/research-drive.md) — `organized/` and `processed/` device folders  
+- [Snowflake](../systems/snowflake.md) — structured device tables after processing  
 - [CDL alert workflow](cdl-alert-workflow.md) — lab alerts (not a “device” but same data team cadence)
 

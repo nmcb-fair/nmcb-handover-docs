@@ -17,6 +17,7 @@ theme:
 extra_javascript:
   - javascripts/site-assets.js
   - javascripts/mermaid-config.js
+  - javascripts/goatcounter-env.js
   - javascripts/goatcounter.js
   - javascripts/pageview-badge.js
   - javascripts/pageviews-chart.js

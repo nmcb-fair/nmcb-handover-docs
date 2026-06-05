@@ -34,7 +34,7 @@
         "</div>";
       return;
     }
-    meta.innerHTML =
+    var html =
       "<p>Unique visitors in the last <strong>" +
       data.periodDays +
       "</strong> days (GoatCounter). Last updated: <strong>" +
@@ -42,6 +42,14 @@
       "</strong>. Site total (unique visitors): <strong>" +
       data.totalVisitors.toLocaleString() +
       "</strong>. Section bars sum per-page counts (one visitor on several pages may appear in multiple bars).</p>";
+    if (data.note) {
+      html += "<p><em>" + data.note + "</em></p>";
+    }
+    if (!data.pages || data.pages.length === 0) {
+      html +=
+        "<p><em><strong>No paths in the last API export.</strong> Open your GoatCounter dashboard — if it shows visits, run <strong>Actions → deploy-docs</strong> again. If the dashboard is also empty, allow domain <code>nmcb-fair.github.io</code> in GoatCounter site settings and disable ad blockers while testing.</em></p>";
+    }
+    meta.innerHTML = html;
   }
 
   function barChart(canvasId, labels, values, label) {

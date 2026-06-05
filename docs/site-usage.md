@@ -7,7 +7,7 @@ Visitor statistics for this hand-over site. Counts are collected with [GoatCount
     Browsing the docs **does not** update this page immediately. Visits are stored in GoatCounter; charts update only when **deploy-docs** runs (push to `main` or **Actions → Run workflow**). Check your [GoatCounter dashboard](https://www.goatcounter.com/) first — if it shows visits but this page is empty, run **deploy-docs** again.
 
 !!! info "Status"
-    Charts load from [pageviews-data.json](../javascripts/pageviews-data.json) after each deploy. If you see empty charts, open that JSON: `"configured": true` means data loaded; `"configured": false` shows the error in `"message"`.
+    Charts load from [pageviews-data.json](javascripts/pageviews-data.json) after each deploy. If you see empty charts, open that JSON: `"configured": true` means data loaded; `"configured": false` shows the error in `"message"`.
 
 ---
 
@@ -56,12 +56,15 @@ To enable tracking and charts on GitHub Pages:
 | `GOATCOUNTER_COUNT_URL` | `https://sxzhang1201.goatcounter.com/count` (optional; `https://` required if you set this) |
 
 !!! warning "Empty charts but page loads"
-    Open [pageviews-data.json](../javascripts/pageviews-data.json). If `"configured": false` and the message contains **403 Forbidden**, create a **new** API token with **Read statistics** checked, replace `GOATCOUNTER_API_TOKEN`, then **Actions → deploy-docs → Run workflow**.
+    Open [pageviews-data.json](javascripts/pageviews-data.json). If `"configured": false` and the message contains **403 Forbidden**, create a **new** API token with **Read statistics** checked, replace `GOATCOUNTER_API_TOKEN`, then **Actions → deploy-docs → Run workflow**.
+
+    If `"configured": true` but `"totalVisitors": 0`, open your [GoatCounter dashboard](https://www.goatcounter.com/) for `sxzhang1201.goatcounter.com`. If the dashboard is also empty, tracking is not recording: in **Settings → Site settings** allow **`nmcb-fair.github.io`**, visit a few doc pages (disable ad blockers for the test), push to `main` or run **deploy-docs**, then reload [Site usage](https://nmcb-fair.github.io/nmcb-handover-docs/site-usage/).
 
 Common mistakes:
 
 - Host without `https://` → API error “No scheme supplied”
 - Token with only **Record pageviews** → **403 Forbidden** (current issue if charts stay empty)
+- Allowed domains missing `nmcb-fair.github.io` → dashboard and charts stay at zero
 
 !!! warning "If /site-usage/ shows 404"
     The page is only on GitHub Pages after a **successful** **deploy-docs** run. If the workflow failed on **Fetch pageview statistics**, fix the secrets above and re-run **Actions → deploy-docs → Run workflow**. A failed fetch no longer blocks deploy, but you must redeploy after the fix is on `main`.

@@ -260,17 +260,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#handover-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handover topics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#end-to-end-data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1828,17 +1817,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#handover-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handover topics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#end-to-end-data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1991,189 +1969,6 @@
 <h1 id="nmcb-hand-over-documentation">NMCB hand-over documentation<a class="headerlink" href="#nmcb-hand-over-documentation" title="Permanent link">&para;</a></h1>
 <p>Welcome to the working hand-over for the <strong>Netherlands ME/CFS Cohort and Biobank (NMCB)</strong> data management and data infrastructure role.</p>
 <p>For folder paths see <a href="where-data-lives/">Where data lives</a>. For step-by-step procedures see <a href="workflows/">Workflows</a>.</p>
-<hr />
-<h2 id="handover-topics">Handover topics<a class="headerlink" href="#handover-topics" title="Permanent link">&para;</a></h2>
-<p>Quick index of main documentation areas. <strong>Documentation</strong> links go to pages on this site.</p>
-<table>
-<thead>
-<tr>
-<th>Topic</th>
-<th>Explanation</th>
-<th>Documentation</th>
-<th>Relevant to</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Entire Data Flow</strong></td>
-<td>End-to-end pipeline from capture to delivery</td>
-<td><a href="#end-to-end-data-flow">Data flow diagram</a></td>
-<td>Peter, Sanne, Jos</td>
-</tr>
-<tr>
-<td>↳</td>
-<td>FAIR target architecture diagram</td>
-<td><a href="fair/fairification/#fair-data-flow-target-architecture">FAIRification — FAIR data flow</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Lab Data Flow</strong></td>
-<td>CDL blood results and clinical alerts</td>
-<td><a href="workflows/cdl-alert-workflow/">CDL alert workflow</a></td>
-<td>Peter, Angela, Jan, Marit</td>
-</tr>
-<tr>
-<td>↳</td>
-<td>RDL lab workflow (Radboud; in progress)</td>
-<td><a href="workflows/rdl-alert-workflow/">RDL alert workflow</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Device Data Flow</strong></td>
-<td>Device data from visit through QC</td>
-<td><a href="workflows/device-data-workflow/">Device data workflow</a></td>
-<td>Peter, Angela, Maud</td>
-</tr>
-<tr>
-<td>↳</td>
-<td>Research Drive storage for device files</td>
-<td><a href="systems/research-drive/">Research Drive</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Device First-time Setup</strong></td>
-<td>Configure devices before a study visit</td>
-<td><a href="workflows/device-setup-for-visit/">Device setup for visit</a></td>
-<td>Peter, Sanne</td>
-</tr>
-<tr>
-<td><strong>Regular Data Routine</strong></td>
-<td>Scheduled exports, logs, and mailbox tasks</td>
-<td><a href="workflows/recurring-routines/">Recurring study routines</a></td>
-<td>Peter, Maud</td>
-</tr>
-<tr>
-<td><strong>Generic Sample Request Workflow</strong></td>
-<td>End-to-end biosample release process</td>
-<td><a href="workflows/sample-request-workflow/">Biosample request workflow</a></td>
-<td>Peter, Laurian, Sanne</td>
-</tr>
-<tr>
-<td><strong>Sample Request</strong></td>
-<td>Run the sample-request GitHub pipeline</td>
-<td><a href="tasks/sample-request/">Sample request task</a></td>
-<td>Peter</td>
-</tr>
-<tr>
-<td><strong>Multi-center Blood Tube and Boxes</strong></td>
-<td>Blood tubes, boxes, and biobank submission</td>
-<td><a href="workflows/multicentre-sample-data-workflow/">Multi-centre sample data workflow</a></td>
-<td>Peter, Sanne</td>
-</tr>
-<tr>
-<td><strong>Data Request</strong></td>
-<td>Build approved researcher data packages</td>
-<td><a href="tasks/data-request/">Data request task</a></td>
-<td>Peter</td>
-</tr>
-<tr>
-<td><strong>ACS Data Cleaning</strong></td>
-<td>Clean raw ACS CSV exports</td>
-<td><a href="tasks/acs-data-clean/">ACS data clean</a></td>
-<td>Peter</td>
-</tr>
-<tr>
-<td><strong>Update SOPs</strong></td>
-<td>Participant withdrawal procedure</td>
-<td><a href="tasks/sop-withdrawal/">Withdrawal SOP</a></td>
-<td>Peter, Sanne, Marit, Niek, Jan</td>
-</tr>
-<tr>
-<td>↳</td>
-<td>Device data transfer SOP</td>
-<td><a href="tasks/sop-data-transfer/">Device data transfer SOP</a></td>
-<td></td>
-</tr>
-<tr>
-<td>↳</td>
-<td>VU-AMS device setup improvements</td>
-<td><a href="tasks/improve-vu-ams/">Improve VU-AMS</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>History of biobank data setup</strong></td>
-<td>OpenSpecimen sample inventory</td>
-<td><a href="systems/openspecimen/">OpenSpecimen</a></td>
-<td>Peter, Sanne</td>
-</tr>
-<tr>
-<td>↳</td>
-<td>Biobank metadata and submission mappings</td>
-<td><a href="systems/biobank/">Biobank</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Patient-resume</strong></td>
-<td>Excel summary per participant</td>
-<td><a href="tasks/patient-resume/">Patient resume</a></td>
-<td>Jan, Peter</td>
-</tr>
-<tr>
-<td><strong>Data Management Plan</strong></td>
-<td>NMCB DMP template and guidance</td>
-<td><a href="tasks/data-management-plan/">Data management plan</a></td>
-<td>Peter, Jos</td>
-</tr>
-<tr>
-<td><strong>History of myDRE</strong></td>
-<td>Secure research workspaces</td>
-<td><a href="systems/mydre/">myDRE</a></td>
-<td>Peter, Angela</td>
-</tr>
-<tr>
-<td><strong>Get participant overview</strong></td>
-<td>Recruitment funnel counts and plots</td>
-<td><a href="tasks/number-overview/">NMCB numbers overview</a></td>
-<td>Peter, Sanne</td>
-</tr>
-<tr>
-<td><strong>Get sample overview</strong></td>
-<td>Sample counts for release prep</td>
-<td><a href="tasks/sample-request/">Sample request task</a></td>
-<td>Peter, Sanne</td>
-</tr>
-<tr>
-<td><strong>Update NMCB Codebook</strong></td>
-<td>Align variables with study changes</td>
-<td><a href="tasks/update-nmcb-codebook/">Update NMCB codebook</a></td>
-<td>Peter</td>
-</tr>
-<tr>
-<td><strong>FAIR work</strong></td>
-<td>OMOP CDM variable mappings</td>
-<td><a href="fair/omop-mapping/">OMOP mapping</a></td>
-<td></td>
-</tr>
-<tr>
-<td>↳</td>
-<td>PAIS / Health-RI metadata schema</td>
-<td><a href="fair/pais-metadata-schema/">PAIS metadata schema</a></td>
-<td></td>
-</tr>
-<tr>
-<td>↳</td>
-<td>FAIR Implementation Profile selections</td>
-<td><a href="fair/fair-implementation-profile/">FAIR Implementation Profile</a></td>
-<td></td>
-</tr>
-<tr>
-<td>↳</td>
-<td>Ontology harmonization workflow</td>
-<td><a href="fair/ontology-harmonization/">Ontology harmonization</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <hr />
 <h2 id="end-to-end-data-flow">End-to-end data flow<a class="headerlink" href="#end-to-end-data-flow" title="Permanent link">&para;</a></h2>
 <p>The diagram starts with the <strong>data management plan</strong>, then runs from <strong>capture</strong> through <strong>Research Drive</strong> and <strong>Snowflake</strong> (Castor loads <strong>directly</strong> into Snowflake). <strong>Patient resume</strong> is built from processed and analyzed outputs; <strong>Snowflake (OMOP)</strong> feeds external collaboration. The <strong>samples</strong> branch ends with <strong>sample request</strong> after OpenSpecimen. <strong>Click a box</strong> in the diagram (desktop) or use the <a href="#step-reference-clickable-links">step reference table</a>.</p>
@@ -2547,6 +2342,8 @@
         <script src="javascripts/site-assets.js"></script>
       
         <script src="javascripts/mermaid-config.js"></script>
+      
+        <script src="javascripts/goatcounter-env.js"></script>
       
         <script src="javascripts/goatcounter.js"></script>
       

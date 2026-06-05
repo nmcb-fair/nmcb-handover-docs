@@ -1770,6 +1770,10 @@
 
 <h1 id="site-usage">Site usage<a class="headerlink" href="#site-usage" title="Permanent link">&para;</a></h1>
 <p>Visitor statistics for this hand-over site. Counts are collected with <a href="https://www.goatcounter.com/">GoatCounter</a> (privacy-friendly, no cookies) and refreshed on each deploy.</p>
+<div class="admonition important">
+<p class="admonition-title">Numbers do not update live</p>
+<p>Browsing the docs <strong>does not</strong> update this page immediately. Visits are stored in GoatCounter; charts update only when <strong>deploy-docs</strong> runs (push to <code>main</code> or <strong>Actions → Run workflow</strong>). Check your <a href="https://www.goatcounter.com/">GoatCounter dashboard</a> first — if it shows visits but this page is empty, run <strong>deploy-docs</strong> again.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Status</p>
 <p>Charts load from <a href="../javascripts/pageviews-data.json">pageviews-data.json</a> after each deploy. If you see empty charts, open that JSON: <code>"configured": true</code> means data loaded; <code>"configured": false</code> shows the error in <code>"message"</code>.</p>
@@ -1833,11 +1837,13 @@
 <div class="admonition warning">
 <p class="admonition-title">Empty charts but page loads</p>
 <p>Open <a href="../javascripts/pageviews-data.json">pageviews-data.json</a>. If <code>"configured": false</code> and the message contains <strong>403 Forbidden</strong>, create a <strong>new</strong> API token with <strong>Read statistics</strong> checked, replace <code>GOATCOUNTER_API_TOKEN</code>, then <strong>Actions → deploy-docs → Run workflow</strong>.</p>
+<p>If <code>"configured": true</code> but <code>"totalVisitors": 0</code>, open your <a href="https://www.goatcounter.com/">GoatCounter dashboard</a> for <code>sxzhang1201.goatcounter.com</code>. If the dashboard is also empty, tracking is not recording: in <strong>Settings → Site settings</strong> allow <strong><code>nmcb-fair.github.io</code></strong>, visit a few doc pages (disable ad blockers for the test), push to <code>main</code> or run <strong>deploy-docs</strong>, then reload <a href="https://nmcb-fair.github.io/nmcb-handover-docs/site-usage/">Site usage</a>.</p>
 </div>
 <p>Common mistakes:</p>
 <ul>
 <li>Host without <code>https://</code> → API error “No scheme supplied”</li>
 <li>Token with only <strong>Record pageviews</strong> → <strong>403 Forbidden</strong> (current issue if charts stay empty)</li>
+<li>Allowed domains missing <code>nmcb-fair.github.io</code> → dashboard and charts stay at zero</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">If /site-usage/ shows 404</p>
@@ -1926,6 +1932,8 @@ mkdocs<span class="w"> </span>serve
         <script src="../javascripts/site-assets.js"></script>
       
         <script src="../javascripts/mermaid-config.js"></script>
+      
+        <script src="../javascripts/goatcounter-env.js"></script>
       
         <script src="../javascripts/goatcounter.js"></script>
       
