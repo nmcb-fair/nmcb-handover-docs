@@ -58,20 +58,43 @@ Participant **1001234** had an oximetry file incorrectly named `1004321_Nellcor.
 
 Work in the dated `organized/{Device}/{YYYYMMDD}/` folder where the file lives (e.g. `organized/Nellcor/20260101/`).
 
+**Raw (`organized/`)**
+
 1. Create an **`archive`** subfolder in that dated folder.
-2. Copy the incorrect raw file into `archive/` and rename it so it cannot be reprocessed by mistake — e.g. `1004321_Nellcor_wrong.xlsx`. Use a `_wrong` (or similar) suffix because a real participant **1004321** may appear later; keeping the bare ID in the archive name would cause confusion.
+2. Copy the incorrect raw file into `archive/` and rename it — e.g. `1004321_Nellcor_wrong.xlsx`. Use a `_wrong` suffix because a real participant **1004321** may appear later; keeping the bare ID in the archive name would cause confusion.
 3. Edit the copy **outside** `archive/` (the file that stays in the dated folder) and correct the participant ID and any related fields.
+
+**Processed (`processed/`)**
+
+4. **Delete** the incorrect processed file (e.g. `1004321_Nellcor.csv` in `processed/Nellcor/20260101/`). Do not archive it with `_wrong` — a stray processed file is easy to reload by mistake. The raw `_wrong` copy in `organized/.../archive/` is enough audit trail.
 
 !!! warning "How to edit raw files"
     Correct IDs in a **text editor** (e.g. Notepad) or with a **script** — not by editing directly on Research Drive or in Excel. Direct edits on the share or in Excel are not recommended (formatting, encoding, and sync issues).
 
-### Step 2 — Reprocess and reload
+### Step 2 — Fix downstream data
+
+Choose **Option A** or **Option B** depending on the error and who uses the data. Contact **Aad** and **Gabriel** before any Snowflake delete, update, or reload — they can advise on the safest approach for the affected table(s).
+
+!!! tip "Which option?"
+    **Prefer Option A (reprocess)** when you can — it keeps `organized/`, `processed/`, and Snowflake aligned, and any future reload from processed files will not undo the fix.
+
+    **Option B (Snowflake-only)** is reasonable for a **simple, isolated mistake** (e.g. wrong `PARTICIPANT_ID` only, no bad derived values) when reprocessing is slow or risky and you accept that `processed/` will stay empty for that participant until the next full run. Step 1 (correct raw + delete wrong processed) should still be done so Research Drive reflects the truth even if you skip reprocessing.
+
+#### Option A — Reprocess and reload (default)
 
 1. Run the usual cleaning pipeline on the corrected raw file (e.g. `1001234_Nellcor.xlsx` after rename/correction).
 2. Place the corrected raw file in the **most recent processing folder** — under the current agreement, device raw files are processed every **Monday**, and folders are named for that Monday’s date. For example, if today is **5 June 2026**, use folder **`20260608`** (the upcoming Monday).
-3. **Remove the wrong rows from Snowflake** after the corrected processed file is in place. Contact **Aad** and **Gabriel** for advice on the safest delete or reload approach for the affected table(s).
+3. **Remove the wrong rows from Snowflake**, then load from the new processed output.
 
-Document what was wrong, which files were archived, and who approved the Snowflake change in the team log or ticket for that correction.
+#### Option B — Update Snowflake only (exception)
+
+1. **Do not** move the corrected raw file to the recent Monday folder and **do not** re-run the cleaning pipeline.
+2. **Update the affected values in Snowflake** directly (e.g. set `PARTICIPANT_ID` from `1004321` to `1001234` for the affected rows). Coordinate with **Aad** and **Gabriel** on the exact `UPDATE` / delete-and-replace strategy and on whether linked tables need the same change.
+
+!!! warning "Option B risks"
+    Snowflake may be correct while `processed/` has no file for that participant (you deleted the wrong one in Step 1). That is usually fine if nothing reads `processed/` for this fix, but **data pool builds, audits, or a full Snowflake reload from processed files could diverge**. Document that Option B was used and schedule reprocessing if a full chain refresh is planned.
+
+Document what was wrong, which raw `_wrong` file was archived, which processed file was deleted, which option you used, and who approved the Snowflake change in the team log or ticket for that correction.
 
 ## Related
 
